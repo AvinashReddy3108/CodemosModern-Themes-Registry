@@ -1,0 +1,101 @@
+# Based on
+# https://github.com/mahdibland/V2RayAggregator/blob/8ebde96f515e56eb3ad9ef88f03aac8c0c6dc62b/update/provider/provider-meta-others.yml
+
+mixed-port: 7890
+allow-lan: true
+tcp-concurrent: true
+find-process-mode: always
+global-client-fingerprint: random
+geodata-mode: true
+mode: rule
+log-level: debug ## silent/error/warning/info/debug
+ipv6: true
+external-controller: 127.0.0.1:9090
+profile:
+  store-selected: false ## It's better to default to "auto" every time it restarts.
+  store-fake-ip: true
+
+#tun:
+#enable: true
+#stack: system ## system/lwip/gvisor
+#dns-hijack:
+#- 0.0.0.0:53
+#auto-detect-interface: true
+#auto-route: true
+#mtu: 9000
+#strict_route: true
+
+dns:
+  enable: true
+  #listen: 127.0.0.1:53 ## Or 0.0.0.0:53 for LAN.
+  ipv6: true
+  prefer-h3: true
+  default-nameserver:
+    - "127.0.0.1"
+    - "1.1.1.1"
+  enhanced-mode: fake-ip
+  use-hosts: true
+  nameserver:
+    - "127.0.0.1"
+    - "1.1.1.1"
+  fallback:
+    - "https://1.1.1.1/dns-query"
+    - "https://8.8.8.8/dns-query"
+    - "https://9.9.9.9/dns-query"
+    - "https://sky.rethinkdns.com/dns-query"
+  fallback-filter:
+    geoip: false
+
+proxy-groups:
+  - name: global
+    type: select
+    proxies:
+      - auto
+      - manual
+      - DIRECT
+      - REJECT
+
+  - name: manual
+    type: select
+    use:
+      #- local
+      - aggregator
+
+  - name: auto
+    type: url-test
+    #filter: "🏁"
+    use:
+      #- local
+      - aggregator
+
+proxy-providers:
+  aggregator:
+    type: http
+    url: "https://cdn.jsdelivr.net/gh/mahdibland/V2RayAggregator@master/sub/sub_merge_yaml.yml"
+    interval: 86400
+    path: ./providers/aggregator.yaml
+    health-check:
+      enable: true
+      interval: 3600
+      lazy: true
+      #url: "https://cp.cloudflare.com"
+      url: "https://cdn.jsdelivr.net"
+      #url: "https://detectportal.firefox.com/success.txt"
+
+rule-providers:
+  applications:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
+    path: ./ruleset/applications.yaml
+    interval: 86400
+
+rules:
+  - GEOSITE,category-ads-all,REJECT ## Rejects advertisements.
+  - GEOSITE,win-spy,REJECT ## Rejects MS Windows analytics and spying.
+  - GEOSITE,category-games,DIRECT ## Online gaming
+  - GEOIP,private,DIRECT ## Loopback and LAN IPs
+  - RULE-SET,applications,DIRECT ## P2P software e.g. BitTorrent.
+  - DOMAIN,yacd.metacubex.one,DIRECT ## Yet Another Clash Dashbord for Clash.Meta
+  - DOMAIN,clash.metacubex.one,DIRECT ## Razord
+  - MATCH,global
