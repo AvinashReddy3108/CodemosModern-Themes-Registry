@@ -4,24 +4,29 @@ version = "0.1.0"
 description = "Fetches themes from 'vscodethemes.com' and constructs the theme registry for use in Codemos Modern"
 readme = "README.md"
 requires-python = ">=3.14"
+authors = [
+  { name = "Avinash Reddy", email = "avinashreddy3108+github@gmail.com" }
+]
 dependencies = [
-  "commentjson>=0.9.0",
-  "hishel[async]>=1.2.1",
+  "asyncer>=0.0.17",
   "httpx>=0.28.1",
+  "json-with-comments>=1.2.10",
   "loguru>=0.7.3",
+  "msgspec>=0.21.1",
   "pathvalidate>=3.3.1",
-  "python-daemon>=3.1.2",
+  "pyrate-limiter>=4.1.0",
+  "scancode-toolkit>=32.5.0",
   "tenacity>=9.1.4",
   "typer>=0.25.1",
 ]
 
 [project.scripts]
-registrar = "registrar.cli:app"
+registrar = "registrar:cli.app"
 
 [dependency-groups]
 dev = [
-  "ruff>=0.15.12",
-  "ty>=0.0.34",
+  "ruff>=0.15.13",
+  "ty>=0.0.35",
 ]
 
 [build-system]

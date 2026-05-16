@@ -1,29 +1,19 @@
-from io import BytesIO
-
 from registrar.logging import log
+from io import BytesIO
 
 
 class VSIXDownloader:
-    def __init__(self, client, cache):
+    def __init__(self, client):
         self.client = client
-        self.cache = cache
 
     async def download(self, ext):
-        log.info(f"[vsix] {ext.publisher}.{ext.name}@{ext.version}")
-
-        path = self.cache.path(ext.publisher, ext.name, ext.version)
-
-        cached = self.cache.get(path)
-        if cached:
-            log.debug("[vsix] cache hit")
-            return BytesIO(cached)
-
-        log.debug(f"[vsix] downloading {ext.vsix_url}")
-
+        log.info(
+            f"Downloading VSIX package archive: {ext.publisher}.{ext.name} (v{ext.version})"
+        )
         resp = await self.client.get(ext.vsix_url)
         resp.raise_for_status()
-
-        self.cache.save(path, resp.content)
-
-        log.info(f"[vsix] saved {path}")
+        size_mb = len(resp.content) / (1024 * 1024)
+        log.debug(
+            f"Download complete for {ext.publisher}.{ext.name} ({size_mb:.2f} MB extracted to stream buffer)"
+        )
         return BytesIO(resp.content)

@@ -4,10 +4,9 @@ from registrar.utils.file import safe_filename
 
 
 class MetadataService:
-    def __init__(self, client, api_url: str, cache):
+    def __init__(self, client, api_url: str):
         self.client = client
         self.api_url = api_url
-        self.cache = cache
 
     def _build_payload(self, extension_id: str):
         return {
@@ -22,61 +21,83 @@ class MetadataService:
         }
 
     async def fetch(self, extension_id: str):
-        log.debug(f"[metadata] fetch {extension_id}")
-
-        payload = self._build_payload(extension_id)
-
-        cached = self.cache.get("POST", self.api_url, payload)
-        if cached:
-            log.debug(f"[metadata] cache hit {extension_id}")
-            return cached
-
-        log.info(f"[metadata] cache miss {extension_id}")
-
         headers = {
             "Content-Type": "application/json",
             "Accept": "application/json; charset=utf-8; api-version=7.2-preview.1",
         }
-
+        log.debug(f"Querying Marketplace metadata for ID: {extension_id}")
         resp = await self.client.post(
-            self.api_url,
-            headers=headers,
-            json=payload,
+            self.api_url, headers=headers, json=self._build_payload(extension_id)
         )
         resp.raise_for_status()
+        return resp.json()
 
-        data = resp.json()
+    def _parse_extension_name(self, ext: dict):
+        name = ext["extensionName"]
+        display_name = ext["displayName"]
+        return f"{display_name} ({name})" if display_name != name else f"{display_name}"
 
-        self.cache.set("POST", self.api_url, data, payload)
+    def _parse_publisher(self, ext: dict):
+        name = ext["publisher"]["publisherName"]
+        display_name = ext["publisher"]["displayName"]
+        return f"{display_name} ({name})" if display_name != name else f"{display_name}"
 
-        return data
-
-    def parse(self, data: dict, extension_id: str) -> Extension:
+    def parse(self, data: dict, extension_id: str) -> Extension | None:
         try:
-            ext = data["results"][0]["extensions"][0]
-            version = ext["versions"][0]
+            results = data.get("results", [])
+            if not results or not results[0].get("extensions"):
+                log.warning(
+                    f"Marketplace returned no metadata record for ID: {extension_id}"
+                )
+                return None
 
-            log.debug(f"[metadata] parsed {extension_id}")
+            ext = results[0]["extensions"][0]
+            versions = ext.get("versions", [])
+            if not versions:
+                log.warning(
+                    f"No released versions found for extension ID: {extension_id}"
+                )
+                return None
 
-            return Extension(
-                publisher=safe_filename(ext["publisher"]["displayName"]),
-                name=safe_filename(ext["displayName"]),
-                version=version["version"],
-                vsix_url=next(
+            version = versions[0]
+
+            vsix_url = next(
+                (
                     f["source"]
-                    for f in version["files"]
+                    for f in version.get("files", [])
                     if "VSIXPackage" in f["assetType"]
                 ),
-                license_url=next(
-                    (
-                        f["source"]
-                        for f in version["files"]
-                        if "License" in f["assetType"]
-                    ),
-                    None,
-                ),
+                None,
             )
 
-        except Exception as e:
-            log.error(f"[metadata] parse failed {extension_id}: {e}")
-            raise
+            if not vsix_url:
+                log.warning(
+                    f"Extension {extension_id} has no valid VSIX package URL reference."
+                )
+
+            license_url = next(
+                (
+                    f["source"]
+                    for f in version.get("files", [])
+                    if "License" in f["assetType"]
+                ),
+                None,
+            )
+
+            parsed_ext = Extension(
+                publisher=safe_filename(self._parse_publisher(ext)),
+                name=safe_filename(self._parse_extension_name(ext)),
+                version=version["version"],
+                vsix_url=vsix_url,  # ty:ignore[invalid-argument-type]
+                license_url=license_url,
+            )
+            log.debug(
+                f"Parsed metadata for {extension_id} -> {parsed_ext.publisher} - {parsed_ext.name} (v{parsed_ext.version})"
+            )
+            return parsed_ext
+
+        except (KeyError, IndexError) as e:
+            log.error(
+                f"Failed structure parsing payload schemas for extension {extension_id}: {e}"
+            )
+            return None
