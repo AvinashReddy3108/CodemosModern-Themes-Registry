@@ -30,8 +30,8 @@ def setup_logging(level: str = "INFO"):
         format="{message}",
     )
 
-    # Add file sink with rotation/compression
-    logger.add("registrar.log", level=level, rotation="10 MB", compression="zip")
+    # Add file sink
+    logger.add("registrar.log", level=level)
 
     # Map string level to numeric logging level
     numeric_level = getattr(logging, level.upper(), logging.INFO)

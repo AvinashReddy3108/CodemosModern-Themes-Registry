@@ -1,8 +1,8 @@
-from registrar.logging import log
 from typing import Optional
 
 import typer
 
+from registrar.logging import log
 from registrar.runner import Runner
 from registrar.utils.progress import make_progress
 

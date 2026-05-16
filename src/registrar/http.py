@@ -1,6 +1,7 @@
 import asyncio
 
 import httpx
+from pyrate_limiter import Duration
 from pyrate_limiter.limiter_factory import create_inmemory_limiter
 from tenacity import (
     retry,
@@ -12,13 +13,10 @@ from tenacity import (
 from registrar.config import MARKETPLACE_API
 from registrar.logging import log
 
-# Separate limiters
+# Limiter for Marketplace API
 marketplace_limiter = create_inmemory_limiter(
-    duration=30, rate_per_duration=5
-)  # 5 requests per 30s
-vsix_limiter = create_inmemory_limiter(
-    duration=60, rate_per_duration=2
-)  # 2 downloads per minute
+    duration=5 * Duration.MINUTE, rate_per_duration=150
+)
 
 
 def is_retryable_exception(exc: BaseException) -> bool:
@@ -81,11 +79,6 @@ class HTTPClient:
                     "Throttling request pipeline via Marketplace rate limiter constraints..."
                 )
                 await marketplace_limiter.try_acquire_async("marketplace")
-            elif url.endswith(".vsix"):
-                log.debug(
-                    "Throttling target asset download pipeline via VSIX rate limiter constraints..."
-                )
-                await vsix_limiter.try_acquire_async("vsix")
 
             log.debug(f"Outbound HTTP Request Execution: {method.upper()} -> {url}")
             resp = await func(url, **kwargs)

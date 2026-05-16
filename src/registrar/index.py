@@ -1,9 +1,10 @@
-from registrar.logging import log
 import asyncio
 import hashlib
 from pathlib import Path
 
 import msgspec
+
+from registrar.logging import log
 
 
 class IndexManager:

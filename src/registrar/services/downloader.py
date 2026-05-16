@@ -1,5 +1,6 @@
-from registrar.logging import log
 from io import BytesIO
+
+from registrar.logging import log
 
 
 class VSIXDownloader:
