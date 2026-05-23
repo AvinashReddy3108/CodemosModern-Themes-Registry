@@ -1,0 +1,238 @@
+{
+    "tokenColors": [
+        { "settings": { "background": "#FFFFFF", "foreground": "#000000" } },
+        {
+            "name": "Comment",
+            "scope": ["comment", "extract.custom.title.sql"],
+            "settings": { "fontStyle": "italic", "foreground": "#CCCCCC" }
+        },
+        {
+            "name": "Query Title",
+            "scope": "custom.title.sql",
+            "settings": { "fontStyle": "", "foreground": "#CC6633" }
+        },
+        {
+            "name": "Keyword",
+            "scope": ["keyword", "storage"],
+            "settings": { "fontStyle": "bold", "foreground": "#052090" }
+        },
+        {
+            "name": "Number",
+            "scope": "constant.numeric",
+            "settings": { "fontStyle": "bold", "foreground": "#0433ff" }
+        },
+        {
+            "name": "User-defined constant",
+            "scope": "constant",
+            "settings": { "fontStyle": "bold", "foreground": "#942193" }
+        },
+        {
+            "name": "Built-in constant",
+            "scope": "constant.language",
+            "settings": { "fontStyle": "bold", "foreground": "#942193" }
+        },
+        {
+            "name": "Variable",
+            "scope": ["variable.language", "variable.other"],
+            "settings": { "fontStyle": "", "foreground": "#000000" }
+        },
+        {
+            "name": "String",
+            "scope": "string",
+            "settings": {
+                "background": "#FFFFFF",
+                "fontStyle": " bold",
+                "foreground": "#1c8c20"
+            }
+        },
+        {
+            "name": "String unquoted",
+            "scope": "string.unquoted",
+            "settings": {
+                "background": "#FFFFFF",
+                "fontStyle": "",
+                "foreground": "#928f1b"
+            }
+        },
+        {
+            "name": "String interpolation",
+            "scope": ["constant.character.escape", "string source"],
+            "settings": { "fontStyle": "", "foreground": "#128d15" }
+        },
+        {
+            "name": "Preprocessor line",
+            "scope": "meta.preprocessor",
+            "settings": { "fontStyle": "", "foreground": "#1A921C" }
+        },
+        {
+            "name": "Preprocessor directive",
+            "scope": "keyword.control.import",
+            "settings": { "fontStyle": "bold", "foreground": "#0C450D" }
+        },
+        {
+            "name": "Console",
+            "scope": ["support.type.object.console"],
+            "settings": { "fontStyle": "", "foreground": "#981798" }
+        },
+        {
+            "name": "Console",
+            "scope": ["support.function.console"],
+            "settings": { "fontStyle": "italic", "foreground": "#3c3c3c" }
+        },
+        {
+            "name": "Function name",
+            "scope": ["entity.name.function", "support.function.any-method"],
+            "settings": { "fontStyle": " italic", "foreground": "#797979" }
+        },
+        {
+            "name": "Type name",
+            "scope": "entity.name.type",
+            "settings": { "fontStyle": "italic", "foreground": "#cccccc" }
+        },
+        {
+            "name": "Inherited class name",
+            "scope": "entity.other.inherited-class",
+            "settings": { "fontStyle": "" }
+        },
+        {
+            "name": "Function parameter",
+            "scope": "variable.parameter",
+            "settings": { "fontStyle": "", "foreground": "#000000" }
+        },
+        {
+            "name": "Function argument and result types",
+            "scope": "storage.type.method",
+            "settings": { "fontStyle": "", "foreground": "#70727E" }
+        },
+        {
+            "name": "Section",
+            "scope": [
+                "meta.section entity.name.section",
+                "declaration.section entity.name.section"
+            ],
+            "settings": { "fontStyle": "italic", "foreground": "#000000" }
+        },
+        {
+            "name": "Library function",
+            "scope": "support.function",
+            "settings": { "fontStyle": "", "foreground": "#990099" }
+        },
+        {
+            "name": "Library object",
+            "scope": ["support.class", "support.type"],
+            "settings": { "fontStyle": "", "foreground": "#929292" }
+        },
+        {
+            "name": "Library constant",
+            "scope": "support.constant",
+            "settings": { "fontStyle": "", "foreground": "#990099" }
+        },
+        {
+            "name": "Library variable",
+            "scope": "support.variable",
+            "settings": { "fontStyle": "", "foreground": "#CC6633" }
+        },
+        {
+            "name": "Operator",
+            "scope": "keyword.operator",
+            "settings": { "foreground": "#09268e" }
+        },
+        {
+            "name": "JS: Operator",
+            "scope": "keyword.operator.js",
+            "settings": { "foreground": "#000000" }
+        },
+        {
+            "name": "Invalid",
+            "scope": "invalid",
+            "settings": { "background": "#990000", "foreground": "#FFFFFF" }
+        },
+        {
+            "name": "Invalid trailing whitespace",
+            "scope": "invalid.deprecated.trailing-whitespace",
+            "settings": { "background": "#FFD0D0", "foreground": "#00000000" }
+        },
+        {
+            "name": "Embedded source",
+            "scope": ["text source", "string.unquoted"],
+            "settings": { "background": "#FFFFFF" }
+        },
+        {
+            "name": "Embedded embedded source",
+            "scope": ["text source string.unquoted", "text source text source"],
+            "settings": { "background": "#0000000F" }
+        },
+        {
+            "name": "Markup XML declaration",
+            "scope": "meta.tag.preprocessor.xml",
+            "settings": { "fontStyle": "", "foreground": "#68685B" }
+        },
+        {
+            "name": "Markup DOCTYPE",
+            "scope": [
+                "meta.tag.sgml.doctype",
+                "meta.tag.sgml.doctype entity",
+                "meta.tag.sgml.doctype string",
+                "meta.tag.preprocessor.xml",
+                "meta.tag.preprocessor.xml entity",
+                "meta.tag.preprocessor.xml string"
+            ],
+            "settings": { "fontStyle": "", "foreground": "#888888" }
+        },
+        {
+            "name": "Markup DTD",
+            "scope": "string.quoted.docinfo.doctype.DTD",
+            "settings": { "fontStyle": "italic" }
+        },
+        {
+            "name": "Markup tag",
+            "scope": ["meta.tag", "declaration.tag"],
+            "settings": { "fontStyle": "", "foreground": "#1C02FF" }
+        },
+        {
+            "name": "Markup name of tag",
+            "scope": "entity.name.tag",
+            "settings": { "fontStyle": "bold" }
+        },
+        {
+            "name": "Markup tag attribute",
+            "scope": "entity.other.attribute-name",
+            "settings": { "fontStyle": "italic" }
+        },
+        {
+            "name": "Markup: Heading",
+            "scope": "markup.heading",
+            "settings": { "fontStyle": "bold", "foreground": "#0C07FF" }
+        },
+        {
+            "name": "Markup: Quote",
+            "scope": "markup.quote",
+            "settings": { "fontStyle": "italic", "foreground": "#000000" }
+        },
+        {
+            "name": "Markup: List",
+            "scope": "markup.list",
+            "settings": { "foreground": "#B90690" }
+        },
+        {
+            "name": "Support type property name",
+            "scope": ["support.type.property_name"],
+            "settings": { "fontStyle": "", "foreground": "#929292" }
+        },
+        {
+            "name": "This keyword",
+            "scope": ["variable.language.this"],
+            "settings": { "fontStyle": "", "foreground": "#368494" }
+        }
+    ],
+    "colors": {
+        "editor.background": "#FFFFFF",
+        "editorCursor.foreground": "#000000",
+        "editor.foreground": "#000000",
+        "editorWhitespace.foreground": "#BFBFBF",
+        "editor.lineHighlightBackground": "#00000012",
+        "editor.selectionBackground": "#4D97FF54"
+    },
+    "name": "Noemi",
+    "$schema": "vscode://schemas/color-theme"
+}

@@ -1,0 +1,63 @@
+{
+    "$schema": "vscode://schemas/color-theme",
+    "name": "Lorem Gypsum High Contrast",
+    "type": "hc",
+    "colors": {
+        "editor.background": "#000000",
+        "editor.foreground": "#FFFFFF",
+        "editorIndentGuide.background1": "#FFFFFF",
+        "editorIndentGuide.activeBackground1": "#FFFFFF",
+        "sideBarTitle.foreground": "#FFFFFF",
+        "selection.background": "#008000",
+        "editor.selectionBackground": "#FFFFFF",
+        "statusBarItem.remoteBackground": "#00000000",
+        "ports.iconRunningProcessForeground": "#FFFFFF",
+        "editorWhitespace.foreground": "#7c7c7c",
+        "actionBar.toggledBackground": "#383a49"
+    },
+    "tokenColors": [
+        {
+            "name": "Comments",
+            "scope": ["comment", "punctuation.definition.comment"],
+            "settings": { "foreground": "#ce9178" }
+        },
+        {
+            "name": "Strings",
+            "scope": [
+                "string",
+                "string.regexp",
+                "punctuation.definition.string",
+                "constant.other.symbol"
+            ],
+            "settings": { "foreground": "#7ca668" }
+        },
+        {
+            "name": "Strings: Escape Sequences",
+            "scope": "constant.character.escape",
+            "settings": { "foreground": "#569cd6" }
+        },
+        {
+            "name": "Numbers, Characters",
+            "scope": [
+                "constant.numeric",
+                "constant.character",
+                "constant.keyword",
+                "constant",
+                "variable.other.constant",
+                "support.type.property-name"
+            ],
+            "settings": { "foreground": "#569cd6" }
+        },
+        {
+            "name": "Global definitions",
+            "scope": ["entity.name"],
+            "settings": { "foreground": "#569cd6" }
+        },
+        {
+            "name": "Invalid",
+            "scope": "invalid",
+            "settings": { "foreground": "#f44747" }
+        }
+    ],
+    "semanticHighlighting": false
+}

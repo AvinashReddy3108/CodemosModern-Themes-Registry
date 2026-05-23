@@ -1,0 +1,233 @@
+{
+    "colors": {
+        "statusBar.background": "#3b4b51",
+        "statusBar.noFolderBackground": "#3f274b",
+        "statusBar.debuggingBackground": "#5d4343"
+    },
+    "semanticHighlighting": true,
+    "semanticTokenColors": {
+        "keyword": "#dd824d",
+        "class": "#dbab68",
+        "type": "#dbab68",
+        "method": { "foreground": "#e4c769", "fontStyle": "italic" },
+        "function": { "foreground": "#e4c769", "fontStyle": "bold" },
+        "method.static": { "fontStyle": "italic bold" },
+        "property.annotation": "#bccb99",
+        "source.interpolation": {
+            "foreground": "#a973be",
+            "fontStyle": "bold"
+        },
+        "property.static": { "fontStyle": "italic" },
+        "parameter.label": { "foreground": "#81a7a9", "fontStyle": "italic" },
+        "variable": "#c0bbbb",
+        "variable.readonly": { "foreground": "#56aecb", "fontStyle": "bold" },
+        "property.readonly": { "foreground": "#56aecb", "fontStyle": "bold" },
+        "variable.defaultLibrary": {
+            "foreground": "#a973be",
+            "fontStyle": "bold"
+        }
+    },
+    "tokenColors": [
+        {
+            "name": "normal comments",
+            "scope": ["comment.block", "comment.line"],
+            "settings": { "foreground": "#6f7b7d", "fontStyle": "italic" }
+        },
+        {
+            "name": "documentation comments",
+            "scope": "comment.block.documentation",
+            "settings": { "foreground": "#51935b" }
+        },
+        {
+            "name": "keywords and semicolons",
+            "scope": [
+                "constant.character.escape",
+                "constant.language",
+                "constant.language.boolean.yaml",
+                "keyword",
+                "keyword.operator.new.ts",
+                "punctuation.terminator",
+                "storage.modifier",
+                "storage.type.class",
+                "storage.type.function",
+                "storage.type.namespace",
+                "storage.type.ts",
+                "storage.type",
+                "support.type.builtin.ts",
+                "variable.language.dart",
+                "variable.language.super",
+                "variable.language.this"
+            ],
+            "settings": { "foreground": "#dd824d" }
+        },
+        {
+            "name": "semicolon and node modules",
+            "scope": [
+                "punctuation.terminator.dart",
+                "keyword.control.export",
+                "keyword.control.import",
+                "storage.type.namespace"
+            ],
+            "settings": { "fontStyle": "bold" }
+        },
+        {
+            "name": "classes and types",
+            "scope": [
+                "entity.name.tag.css",
+                "entity.name.type.go",
+                "entity.name.type.ts",
+                "entity.name.type.module.ts",
+                "entity.name.type.receiver.go",
+                "storage.type",
+                "support.class.dart",
+                "support.type.primitive",
+                "variable.other.object.ts"
+            ],
+            "settings": { "foreground": "#dbab68" }
+        },
+        {
+            "name": "module and namespace",
+            "scope": ["entity.name.tag.css", "entity.name.type.module.ts"],
+            "settings": { "foreground": "#dbab68", "fontStyle": "italic" }
+        },
+        {
+            "name": "functions and methods",
+            "scope": [
+                "entity.name.function",
+                "entity.other.attribute-name.class.css",
+                "entity.other.attribute-name.id",
+                "meta.at-rule.extend.scss",
+                "support.function.go"
+            ],
+            "settings": { "foreground": "#e4c769" }
+        },
+        {
+            "name": "css classes",
+            "scope": [
+                "entity.name.tag.html",
+                "entity.name.tag.script.html.vue",
+                "entity.name.tag.style.html.vue",
+                "entity.name.tag.template.html.vue",
+                "entity.other.attribute-name.class.css"
+            ],
+            "settings": { "foreground": "#e4c769", "fontStyle": "italic" }
+        },
+        {
+            "name": "variables in templates",
+            "scope": ["variable.other.readwrite.ts"],
+            "settings": { "foreground": "#c0bbbb" }
+        },
+        {
+            "name": "properties of types",
+            "scope": [
+                "variable.other.field.go",
+                "variable.other.property.ts",
+                "variable.other.object.property.ts",
+                "variable.other.receiver.go",
+                "meta.object-literal.key"
+            ],
+            "settings": { "foreground": "#c3b2b2", "fontStyle": "italic" }
+        },
+        {
+            "name": "storage type annotations.",
+            "scope": [
+                "constant.other.color.rgb-value.hex.css",
+                "constant.other.rgb-value.css",
+                "storage.type.annotation.dart",
+                "storage.type.class.jsdoc"
+            ],
+            "settings": { "foreground": "#a6ba74", "fontStyle": "italic" }
+        },
+        {
+            "name": "strings",
+            "scope": [
+                "markup.quote.markdown",
+                "string.interpolated",
+                "string.quoted.double",
+                "string.quoted.single",
+                "string.template",
+                "string.unquoted",
+                "support.constant.property-value.css"
+            ],
+            "settings": { "foreground": "#6da228" }
+        },
+        {
+            "name": "operators",
+            "scope": ["keyword.operator", "keyword.other.unit"],
+            "settings": { "foreground": "#88cac8" }
+        },
+        {
+            "name": "scss and less variables",
+            "scope": ["variable.scss", "variable.other.less"],
+            "settings": { "foreground": "#56aecb" }
+        },
+        {
+            "name": "numbers",
+            "scope": ["constant.numeric"],
+            "settings": { "foreground": "#419cd5" }
+        },
+        {
+            "name": "special variables and key words.",
+            "scope": [
+                "constant.other.placeholder.go",
+                "entity.name.tag.yaml",
+                "entity.other.attribute-name.html",
+                "keyword.other.definition.ini",
+                "markup.heading.markdown",
+                "punctuation.definition.list.begin.markdown",
+                "punctuation.definition.quote.begin.markdown",
+                "punctuation.definition.template-expression.begin",
+                "punctuation.definition.template-expression.end",
+                "support.type.property-name.json",
+                "support.type.property-name.css",
+                "variable.other.description.jsdoc",
+                "variable.other.jsdoc",
+                "variable.other.source.dart"
+            ],
+            "settings": { "foreground": "#a973be" }
+        },
+        {
+            "name": "markdown bold",
+            "scope": "markup.bold.markdown",
+            "settings": { "foreground": "#32a6d4", "fontStyle": "bold" }
+        },
+        {
+            "name": "markdown italic",
+            "scope": "markup.italic",
+            "settings": { "foreground": "#4bc8bc", "fontStyle": "italic" }
+        },
+        {
+            "name": "markdown inline codes",
+            "scope": "markup.inline.raw.string.markdown",
+            "settings": { "foreground": "#d5b66c" }
+        },
+        {
+            "name": "markdown links title",
+            "scope": ["string.other.link.title.markdown"],
+            "settings": { "foreground": "#398edd", "fontStyle": "bold" }
+        },
+        {
+            "name": "markdown links path",
+            "scope": [
+                "meta.image.inline.markdown",
+                "meta.link.inline.markdown"
+            ],
+            "settings": {
+                "foreground": "#798386",
+                "fontStyle": "italic underline"
+            }
+        },
+        {
+            "name": "vice link decorations",
+            "scope": [
+                "punctuation.definition.link.description.begin.markdown",
+                "punctuation.definition.link.description.end.markdown",
+                "punctuation.definition.link.title.begin.markdown",
+                "punctuation.definition.link.title.end.markdown",
+                "punctuation.definition.metadata.markdown"
+            ],
+            "settings": { "foreground": "#798386", "fontStyle": "" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

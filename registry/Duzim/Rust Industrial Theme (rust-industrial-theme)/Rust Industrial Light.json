@@ -1,0 +1,178 @@
+{
+    "name": "Rust Industrial Light",
+    "type": "light",
+    "colors": {
+        "editor.background": "#f5f5f5",
+        "editor.foreground": "#333333",
+        "sideBar.background": "#ebebeb",
+        "activityBar.background": "#ebebeb",
+        "activityBar.foreground": "#d93a18",
+        "statusBar.background": "#d93a18",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.border": "#c23415",
+        "editorCursor.foreground": "#d93a18",
+        "editor.selectionBackground": "#d4d4d4",
+        "editor.lineHighlightBackground": "#eaeaea",
+        "editorLineNumber.activeForeground": "#d93a18",
+        "tab.activeBackground": "#f5f5f5",
+        "tab.activeForeground": "#d93a18",
+        "tab.inactiveBackground": "#ebebeb",
+        "tab.border": "#d4d4d4",
+        "editorError.foreground": "#d93a18",
+        "editorWarning.foreground": "#b8860b",
+        "editorInfo.foreground": "#3a5f5f",
+        "editorHint.foreground": "#3a7a3a"
+    },
+    "tokenColors": [
+        {
+            "name": "Keywords e Estruturas de Controle",
+            "scope": [
+                "keyword",
+                "storage.type",
+                "storage.modifier",
+                "keyword.control"
+            ],
+            "settings": { "foreground": "#d93a18" }
+        },
+        {
+            "name": "Funções e Métodos",
+            "scope": [
+                "entity.name.function",
+                "support.function",
+                "variable.function"
+            ],
+            "settings": { "foreground": "#5c4033" }
+        },
+        {
+            "name": "Strings e Caracteres",
+            "scope": ["string", "constant.character"],
+            "settings": { "foreground": "#4d661a" }
+        },
+        {
+            "name": "Tipos, Structs e Enums",
+            "scope": ["entity.name.type", "support.type", "support.class"],
+            "settings": { "foreground": "#b8860b" }
+        },
+        {
+            "name": "Números e Constantes",
+            "scope": [
+                "constant.numeric",
+                "constant.language",
+                "support.constant"
+            ],
+            "settings": { "foreground": "#9b4d6a" }
+        },
+        {
+            "name": "Comentários",
+            "scope": ["comment", "punctuation.definition.comment"],
+            "settings": { "foreground": "#808080", "fontStyle": "italic" }
+        },
+        {
+            "name": "Macros (Rust)",
+            "scope": ["entity.name.function.macro", "support.function.macro"],
+            "settings": { "foreground": "#3a7a3a", "fontStyle": "bold" }
+        },
+        {
+            "name": "Lifetimes (Rust)",
+            "scope": ["storage.modifier.lifetime", "entity.name.type.lifetime"],
+            "settings": { "foreground": "#9b4d6a", "fontStyle": "italic" }
+        },
+        {
+            "name": "TOML: Tabelas e Seções",
+            "scope": [
+                "entity.name.section.toml",
+                "support.type.property-name.table.toml",
+                "meta.tag.toml"
+            ],
+            "settings": { "foreground": "#fabd2f", "fontStyle": "bold" }
+        },
+        {
+            "name": "TOML: Chaves (Keys)",
+            "scope": [
+                "variable.key.toml",
+                "support.type.property-name.toml",
+                "keyword.key.toml"
+            ],
+            "settings": { "foreground": "#83a598" }
+        },
+        {
+            "name": "TOML: Pontuação",
+            "scope": [
+                "punctuation.definition.table.toml",
+                "punctuation.separator.key-value.toml"
+            ],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "Markdown: Títulos (Headings)",
+            "scope": [
+                "markup.heading",
+                "punctuation.definition.heading.markdown"
+            ],
+            "settings": { "foreground": "#b8860b", "fontStyle": "bold" }
+        },
+        {
+            "name": "Markdown: Negrito",
+            "scope": ["markup.bold", "punctuation.definition.bold.markdown"],
+            "settings": { "foreground": "#d93a18", "fontStyle": "bold" }
+        },
+        {
+            "name": "Markdown: Itálico",
+            "scope": [
+                "markup.italic",
+                "punctuation.definition.italic.markdown"
+            ],
+            "settings": { "foreground": "#9b4d6a", "fontStyle": "italic" }
+        },
+        {
+            "name": "Markdown: Listas e Citações (Blockquote)",
+            "scope": [
+                "markup.quote",
+                "markup.list",
+                "punctuation.definition.list.begin.markdown"
+            ],
+            "settings": { "foreground": "#4d661a" }
+        },
+        {
+            "name": "Markdown: Links e Texto de Link",
+            "scope": [
+                "markup.underline.link",
+                "string.other.link.title.markdown"
+            ],
+            "settings": { "foreground": "#3a5f5f", "fontStyle": "underline" }
+        },
+        {
+            "name": "Markdown: Código Inline (Crases)",
+            "scope": [
+                "markup.inline.raw.string.markdown",
+                "markup.fenced_code.block.markdown"
+            ],
+            "settings": { "foreground": "#5c4033" }
+        },
+        {
+            "name": "HTML/Markdown: Tags HTML",
+            "scope": ["entity.name.tag", "meta.tag.sgml"],
+            "settings": { "foreground": "#b8860b" }
+        },
+        {
+            "name": "HTML/Markdown: Pontuação de Tags (< e >)",
+            "scope": ["punctuation.definition.tag"],
+            "settings": { "foreground": "#808080" }
+        },
+        {
+            "name": "HTML/Markdown: Atributos da Tag",
+            "scope": ["entity.other.attribute-name"],
+            "settings": { "foreground": "#3a5f5f", "fontStyle": "italic" }
+        }
+    ],
+    "semanticHighlighting": true,
+    "semanticTokenColors": {
+        "variable.mut:rust": {
+            "fontStyle": "underline",
+            "foreground": "#d93a18"
+        },
+        "lifetime:rust": { "foreground": "#9b4d6a", "fontStyle": "italic" },
+        "macro:rust": { "foreground": "#3a7a3a", "fontStyle": "bold" }
+    },
+    "$schema": "vscode://schemas/color-theme"
+}

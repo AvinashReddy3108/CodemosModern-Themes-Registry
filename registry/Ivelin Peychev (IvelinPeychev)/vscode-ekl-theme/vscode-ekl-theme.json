@@ -1,0 +1,59 @@
+{
+    "name": "vscode-ekl-theme",
+    "type": "light",
+    "colors": {
+        "editor.background": "#f5f5f5",
+        "editor.foreground": "#000000"
+    },
+    "tokenColors": [
+        {
+            "name": "Comments",
+            "scope": ["comment.line.double-slash.ekl", "comment.block.ekl"],
+            "settings": { "fontStyle": "", "foreground": "#008040" }
+        },
+        {
+            "name": "Types",
+            "scope": ["storage.type.function.ekl"],
+            "settings": { "fontStyle": "bold", "foreground": "#800080" }
+        },
+        {
+            "name": "Numbers, Units, Arithmetic Operators",
+            "scope": [
+                "constant.numeric.ekl",
+                "constant.numeric.units.ekl",
+                "constant.numeric.float.ekl",
+                "markup.deleted"
+            ],
+            "settings": { "fontStyle": "", "foreground": "#FF8000" }
+        },
+        {
+            "name": "Strings",
+            "scope": [
+                "string.quoted.double.ekl",
+                "constant.character.escape.ekl"
+            ],
+            "settings": { "foreground": "#9B0000" }
+        },
+        {
+            "name": "Operators",
+            "scope": "constant.language.ekl",
+            "settings": { "fontStyle": "", "foreground": "#FF8000" }
+        },
+        {
+            "name": "Keywords",
+            "scope": ["keyword.control.ekl"],
+            "settings": { "fontStyle": "bold", "foreground": "#0000FF" }
+        },
+        {
+            "name": "Variables",
+            "scope": ["variable", "support.variable"],
+            "settings": { "foreground": "#000000" }
+        },
+        {
+            "name": "Functions",
+            "scope": ["entity.name.function", "support.function"],
+            "settings": { "fontStyle": "bold", "foreground": "#000000" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

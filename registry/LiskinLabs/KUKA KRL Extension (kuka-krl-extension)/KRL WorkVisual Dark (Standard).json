@@ -1,0 +1,160 @@
+{
+    "name": "KRL WorkVisual Dark",
+    "type": "dark",
+    "colors": {
+        "editor.background": "#282c34",
+        "editor.foreground": "#abb2bf",
+        "editorCursor.foreground": "#ff5e00",
+        "editor.lineHighlightBackground": "#2c313c",
+        "editor.selectionBackground": "#3e4451",
+        "editorIndentGuide.activeBackground": "#ff5e00",
+        "editorIndentGuide.background": "#3b4048",
+        "activityBar.background": "#282c34",
+        "activityBar.foreground": "#d7dae0",
+        "activityBarBadge.background": "#ff5e00",
+        "activityBarBadge.foreground": "#ffffff",
+        "sideBar.background": "#21252b",
+        "sideBar.foreground": "#abb2bf",
+        "sideBarSectionHeader.background": "#282c34",
+        "sideBarSectionHeader.foreground": "#abb2bf",
+        "sideBarTitle.foreground": "#bbbbbb",
+        "statusBar.background": "#21252b",
+        "statusBar.foreground": "#9da5b4",
+        "statusBar.debuggingBackground": "#cc6633",
+        "statusBar.noFolderBackground": "#21252b",
+        "titleBar.activeBackground": "#282c34",
+        "titleBar.activeForeground": "#9da5b4",
+        "list.activeSelectionBackground": "#2c313c",
+        "list.activeSelectionForeground": "#ff5e00",
+        "list.hoverBackground": "#2c313c",
+        "list.inactiveSelectionBackground": "#2c313c",
+        "input.background": "#1d1f23",
+        "input.foreground": "#abb2bf",
+        "input.placeholderForeground": "#5c6370",
+        "inputOption.activeBorder": "#ff5e00",
+        "button.background": "#ff5e00",
+        "button.foreground": "#ffffff",
+        "progressBar.background": "#ff5e00",
+        "tab.activeBorder": "#ff5e00",
+        "tab.inactiveBackground": "#21252b",
+        "gitDecoration.modifiedResourceForeground": "#e2c08d",
+        "gitDecoration.deletedResourceForeground": "#e06c75",
+        "scrollbarSlider.background": "#4b536380",
+        "scrollbarSlider.hoverBackground": "#4b5363",
+        "scrollbarSlider.activeBackground": "#ff5e0080",
+        "breadcrumb.foreground": "#abb2bf",
+        "focusBorder": "#ff5e00"
+    },
+    "tokenColors": [
+        {
+            "scope": "comment",
+            "settings": { "foreground": "#5c6370", "fontStyle": "italic" }
+        },
+        { "scope": "variable", "settings": { "foreground": "#abb2bf" } },
+        { "scope": "string", "settings": { "foreground": "#98c379" } },
+        {
+            "scope": ["constant.numeric"],
+            "settings": { "foreground": "#d19a66" }
+        },
+        {
+            "scope": "keyword.operator",
+            "settings": { "foreground": "#56b6c2" }
+        },
+        {
+            "name": "KRL Comments",
+            "scope": ["comment.line"],
+            "settings": { "foreground": "#5c6370", "fontStyle": "italic" }
+        },
+        {
+            "name": "KRL Comments",
+            "scope": [
+                "comment.line",
+                "comment.line.semicolon.krl",
+                "comment.line.ampersand.krl",
+                "comment.line.bug.krl",
+                "comment.line.fixme.krl",
+                "comment.line.hack.krl",
+                "comment.line.note.krl",
+                "comment.line.todo.krl"
+            ],
+            "settings": { "foreground": "#5c6370", "fontStyle": "italic" }
+        },
+        {
+            "name": "KRL Fold Markers (Subtle)",
+            "scope": [
+                "comment.line.fold.krl",
+                "meta.fold.krl",
+                "keyword.control.fold.krl"
+            ],
+            "settings": { "foreground": "#846672", "fontStyle": "italic" }
+        },
+        {
+            "name": "KRL Control Keywords",
+            "scope": ["keyword.control.krl"],
+            "settings": { "foreground": "#c678dd", "fontStyle": "bold" }
+        },
+        {
+            "name": "KRL Movement Commands (POP)",
+            "scope": ["keyword.function.movement.krl"],
+            "settings": { "foreground": "#61afef", "fontStyle": "bold" }
+        },
+        {
+            "name": "KRL Storage/Types",
+            "scope": [
+                "storage.type.krl",
+                "storage.type.interrupt.krl",
+                "storage.type.trigger.krl"
+            ],
+            "settings": { "foreground": "#e06c75", "fontStyle": "italic" }
+        },
+        {
+            "name": "KRL System Variables",
+            "scope": ["variable.language.system.krl"],
+            "settings": { "foreground": "#d19a66", "fontStyle": "" }
+        },
+        {
+            "name": "KRL Numbers",
+            "scope": [
+                "constant.numeric.krl",
+                "constant.numeric.hex.krl",
+                "constant.numeric.binary.krl"
+            ],
+            "settings": { "foreground": "#d19a66" }
+        },
+        {
+            "name": "KRL Strings",
+            "scope": ["string.quoted.double.krl"],
+            "settings": { "foreground": "#98c379" }
+        },
+        {
+            "name": "KRL User Functions",
+            "scope": ["variable.function.krl"],
+            "settings": { "foreground": "#61afef" }
+        },
+        {
+            "name": "KRL Enums",
+            "scope": [
+                "constant.language.enum.krl",
+                "variable.other.enummember.krl"
+            ],
+            "settings": { "foreground": "#56b6c2" }
+        },
+        {
+            "name": "KRL Built-in Functions",
+            "scope": ["support.function.builtin.krl"],
+            "settings": { "foreground": "#61afef" }
+        },
+        {
+            "name": "KRL Operators",
+            "scope": [
+                "keyword.operator.krl",
+                "keyword.operator.comparison.krl",
+                "keyword.operator.arithmetic.krl",
+                "keyword.operator.bitwise.krl",
+                "keyword.operator.logical.krl"
+            ],
+            "settings": { "foreground": "#56b6c2" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

@@ -1,0 +1,260 @@
+{
+    "name": "Custom Light Lite",
+    "$schema": "vscode://schemas/color-theme",
+    "type": "light",
+    "colors": {
+        "editor.foreground": "#222222",
+        "editor.background": "#FBFBFB",
+        "editorIndentGuide.background": "#E6E6E6",
+        "editorLineNumber.foreground": "#AAAAAA",
+        "editorLineNumber.activeForeground": "#808080",
+        "editor.selectionBackground": "#FCBC055b",
+        "editor.inactiveSelectionBackground": "#E7E8F2",
+        "editor.selectionHighlightBackground": "#E7E8F2",
+        "activityBar.background": "#FBFBFB",
+        "activityBar.foreground": "#222222",
+        "sideBarSectionHeader.background": "#E3F1F6",
+        "sideBar.background": "#FBFBFB",
+        "sideBar.border": "#E6E6E6",
+        "list.activeSelectionForeground": "#FFFFFF",
+        "list.highlightForeground": "#0C31DA",
+        "list.activeSelectionBackground": "#098CC0",
+        "list.focusOutline": "#098CC0",
+        "activityBarBadge.background": "#E3F1F6",
+        "activityBarBadge.foreground": "#090909",
+        "statusBar.background": "#FBFBFB",
+        "statusBar.foreground": "#222222",
+        "statusBar.debuggingBackground": "#CA473F"
+    },
+    "tokenColors": [
+        {
+            "name": "Comment, keyword documentation",
+            "scope": ["comment", "punctuation.definition.comment"],
+            "settings": { "foreground": "#787878" }
+        },
+        {
+            "name": "Variables, puctuation",
+            "scope": [
+                "string constant.other.placeholder",
+                "punctuation",
+                "meta.function-call.arguments",
+                "constant.character",
+                "variable.",
+                "keyword.operator.class.php"
+            ],
+            "settings": { "foreground": "#222222" }
+        },
+        {
+            "name": "Invalid",
+            "scope": ["invalid", "invalid.illegal"],
+            "settings": { "foreground": "#981D15" }
+        },
+        {
+            "name": "Keyword, Storage",
+            "scope": [
+                "storage.type",
+                "storage.modifier",
+                "keyword.control",
+                "keyword.other"
+            ],
+            "settings": { "foreground": "#4285F4" }
+        },
+        {
+            "name": "Operator, Misc",
+            "scope": [
+                "constant.other.color",
+                "meta.tag",
+                "punctuation.definition.tag",
+                "punctuation.definition.tag.html",
+                "punctuation.definition.tag.begin.html",
+                "punctuation.definition.tag.end.html",
+                "punctuation.section.embedded",
+                "keyword.other.template",
+                "keyword.other.substitution",
+                "keyword.other.unit"
+            ],
+            "settings": { "foreground": "#222222" }
+        },
+        {
+            "name": "Function, Special Method",
+            "scope": [
+                "entity.name.function",
+                "variable.function",
+                "support.function",
+                "keyword.other.special-method"
+            ],
+            "settings": { "foreground": "#34A853" }
+        },
+        {
+            "name": "String, Symbols, Inherited Class, Markup Heading",
+            "scope": [
+                "string",
+                "constant.other.symbol",
+                "constant.other.key",
+                "markup.heading",
+                "punctuation.definition.string.begin",
+                "punctuation.definition.string.end",
+                "markup.inserted.git_gutter",
+                "meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
+            ],
+            "settings": { "foreground": "#EA4334", "fontStyle": "italic" }
+        },
+        {
+            "name": "Class, Support",
+            "scope": [
+                "entity.name",
+                "entity.other.inherited-class",
+                "support.type",
+                "support.class",
+                "markup.changed.git_gutter",
+                "support.type.sys-types"
+            ],
+            "settings": { "foreground": "#EA4334" }
+        },
+        {
+            "name": "Entity Types",
+            "scope": ["support.type"],
+            "settings": { "foreground": "#EA4334" }
+        },
+        {
+            "name": "this, self",
+            "scope": ["variable.language"],
+            "settings": { "foreground": "#222222" }
+        },
+        {
+            "name": "Regular Expressions",
+            "scope": ["string.regexp"],
+            "settings": { "foreground": "#0782b1" }
+        },
+        {
+            "name": "Escape Characters",
+            "scope": ["constant.character.escape"],
+            "settings": { "foreground": "#0782b1" }
+        },
+        {
+            "name": "Javascript:",
+            "scope": ["variable.other"],
+            "settings": { "foreground": "#222222" }
+        },
+        {
+            "name": "Javascript: string in jsx",
+            "scope": ["meta.jsx.children.js string"],
+            "settings": { "foreground": "#055472" }
+        },
+        {
+            "name": "PHP: variable",
+            "scope": [
+                "variable.language.this.php punctuation.definition.variable.php",
+                "punctuation.definition.variable.php",
+                "variable.other.php"
+            ],
+            "settings": { "foreground": "#222222" }
+        },
+        {
+            "name": "PHP: class use, namespace",
+            "scope": [
+                "support.class.php",
+                "support.other.namespace.php",
+                "punctuation.separator.inheritance.php",
+                "entity.name.type.namespace"
+            ],
+            "settings": { "foreground": "#EA4334" }
+        },
+        {
+            "name": "PHP: Type in documentation",
+            "scope": [
+                "comment.block.documentation.phpdoc.php support.other.namespace.php",
+                "comment.block.documentation.phpdoc.php punctuation.separator.inheritance.php",
+                "comment.block.documentation.phpdoc.php punctuation.separator.delimiter.php",
+                "comment.block.documentation.phpdoc.php support.class.builtin.php"
+            ],
+            "settings": { "foreground": "#787878" }
+        },
+        {
+            "name": "PHP: @var in documentation",
+            "scope": "comment.block.documentation.phpdoc.php keyword.other",
+            "settings": { "foreground": "#4285F4" }
+        },
+        {
+            "name": "PHP: class variables",
+            "scope": "variable.other.property.php",
+            "settings": { "foreground": "#34A853" }
+        },
+        {
+            "name": "PHP: opening/closing tag",
+            "scope": [
+                "punctuation.section.embedded.begin.php",
+                "punctuation.section.embedded.end.php"
+            ],
+            "settings": { "foreground": "#4285F4" }
+        },
+        {
+            "name": "PHP: true/false/other constants",
+            "scope": "constant.language.php",
+            "settings": { "foreground": "#4285F4" }
+        },
+        {
+            "scope": "constant.other.class.php",
+            "settings": { "foreground": "#34A853", "fontStyle": "bold" }
+        },
+        {
+            "name": "HTML: Name Tag",
+            "scope": ["entity.name.tag"],
+            "settings": { "foreground": "#4285F4" }
+        },
+        {
+            "name": "HTML: punctuation tag",
+            "scope": [
+                "punctuation.definition.tag",
+                "punctuation.definition.tag.begin.html",
+                "punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#222222" }
+        },
+        {
+            "name": "HTML: attribute",
+            "scope": ["meta.tag"],
+            "settings": { "foreground": "#34A853" }
+        },
+        {
+            "name": "HTML: String",
+            "scope": [
+                "string.quoted.double.html",
+                "punctuation.definition.string.end.html",
+                "punctuation.definition.string.begin.html"
+            ],
+            "settings": { "foreground": "#222222", "fontStyle": "" }
+        },
+        {
+            "name": "CSS Class and Support",
+            "scope": [
+                "source.css support.type.property-name",
+                "source.sass support.type.property-name",
+                "source.scss support.type.property-name",
+                "source.less support.type.property-name",
+                "source.stylus support.type.property-name",
+                "source.postcss support.type.property-name"
+            ],
+            "settings": { "foreground": "#34A853" }
+        },
+        {
+            "name": "CSS Classes",
+            "scope": ["entity.other.attribute-name.class"],
+            "settings": { "foreground": "#222222" }
+        },
+        {
+            "name": "CSS punctuation definition",
+            "scope": ["source.css keyword.other.unit"],
+            "settings": { "foreground": "#222222" }
+        },
+        {
+            "name": "JSON: Puntuation",
+            "scope": [
+                "support.type.property-name.json",
+                "punctuation.support.type.property-name.begin.json",
+                "punctuation.support.type.property-name.end.json"
+            ],
+            "settings": { "foreground": "#055472" }
+        }
+    ]
+}

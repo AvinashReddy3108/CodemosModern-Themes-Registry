@@ -1,0 +1,223 @@
+{
+    "name": "TIL Dark",
+    "type": "dark",
+    "colors": {
+        "editor.background": "#0d1117",
+        "editor.foreground": "#e6edf3",
+        "editor.lineHighlightBackground": "#161b22",
+        "editor.selectionBackground": "#264f78",
+        "editorCursor.foreground": "#58a6ff",
+        "editorIndentGuide.background1": "#21262d",
+        "editorIndentGuide.activeBackground1": "#30363d",
+        "activityBar.background": "#010409",
+        "sideBar.background": "#010409",
+        "statusBar.background": "#0d1117",
+        "titleBar.activeBackground": "#010409",
+        "tab.activeBackground": "#0d1117",
+        "tab.inactiveBackground": "#010409",
+        "terminal.background": "#0d1117",
+        "terminal.foreground": "#e6edf3"
+    },
+    "tokenColors": [
+        {
+            "name": "Comments",
+            "scope": "comment",
+            "settings": { "foreground": "#8b949e", "fontStyle": "italic" }
+        },
+        {
+            "name": "Strings",
+            "scope": "string",
+            "settings": { "foreground": "#a5d6ff" }
+        },
+        {
+            "name": "String Interpolation Braces",
+            "scope": [
+                "punctuation.section.interpolation.begin.til",
+                "punctuation.section.interpolation.end.til"
+            ],
+            "settings": { "foreground": "#f0883e" }
+        },
+        {
+            "name": "Escape Characters",
+            "scope": "constant.character.escape",
+            "settings": { "foreground": "#79c0ff" }
+        },
+        {
+            "name": "Numbers",
+            "scope": "constant.numeric",
+            "settings": { "foreground": "#79c0ff" }
+        },
+        {
+            "name": "Duration Literals (Temporal Types)",
+            "scope": "constant.numeric.duration.til",
+            "settings": { "foreground": "#d2a8ff", "fontStyle": "bold" }
+        },
+        {
+            "name": "Level Numbers",
+            "scope": "constant.numeric.level.til",
+            "settings": { "foreground": "#ffa657", "fontStyle": "bold" }
+        },
+        {
+            "name": "Booleans & None",
+            "scope": [
+                "constant.language.boolean",
+                "constant.language.none",
+                "constant.language.special"
+            ],
+            "settings": { "foreground": "#79c0ff" }
+        },
+        {
+            "name": "Control Flow Keywords",
+            "scope": "keyword.control",
+            "settings": { "foreground": "#ff7b72" }
+        },
+        {
+            "name": "Declaration Keywords (fn, struct, enum, impl, trait)",
+            "scope": "keyword.declaration",
+            "settings": { "foreground": "#ff7b72" }
+        },
+        {
+            "name": "Variable Keywords (let, var, const)",
+            "scope": "keyword.declaration.variable",
+            "settings": { "foreground": "#ff7b72" }
+        },
+        {
+            "name": "Modifier Keywords (pub, mut, async)",
+            "scope": "keyword.declaration.modifier",
+            "settings": { "foreground": "#ff7b72" }
+        },
+        {
+            "name": "Effect System Keywords (effect, handler, perform)",
+            "scope": "keyword.declaration.effect.til",
+            "settings": { "foreground": "#d2a8ff", "fontStyle": "bold" }
+        },
+        {
+            "name": "Capability Keywords",
+            "scope": "keyword.declaration.capability.til",
+            "settings": { "foreground": "#7ee787", "fontStyle": "bold" }
+        },
+        {
+            "name": "Error/Strategy Keywords",
+            "scope": "keyword.declaration.error.til",
+            "settings": { "foreground": "#ffa657", "fontStyle": "bold" }
+        },
+        {
+            "name": "Contract Keywords (requires, ensures, invariant)",
+            "scope": [
+                "keyword.other.contract.til",
+                "storage.modifier.contract.til"
+            ],
+            "settings": { "foreground": "#ffa657", "fontStyle": "italic" }
+        },
+        {
+            "name": "Logical Operators (and, or, not)",
+            "scope": "keyword.operator.logical",
+            "settings": { "foreground": "#ff7b72" }
+        },
+        {
+            "name": "Operators",
+            "scope": "keyword.operator",
+            "settings": { "foreground": "#ff7b72" }
+        },
+        {
+            "name": "Arrow Operators (-> =>)",
+            "scope": "keyword.operator.arrow",
+            "settings": { "foreground": "#ff7b72" }
+        },
+        {
+            "name": "Primitive Types",
+            "scope": "storage.type.primitive.til",
+            "settings": { "foreground": "#ffa657" }
+        },
+        {
+            "name": "Numeric Types (i32, u64, f64)",
+            "scope": "storage.type.numeric.til",
+            "settings": { "foreground": "#ffa657" }
+        },
+        {
+            "name": "Generic Types (Vec, Option, Result)",
+            "scope": "storage.type.generic.til",
+            "settings": { "foreground": "#ffa657" }
+        },
+        {
+            "name": "Type Names (PascalCase)",
+            "scope": "entity.name.type",
+            "settings": { "foreground": "#ffa657" }
+        },
+        {
+            "name": "Type Parameters (<T>)",
+            "scope": "entity.name.type.parameter",
+            "settings": { "foreground": "#ffa657", "fontStyle": "italic" }
+        },
+        {
+            "name": "Function Definitions",
+            "scope": "entity.name.function.definition",
+            "settings": { "foreground": "#d2a8ff" }
+        },
+        {
+            "name": "Main Function",
+            "scope": "entity.name.function.main",
+            "settings": { "foreground": "#d2a8ff", "fontStyle": "bold" }
+        },
+        {
+            "name": "Function Calls",
+            "scope": "entity.name.function.call",
+            "settings": { "foreground": "#d2a8ff" }
+        },
+        {
+            "name": "Method Calls",
+            "scope": "entity.name.function.method",
+            "settings": { "foreground": "#d2a8ff" }
+        },
+        {
+            "name": "Builtin Functions",
+            "scope": "support.function.builtin",
+            "settings": { "foreground": "#d2a8ff", "fontStyle": "italic" }
+        },
+        {
+            "name": "Effect Operations (Logger.log)",
+            "scope": "entity.name.function.effect-operation",
+            "settings": { "foreground": "#d2a8ff" }
+        },
+        {
+            "name": "Attributes (#[...])",
+            "scope": "entity.other.attribute-name",
+            "settings": { "foreground": "#7ee787" }
+        },
+        {
+            "name": "Attribute Values",
+            "scope": [
+                "variable.parameter.effect",
+                "variable.parameter.intent",
+                "string.unquoted.attribute-value"
+            ],
+            "settings": { "foreground": "#a5d6ff" }
+        },
+        {
+            "name": "Temporal Annotations (@expires, @stale_after)",
+            "scope": "entity.other.attribute-name.temporal.til",
+            "settings": { "foreground": "#d2a8ff", "fontStyle": "italic" }
+        },
+        {
+            "name": "Security Annotations (@pii, @secret, @encrypted)",
+            "scope": "entity.other.attribute-name.security.til",
+            "settings": { "foreground": "#f85149", "fontStyle": "bold italic" }
+        },
+        {
+            "name": "Self",
+            "scope": "variable.language.self",
+            "settings": { "foreground": "#ff7b72", "fontStyle": "italic" }
+        },
+        {
+            "name": "Constants (UPPER_CASE)",
+            "scope": "variable.other.constant",
+            "settings": { "foreground": "#79c0ff", "fontStyle": "bold" }
+        },
+        {
+            "name": "Punctuation",
+            "scope": "punctuation",
+            "settings": { "foreground": "#e6edf3" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

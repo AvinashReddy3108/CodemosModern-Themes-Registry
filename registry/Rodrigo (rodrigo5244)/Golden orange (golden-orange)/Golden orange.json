@@ -1,0 +1,76 @@
+{
+    "$schema": "vscode://schemas/color-theme",
+    "name": "Golden Orange",
+    "semanticHighlighting": true,
+    "type": "dark",
+    "semanticTokenColors": { "*.defaultLibrary": "#d6b69a" },
+    "colors": {
+        "editor.background": "#282828",
+        "editor.findMatchBackground": "#7575753a",
+        "editor.findMatchHighlightBackground": "#7575753a",
+        "editor.hoverHighlightBackground": "#7575753a",
+        "editor.selectionBackground": "#363636",
+        "editor.selectionHighlightBackground": "#7575753a",
+        "editor.wordHighlightBackground": "#7575753a",
+        "editor.wordHighlightStrongBackground": "#7575753a",
+        "editorBracketMatch.background": "#7575753a",
+        "editorBracketMatch.border": "#00000000",
+        "editorError.background": "#00000000",
+        "editorError.foreground": "#c22121",
+        "editorInfo.background": "#00000000",
+        "editorInfo.foreground": "#2182c2",
+        "editorLink.activeForeground": "#d6b69a",
+        "editorWarning.background": "#00000000",
+        "editorWarning.foreground": "#c2aa21",
+        "statusBar.background": "#444"
+    },
+    "tokenColors": [
+        {
+            "name": "User Text",
+            "scope": [
+                "",
+                "string.json",
+                "string.json punctuation",
+                "meta.template.expression",
+                "source.coffee.embedded",
+                "keyword.key.toml",
+                "entity.name.tag.yaml"
+            ],
+            "settings": { "foreground": "#bbb" }
+        },
+        {
+            "name": "punctuation",
+            "scope": [
+                "punctuation",
+                "meta.brace",
+                "keyword.operator.type.annotation"
+            ],
+            "settings": { "foreground": "#ffb459" }
+        },
+        {
+            "name": "values",
+            "scope": [
+                "string",
+                "punctuation.definition.string",
+                "constant",
+                "variable.language"
+            ],
+            "settings": { "foreground": "#d6b69a" }
+        },
+        {
+            "name": "comments",
+            "scope": ["comment", "comment punctuation", "comment storage"],
+            "settings": { "foreground": "#555" }
+        },
+        {
+            "name": "keywords",
+            "scope": [
+                "keyword",
+                "storage",
+                "support.type.primitive",
+                "support.type.builtin"
+            ],
+            "settings": { "foreground": "#de7e43" }
+        }
+    ]
+}

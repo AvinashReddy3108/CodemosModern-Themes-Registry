@@ -1,0 +1,621 @@
+{
+    "name": "Monokai Kai",
+    "semanticHighlighting": true,
+    "type": "dark",
+    "colors": {
+        "editor.background": "#1e1e1e",
+        "editor.foreground": "#dfdfdf",
+        "tab.activeBorder": "#007acc",
+        "activityBarBadge.background": "#007acc",
+        "editor.inactiveSelectionBackground": "#3a3d41aa",
+        "editor.selectionHighlightBackground": "#add6ff26",
+        "editorIndentGuide.activeBackground1": "#808080",
+        "editorIndentGuide.activeBackground2": "#808080",
+        "editorIndentGuide.activeBackground3": "#808080",
+        "editorIndentGuide.activeBackground4": "#808080",
+        "editorIndentGuide.activeBackground5": "#808080",
+        "editorIndentGuide.activeBackground6": "#808080",
+        "editorIndentGuide.background1": "#404040",
+        "editorIndentGuide.background2": "#404040",
+        "editorIndentGuide.background3": "#404040",
+        "editorIndentGuide.background4": "#404040",
+        "editorIndentGuide.background5": "#404040",
+        "editorIndentGuide.background6": "#404040",
+        "input.placeholderForeground": "#a6a6a6",
+        "list.activeSelectionIconForeground": "#ffffff",
+        "list.dropBackground": "#383b3d",
+        "menu.background": "#252526",
+        "menu.foreground": "#cccccc",
+        "ports.iconRunningProcessForeground": "#369432",
+        "sideBarSectionHeader.background": "#00000000",
+        "sideBarSectionHeader.border": "#cccccc33",
+        "sideBarTitle.foreground": "#bbbbbb",
+        "statusBarItem.remoteBackground": "#16825d",
+        "statusBarItem.remoteForeground": "#ffffff",
+        "tab.lastPinnedBorder": "#cccccc33"
+    },
+    "semanticTokenColors": {
+        "namespace": { "foreground": "#dfdfdf", "italic": false, "bold": true },
+        "module": { "foreground": "#dfdfdf", "italic": false, "bold": true },
+        "variable": { "foreground": "#dfdfdf" },
+        "variable.defaultLibrary": { "foreground": "#cfcfcf", "bold": true },
+        "keyword": { "foreground": "#ff6188" },
+        "builtinConstant.readonly.builtin": { "foreground": "#ff6188" },
+        "variable.parameter": { "foreground": "#fc9867" },
+        "annotation": {
+            "foreground": "#e6b422",
+            "italic": false,
+            "bold": false
+        },
+        "namespace.attribute": {
+            "foreground": "#e6b422",
+            "italic": false,
+            "bold": false
+        },
+        "method": { "foreground": "#a9dc76" },
+        "function": { "foreground": "#a9dc76" },
+        "class.declaration.constructor": {
+            "foreground": "#a9dc76",
+            "bold": true
+        },
+        "property": { "foreground": "#ace8ff" },
+        "variable.classMember": { "foreground": "#ace8ff" },
+        "annotationMember": { "foreground": "#ace8ff" },
+        "class": { "foreground": "#78dce8", "bold": true },
+        "class.typeHint.builtin": {
+            "foreground": "#78dce8",
+            "italic": true,
+            "bold": false
+        },
+        "enum": { "foreground": "#78dce8", "italic": true, "bold": true },
+        "interface": { "foreground": "#30c0ff", "italic": false, "bold": true },
+        "type": { "foreground": "#30c0ff", "bold": true },
+        "typeParameter": { "foreground": "#30c0ff", "bold": true },
+        "variable.typeHint.readonly": { "foreground": "#30c0ff", "bold": true },
+        "class.typeHint": { "foreground": "#30c0ff", "bold": true },
+        "const": { "foreground": "#ab9df2" },
+        "variable.readonly": { "foreground": "#ab9df2" },
+        "number": { "foreground": "#ab9df2" },
+        "numberLiteral": { "foreground": "#ab9df2" },
+        "property.readonly": { "foreground": "#ab9df2" },
+        "enumMember": { "foreground": "#ab9df2", "italic": true, "bold": true },
+        "comment": { "foreground": "#858585" },
+        "parameter.documentation": { "foreground": "#aa8257", "italic": true },
+        "keyword.documentation": {
+            "foreground": "#629755",
+            "italic": true,
+            "bold": true,
+            "underline": true
+        },
+        "*.decorator": {
+            "foreground": "#e6b422",
+            "italic": false,
+            "bold": false
+        },
+        "*.deprecated": { "strikethrough": true },
+        "*.static": { "italic": true },
+        "class.static": { "italic": false },
+        "interface.static": { "italic": false }
+    },
+    "tokenColors": [
+        { "scope": "region.redish", "settings": { "foreground": "#ff6188" } },
+        { "scope": "region.orangish", "settings": { "foreground": "#fc9867" } },
+        {
+            "scope": "region.yellowish",
+            "settings": { "foreground": "#ffd866" }
+        },
+        { "scope": "region.greenish", "settings": { "foreground": "#a9dc76" } },
+        { "scope": "region.bluish", "settings": { "foreground": "#78dce8" } },
+        { "scope": "region.purplish", "settings": { "foreground": "#ab9df2" } },
+        { "scope": "region.pinkish", "settings": { "foreground": "#ff6188" } },
+        { "scope": "region.whitish", "settings": { "foreground": "#dfdfdf" } },
+        {
+            "name": "コメント",
+            "scope": ["comment.line", "punctuation.definition.comment"],
+            "settings": { "foreground": "#858585", "fontStyle": "" }
+        },
+        {
+            "name": "ブロックコメント",
+            "scope": [
+                "comment.block",
+                "comment.block comment.line",
+                "comment.block punctuation.definition",
+                "comment.block punctuation.definition.comment",
+                "comment.line.documentation",
+                "comment.line.documentation punctuation.definition.comment",
+                "string.quoted.docstring",
+                "string.quoted.docstring punctuation.definition.string"
+            ],
+            "settings": { "foreground": "#629755", "fontStyle": "italic" }
+        },
+        {
+            "name": "ブロック内のキーワード",
+            "scope": [
+                "keyword.other.documentation",
+                "keyword.other.phpdoc.php",
+                "comment.block storage.type.class.jsdoc",
+                "comment.block punctuation.definition.block.tag.jsdoc",
+                "comment.block punctuation.definition.inline.tag.jsdoc"
+            ],
+            "settings": {
+                "foreground": "#629755",
+                "fontStyle": "italic bold underline"
+            }
+        },
+        {
+            "name": "ドキュメントコメント内のクラスや変数",
+            "scope": [
+                "comment.block.documentation entity.name.type",
+                "comment.block.documentation variable.other",
+                "comment.block variable.parameter"
+            ],
+            "settings": { "foreground": "#AA8257", "fontStyle": "italic" }
+        },
+        {
+            "name": "アノテーション／デコレータ",
+            "scope": [
+                "entity.name.function.decorator",
+                "entity.name.type.annotation",
+                "meta.declaration.annotation",
+                "meta.attribute.php",
+                "meta.decorator",
+                "meta.function.decorator",
+                "punctuation.brackets.attribute.rust",
+                "punctuation.decorator",
+                "punctuation.definition.annotation",
+                "punctuation.definition.attribute.rust",
+                "punctuation.definition.decorator",
+                "storage.type.annotation",
+                "support.other.attribute entity.other.attribute"
+            ],
+            "settings": { "foreground": "#e6b422", "fontStyle": "" }
+        },
+        {
+            "name": "タイプパラメータ",
+            "scope": ["storage.type.generic"],
+            "settings": { "foreground": "#78dce8", "fontStyle": "" }
+        },
+        {
+            "name": "クラス名, オブジェクト名",
+            "scope": [
+                "entity.name.class",
+                "entity.name.type",
+                "entity.other.inherited-class.java",
+                "storage.type.groovy",
+                "storage.type.java",
+                "storage.type.object",
+                "support.class",
+                "support.constant",
+                "support.type.object",
+                "entity.other.inherited-class"
+            ],
+            "settings": { "foreground": "#78dce8", "fontStyle": "bold" }
+        },
+        {
+            "name": "列挙型",
+            "scope": ["entity.name.type.enum"],
+            "settings": { "foreground": "#78dce8", "fontStyle": "italic bold" }
+        },
+        {
+            "name": "インターフェース名, 型エイリアス",
+            "scope": [
+                "entity.name.interface",
+                "entity.name.type.interface",
+                "entity.name.type.alias"
+            ],
+            "settings": { "foreground": "#30C0FF", "fontStyle": "bold" }
+        },
+        {
+            "name": "キーワード, ストレージ修飾子, プリミティブ型, null, undefined",
+            "scope": [
+                "constant.language",
+                "keyword",
+                "punctuation.access.module",
+                "punctuation.definition.keyword",
+                "punctuation.section.embedded.begin",
+                "punctuation.section.embedded.end",
+                "punctuation.separator.key-value",
+                "punctuation.separator.types",
+                "storage.type.built-in.primitive",
+                "storage.type.local.java",
+                "storage.type.primitive",
+                "storage",
+                "support.type.builtin",
+                "support.type.primitive",
+                "variable.language"
+            ],
+            "settings": { "foreground": "#ff6188", "fontStyle": "" }
+        },
+        {
+            "name": "パッケージ名",
+            "scope": ["storage.modifier.package"],
+            "settings": { "foreground": "#dfdfdf", "fontStyle": "" }
+        },
+        {
+            "name": "インポートしているパッケージ名",
+            "scope": ["storage.modifier.import", "storage.modifier.package"],
+            "settings": { "foreground": "#dfdfdf", "fontStyle": "" }
+        },
+        {
+            "name": "文字列リテラル",
+            "scope": ["string", "punctuation.definition.string"],
+            "settings": { "foreground": "#ffd866", "fontStyle": "" }
+        },
+        {
+            "name": "関数名",
+            "scope": [
+                "entity.name.function",
+                "support.function",
+                "variable.function",
+                "meta.method.groovy"
+            ],
+            "settings": { "foreground": "#a9dc76", "fontStyle": "" }
+        },
+        {
+            "name": "変数",
+            "scope": ["variable"],
+            "settings": { "foreground": "#dfdfdf", "fontStyle": "" }
+        },
+        {
+            "name": "パラメータ変数",
+            "scope": ["variable.parameter"],
+            "settings": { "foreground": "#fc9867", "fontStyle": "" }
+        },
+        {
+            "name": "定数",
+            "scope": [
+                "variable.other.constant",
+                "constant.other.caps.rust",
+                "constant.other.class.php"
+            ],
+            "settings": { "foreground": "#ab9df2", "fontStyle": "" }
+        },
+        {
+            "name": "列挙型メンバー",
+            "scope": ["variable.other.enummember"],
+            "settings": { "foreground": "#ab9df2", "fontStyle": "" }
+        },
+        {
+            "name": "数値リテラル",
+            "scope": ["constant.numeric", "constant.other.color"],
+            "settings": { "foreground": "#ab9df2", "fontStyle": "" }
+        },
+        {
+            "name": "文字列内の文字エスケープ, プレースホルダ",
+            "scope": [
+                "constant.character.entity",
+                "constant.character.entity punctuation.definition",
+                "constant.character.escape",
+                "constant.other.placeholder"
+            ],
+            "settings": { "foreground": "#ab9df2", "fontStyle": "" }
+        },
+        {
+            "name": "プロパティ",
+            "scope": [
+                "support.type.property-name",
+                "support.variable.property",
+                "variable.object.property",
+                "variable.other.object.property",
+                "variable.other.property"
+            ],
+            "settings": { "foreground": "#ace8ff", "fontStyle": "" }
+        },
+        {
+            "name": "オブジェクトリテラルのキー",
+            "scope": "meta.objectliteral meta.object-literal.key",
+            "settings": { "foreground": "#ace8ff", "fontStyle": "" }
+        },
+        {
+            "name": "インポートのワイルドカード",
+            "scope": ["storage.modifier.import variable.language.wildcard"],
+            "settings": { "foreground": "#ff6188", "fontStyle": "" }
+        },
+        {
+            "name": "括弧, コロン, カンマ",
+            "scope": [
+                "meta.brace",
+                "punctuation.bracket",
+                "punctuation.definition",
+                "punctuation.section",
+                "punctuation.separator",
+                "punctuation.terminator"
+            ],
+            "settings": { "foreground": "#dfdfdf", "fontStyle": "" }
+        },
+        {
+            "name": "テンプレートリテラル",
+            "scope": [
+                "punctuation.definition.string.template.begin",
+                "punctuation.definition.string.template.end",
+                "punctuation.template-string.element.begin",
+                "punctuation.template-string.element.end",
+                "string.quoted.template punctuation.definition.string.begin",
+                "string.quoted.template punctuation.definition.string.end"
+            ],
+            "settings": { "foreground": "#ff6188", "fontStyle": "" }
+        },
+        {
+            "name": "テンプレートリテラル プレースホルダー",
+            "scope": [
+                "string.template punctuation.definition.template-expression"
+            ],
+            "settings": { "foreground": "#ff6188", "fontStyle": "" }
+        },
+        {
+            "name": "オプショナルのアクセサ",
+            "scope": ["punctuation.accessor.optional"],
+            "settings": { "foreground": "#ff6188", "fontStyle": "" }
+        },
+        {
+            "name": "正規表現 文字列",
+            "scope": [
+                "constant.other.character-class.range.regexp",
+                "constant.other.character-class.set.regexp",
+                "string.regexp"
+            ],
+            "settings": { "foreground": "#ffd866", "fontStyle": "" }
+        },
+        {
+            "name": "正規表現 文字のエスケープ",
+            "scope": "constant.character.escape.backslash.regexp",
+            "settings": { "foreground": "#fc9867", "fontStyle": "" }
+        },
+        {
+            "name": "正規表現 リテラルの記号",
+            "scope": [
+                "string.regexp punctuation.definition.string.begin",
+                "string.regexp punctuation.definition.string.end"
+            ],
+            "settings": { "foreground": "#ff6188", "fontStyle": "" }
+        },
+        {
+            "name": "正規表現 文字クラス",
+            "scope": ["constant.other.character-class.regexp"],
+            "settings": { "foreground": "#ab9df2", "fontStyle": "" }
+        },
+        {
+            "name": "正規表現 アンカー",
+            "scope": ["keyword.control.anchor.regexp"],
+            "settings": { "foreground": "#78dce8", "fontStyle": "" }
+        },
+        {
+            "name": "正規表現 グループ化の記号",
+            "scope": [
+                "punctuation.definition.group.regexp",
+                "punctuation.definition.character-class.regexp"
+            ],
+            "settings": { "foreground": "#dfdfdf", "fontStyle": "" }
+        },
+        {
+            "name": "正規表現 量指定子",
+            "scope": ["keyword.operator.quantifier.regexp"],
+            "settings": { "foreground": "#a9dc76", "fontStyle": "" }
+        },
+        {
+            "name": "ハイパーリンク",
+            "scope": ["variable.parameter.url", "markup.underline.link"],
+            "settings": { "foreground": "#3794ff", "fontStyle": "underline" }
+        },
+        {
+            "name": "エンティティ タグ名",
+            "scope": ["entity.name.tag"],
+            "settings": { "foreground": "#30C0FF", "fontStyle": "bold" }
+        },
+        {
+            "name": "エンティティ 属性名",
+            "scope": ["entity.other.attribute-name"],
+            "settings": { "foreground": "#ace8ff", "fontStyle": "" }
+        },
+        {
+            "name": "エンティティ クラス名, ID名",
+            "scope": [
+                "entity.other.attribute-name.class",
+                "entity.other.attribute-name.id"
+            ],
+            "settings": { "foreground": "#a9dc76", "fontStyle": "bold" }
+        },
+        {
+            "name": "メタ プロパティ値",
+            "scope": [
+                "meta.property-value",
+                "meta.property-value support.constant.color",
+                "meta.property-value support.constant.property-value"
+            ],
+            "settings": { "foreground": "#fc9867", "fontStyle": "" }
+        },
+        {
+            "name": "メタ セレクタ",
+            "scope": [
+                "meta.selector",
+                "entity.other.attribute-name.pseudo-class",
+                "entity.other.attribute-name.pseudo-element"
+            ],
+            "settings": { "foreground": "#ff6188", "fontStyle": "" }
+        },
+        {
+            "name": "[shell] キーワード",
+            "scope": [
+                "source.shell punctuation.separator.pipe-sign",
+                "source.shell punctuation.terminator.case-clause",
+                "source.shell punctuation.definition.case-pattern"
+            ],
+            "settings": { "foreground": "#ff6188", "fontStyle": "" }
+        },
+        {
+            "name": "[shell] $記号",
+            "scope": ["source.shell punctuation.definition.variable"],
+            "settings": { "foreground": "#ab9df2", "fontStyle": "" }
+        },
+        {
+            "name": "[shell] 特殊変数",
+            "scope": [
+                "source.shell variable.other.special",
+                "source.shell variable.other.positional"
+            ],
+            "settings": { "foreground": "#ab9df2", "fontStyle": "" }
+        },
+        {
+            "name": "[shell] 論理式の記号",
+            "scope": ["source.shell punctuation.definition.logical-expression"],
+            "settings": { "foreground": "#a9dc76", "fontStyle": "" }
+        },
+        {
+            "name": "[markdown] 斜体",
+            "scope": ["markup.italic"],
+            "settings": { "fontStyle": "italic" }
+        },
+        {
+            "name": "[markdown] 太字",
+            "scope": ["markup.bold"],
+            "settings": { "fontStyle": "bold" }
+        },
+        {
+            "name": "[markdown] 斜体 + 太字",
+            "scope": ["markup.bold markup.italic", "markup.italic markup.bold"],
+            "settings": { "fontStyle": "italic bold" }
+        },
+        {
+            "name": "[markdown] 下線",
+            "scope": ["markup.underline"],
+            "settings": { "fontStyle": "underline" }
+        },
+        {
+            "name": "[markdown] 見出し",
+            "scope": ["markup.heading"],
+            "settings": { "foreground": "#78dce8", "fontStyle": "bold" }
+        },
+        {
+            "name": "[markdown] 記号",
+            "scope": ["text.html.markdown punctuation.definition"],
+            "settings": { "foreground": "#ff6188", "fontStyle": "" }
+        },
+        {
+            "name": "[markdown] ``で囲まれた文字列",
+            "scope": ["text.html.markdown markup.inline.raw.string.markdown"],
+            "settings": { "foreground": "#ffd866", "fontStyle": "" }
+        },
+        {
+            "name": "[markdown] 水平線",
+            "scope": ["text.html.markdown meta.separator.markdown"],
+            "settings": { "foreground": "#a9dc76", "fontStyle": "" }
+        },
+        {
+            "name": "[markdown] コードブロックに指定する言語名",
+            "scope": ["fenced_code.block.language.markdown"],
+            "settings": { "foreground": "#e6b422", "fontStyle": "" }
+        },
+        {
+            "name": "[sql]",
+            "scope": ["source.sql"],
+            "settings": { "foreground": "#ace8ff", "fontStyle": "" }
+        },
+        {
+            "name": "[sql] データーベース名、テーブル名",
+            "scope": [
+                "source.sql constant.other.database-name.sql",
+                "source.sql constant.other.table-name.sql"
+            ],
+            "settings": { "foreground": "#78dce8", "fontStyle": "bold" }
+        },
+        {
+            "name": "[php] グルーバル変数",
+            "scope": "variable.other.global.php",
+            "settings": { "foreground": "#dfdfdf", "fontStyle": "bold" }
+        },
+        {
+            "name": "[php] ヒアドキュメント記号",
+            "scope": [
+                "string.unquoted.nowdoc.php punctuation.definition.string.php",
+                "keyword.operator.nowdoc.php"
+            ],
+            "settings": { "foreground": "#e6b422", "fontStyle": "" }
+        },
+        {
+            "name": "[php] ドキュメント内で白くしない文字",
+            "scope": "keyword.other.array.phpdoc.php",
+            "settings": { "foreground": "#dfdfdf", "fontStyle": "" }
+        },
+        {
+            "name": "タグの山括弧 <>",
+            "scope": [
+                "punctuation.definition.tag.xml",
+                "punctuation.definition.tag.begin",
+                "punctuation.definition.tag.end"
+            ],
+            "settings": { "foreground": "#afafaf", "fontStyle": "" }
+        },
+        {
+            "name": "[css] 赤いやつ",
+            "scope": [
+                "constant.other.color.rgb-value.hex.css punctuation.definition.constant.css"
+            ],
+            "settings": { "foreground": "#ff6188", "fontStyle": "" }
+        },
+        {
+            "name": "ghaschel.vscode-angular-html",
+            "scope": [
+                "text.angular.html template.ng.tag",
+                "text.angular.html string.regexp.angular-interpolation"
+            ],
+            "settings": { "foreground": "#ff6188", "fontStyle": "" }
+        },
+        {
+            "name": "ghaschel.vscode-angular-html",
+            "scope": ["constant.numeric.angular-directive"],
+            "settings": { "foreground": "#fc9867", "fontStyle": "" }
+        },
+        {
+            "name": "ghaschel.vscode-angular-html",
+            "scope": [
+                "text.angular.html support.type.object.html-attribute",
+                "text.angular.html keyword.operator.entity.html"
+            ],
+            "settings": { "foreground": "#ace8ff", "fontStyle": "" }
+        },
+        {
+            "name": "ghaschel.vscode-angular-html",
+            "scope": ["text.angular.html punctuation.definition.string"],
+            "settings": { "foreground": "#ffd866", "fontStyle": "" }
+        },
+        {
+            "name": "[groovy] 赤いやつ",
+            "scope": [
+                "punctuation.section.embedded.groovy",
+                "variable.other.interpolated.groovy"
+            ],
+            "settings": { "foreground": "#ff6188", "fontStyle": "" }
+        },
+        {
+            "name": "[Angular Template] 赤いやつ",
+            "scope": [
+                "text.html.derivative meta.tag.custom entity.name.tag.html",
+                "text.html.derivative punctuation.definition.block.ts"
+            ],
+            "settings": { "foreground": "#ff6188", "fontStyle": "" }
+        },
+        {
+            "name": "[Angular Template] バインディングに使用される記号 *, (), [], [()] など",
+            "scope": [
+                "text.html.derivative punctuation.definition.ng-binding-name"
+            ],
+            "settings": { "foreground": "#ffd866", "fontStyle": "" }
+        },
+        {
+            "name": "[Angular] バインディング対象の名前",
+            "scope": ["text.html.derivative entity.other.ng-binding-name"],
+            "settings": { "foreground": "#fc9867", "fontStyle": "" }
+        },
+        {
+            "name": "[Angular Template] 定数",
+            "scope": ["text.html.derivative expression.ng constant"],
+            "settings": { "foreground": "#ab9df2", "fontStyle": "" }
+        },
+        {
+            "name": "[Angular Template] 変数",
+            "scope": ["text.html.derivative expression.ng variable"],
+            "settings": { "foreground": "#cfcfcf", "fontStyle": "bold" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

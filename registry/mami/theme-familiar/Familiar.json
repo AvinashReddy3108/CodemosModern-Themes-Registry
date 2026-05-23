@@ -1,0 +1,175 @@
+{
+    "name": "Familiar",
+    "include": "./dark_vs.json",
+    "tokenColors": [
+        {
+            "name": "Function declarations",
+            "scope": [
+                "entity.name.function",
+                "entity.name.function.member",
+                "support.function",
+                "support.constant.handlebars",
+                "source.powershell variable.other.member",
+                "entity.name.operator.custom-literal"
+            ],
+            "settings": { "foreground": "#e5c18e" }
+        },
+        {
+            "name": "Types declaration and references",
+            "scope": [
+                "meta.return-type",
+                "support.class",
+                "support.type",
+                "entity.name.type",
+                "entity.name.namespace",
+                "entity.other.attribute",
+                "entity.name.scope-resolution",
+                "entity.name.class",
+                "storage.modifier"
+            ],
+            "settings": { "foreground": "#98B0F2" }
+        },
+        {
+            "name": "Operators",
+            "scope": ["keyword.operator"],
+            "settings": { "foreground": "#E6D895" }
+        },
+        {
+            "name": "Meta / Macros",
+            "scope": [
+                "meta.attribute",
+                "entity.name.function.macro",
+                "keyword.operator.new",
+                "keyword.operator.expression",
+                "keyword.operator.cast",
+                "keyword.operator.sizeof",
+                "keyword.operator.alignof",
+                "keyword.operator.typeid",
+                "keyword.operator.alignas",
+                "keyword.operator.instanceof",
+                "keyword.operator.logical.python",
+                "keyword.operator.wordlike"
+            ],
+            "settings": { "foreground": "#E6D895" }
+        },
+        {
+            "name": "Control Flow",
+            "scope": ["keyword.control"],
+            "settings": { "foreground": "#C495E6" }
+        },
+        {
+            "name": "Other Keywords",
+            "scope": [
+                "storage.type",
+                "keyword.operator.noexcept",
+                "source.cpp keyword.operator.new",
+                "keyword.operator.delete",
+                "keyword.other.using",
+                "keyword.other.operator",
+                "entity.name.operator"
+            ],
+            "settings": { "foreground": "#C495E6" }
+        },
+        {
+            "name": "Variable",
+            "scope": [
+                "variable.other.normal",
+                "variable.other",
+                "variable.js",
+                "punctuation.separator.variable",
+                "variable.parameter"
+            ],
+            "settings": { "foreground": "#e5c9e1" }
+        },
+        {
+            "name": "Field",
+            "scope": [
+                "meta.definition.variable.name",
+                "support.variable",
+                "entity.name.variable",
+                "entity.other.attribute-name",
+                "entity.name.tag",
+                "variable.other.property"
+            ],
+            "settings": { "foreground": "#E1E6E3" }
+        },
+        {
+            "name": "Language numerical constants",
+            "scope": ["constant.numeric", "constant.character.escape"],
+            "settings": { "foreground": "#85CCC2" }
+        },
+        {
+            "name": "User defined constants and enums",
+            "scope": [
+                "variable.other.constant",
+                "variable.other.enummember",
+                "constant.character",
+                "constant.other",
+                "constant.language",
+                "variable.other.global"
+            ],
+            "settings": { "foreground": "#AEEACB" }
+        },
+        {
+            "name": "CSS property value",
+            "scope": [
+                "support.constant.property-value",
+                "support.constant.font-name",
+                "support.constant.media-type",
+                "support.constant.media",
+                "constant.other.color.rgb-value",
+                "constant.other.rgb-value",
+                "support.constant.color"
+            ],
+            "settings": { "foreground": "#CE9178" }
+        },
+        {
+            "name": "Regular expression groups",
+            "scope": [
+                "punctuation.definition.group.regexp",
+                "punctuation.definition.group.assertion.regexp",
+                "punctuation.definition.character-class.regexp",
+                "punctuation.character.set.begin.regexp",
+                "punctuation.character.set.end.regexp",
+                "keyword.operator.negation.regexp",
+                "support.other.parenthesis.regexp"
+            ],
+            "settings": { "foreground": "#CE9178" }
+        },
+        {
+            "scope": [
+                "constant.character.character-class.regexp",
+                "constant.other.character-class.set.regexp",
+                "constant.other.character-class.regexp",
+                "constant.character.set.regexp"
+            ],
+            "settings": { "foreground": "#d16969" }
+        },
+        {
+            "scope": [
+                "keyword.operator.or.regexp",
+                "keyword.control.anchor.regexp"
+            ],
+            "settings": { "foreground": "#DCDCAA" }
+        },
+        {
+            "scope": "keyword.operator.quantifier.regexp",
+            "settings": { "foreground": "#d7ba7d" }
+        },
+        {
+            "scope": "constant.character",
+            "settings": { "foreground": "#569cd6" }
+        },
+        {
+            "scope": "entity.name.label",
+            "settings": { "foreground": "#C8C8C8" }
+        }
+    ],
+    "semanticTokenColors": {
+        "newOperator": "#E6D895",
+        "stringLiteral": "#B9D977",
+        "customLiteral": "#AEEACB",
+        "numberLiteral": "#85CCC2"
+    },
+    "$schema": "vscode://schemas/color-theme"
+}

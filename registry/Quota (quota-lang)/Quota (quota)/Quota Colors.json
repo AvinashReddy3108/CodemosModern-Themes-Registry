@@ -1,0 +1,59 @@
+{
+    "name": "Quota Colors",
+    "type": "dark",
+    "colors": {
+        "editor.background": "#0f1419",
+        "editor.foreground": "#e6edf3",
+        "editorLineNumber.foreground": "#4b5563",
+        "editorLineNumber.activeForeground": "#93a4b8"
+    },
+    "tokenColors": [
+        {
+            "name": "Quota Comments",
+            "scope": [
+                "comment.line.double-slash.quota",
+                "comment.line.number-sign.quota"
+            ],
+            "settings": { "foreground": "#6a737d", "fontStyle": "italic" }
+        },
+        {
+            "name": "Quota Control Keywords",
+            "scope": ["keyword.control.quota", "keyword.control.import.quota"],
+            "settings": { "foreground": "#ff7b72", "fontStyle": "bold" }
+        },
+        {
+            "name": "Quota Function Names",
+            "scope": "entity.name.function.quota",
+            "settings": { "foreground": "#79c0ff" }
+        },
+        {
+            "name": "Quota Strings",
+            "scope": [
+                "string.quoted.double.quota",
+                "constant.character.escape.quota"
+            ],
+            "settings": { "foreground": "#a5d6ff" }
+        },
+        {
+            "name": "Quota Numbers",
+            "scope": "constant.numeric.quota",
+            "settings": { "foreground": "#f2cc60" }
+        },
+        {
+            "name": "Quota Operators",
+            "scope": "keyword.operator.quota",
+            "settings": { "foreground": "#ffa657" }
+        },
+        {
+            "name": "Quota Builtins",
+            "scope": "support.function.builtin.quota",
+            "settings": { "foreground": "#7ee787", "fontStyle": "bold" }
+        },
+        {
+            "name": "Quota Punctuation",
+            "scope": "punctuation.separator.quota",
+            "settings": { "foreground": "#c9d1d9" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

@@ -1,0 +1,82 @@
+{
+    "name": "Lof Dark",
+    "type": "dark",
+    "colors": {
+        "editor.background": "#1e1e1e",
+        "editor.foreground": "#d4d4d4",
+        "editorLineNumber.foreground": "#858585",
+        "editorCursor.foreground": "#aeafad",
+        "editor.selectionBackground": "#264f78",
+        "editor.lineHighlightBackground": "#2a2d2e"
+    },
+    "tokenColors": [
+        {
+            "name": "Comment",
+            "scope": ["comment", "comment.line.double-slash.lof"],
+            "settings": { "foreground": "#6a9955", "fontStyle": "italic" }
+        },
+        {
+            "name": "Keyword",
+            "scope": ["keyword.control.lof", "keyword.other.lof"],
+            "settings": { "foreground": "#569cd6", "fontStyle": "bold" }
+        },
+        {
+            "name": "Visibility Modifier",
+            "scope": "storage.modifier.visibility.lof",
+            "settings": { "foreground": "#c586c0", "fontStyle": "bold" }
+        },
+        {
+            "name": "Type",
+            "scope": [
+                "storage.type.primitive.lof",
+                "storage.type.custom.lof",
+                "entity.name.type.proof.lof",
+                "entity.name.type.component.lof",
+                "entity.name.type.enum.lof"
+            ],
+            "settings": { "foreground": "#4ec9b0", "fontStyle": "bold" }
+        },
+        {
+            "name": "Operator",
+            "scope": [
+                "punctuation.operator.constraint.lof",
+                "punctuation.operator.comparison.lof",
+                "punctuation.operator.logical.lof",
+                "punctuation.operator.arithmetic.lof",
+                "punctuation.operator.assignment.lof",
+                "punctuation.operator.arrow.lof",
+                "punctuation.operator.range.lof"
+            ],
+            "settings": { "foreground": "#d4d4d4" }
+        },
+        {
+            "name": "Number",
+            "scope": "constant.numeric.integer.lof",
+            "settings": { "foreground": "#b5cea8" }
+        },
+        {
+            "name": "String",
+            "scope": "string.quoted.double.lof",
+            "settings": { "foreground": "#ce9178" }
+        },
+        {
+            "name": "Function Name",
+            "scope": "entity.name.function.lof",
+            "settings": { "foreground": "#dcdcaa" }
+        },
+        {
+            "name": "Variable",
+            "scope": "variable.other.lof",
+            "settings": { "foreground": "#9cdcfe" }
+        },
+        {
+            "name": "Constant",
+            "scope": [
+                "variable.other.constant.lof",
+                "constant.language.wildcard.lof"
+            ],
+            "settings": { "foreground": "#4fc1ff", "fontStyle": "bold" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

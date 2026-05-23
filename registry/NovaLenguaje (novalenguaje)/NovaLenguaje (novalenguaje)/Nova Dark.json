@@ -1,0 +1,133 @@
+{
+    "name": "Nova Dark",
+    "type": "dark",
+    "colors": {
+        "editor.background": "#0F0F1A",
+        "editor.foreground": "#CDD6F4",
+        "editorLineNumber.foreground": "#444466",
+        "editorCursor.foreground": "#7B2FBE",
+        "editor.selectionBackground": "#7B2FBE44",
+        "editor.lineHighlightBackground": "#1A1A2E",
+        "editorIndentGuide.background1": "#2A2A4A",
+        "activityBar.background": "#0A0A14",
+        "sideBar.background": "#0D0D1F",
+        "statusBar.background": "#5A1F90",
+        "statusBar.foreground": "#FFFFFF",
+        "tab.activeBackground": "#1A1A2E",
+        "tab.inactiveBackground": "#0D0D1F",
+        "tab.activeBorderTop": "#7B2FBE",
+        "titleBar.activeBackground": "#0A0A14",
+        "terminal.background": "#0F0F1A",
+        "terminal.foreground": "#CDD6F4"
+    },
+    "tokenColors": [
+        {
+            "name": "Comments",
+            "scope": ["comment", "comment.line", "comment.block"],
+            "settings": { "foreground": "#444466", "fontStyle": "italic" }
+        },
+        {
+            "name": "Banner Comments",
+            "scope": "comment.line.banner.nova",
+            "settings": { "foreground": "#2A2A4A" }
+        },
+        {
+            "name": "Nova Decorators — morado brillante",
+            "scope": [
+                "entity.name.decorator.nova",
+                "entity.name.decorator.generic.nova"
+            ],
+            "settings": { "foreground": "#C792EA", "fontStyle": "bold" }
+        },
+        {
+            "name": "Nova Modules (db, http, env, servidor)",
+            "scope": "support.type.nova",
+            "settings": { "foreground": "#89DCEB", "fontStyle": "italic" }
+        },
+        {
+            "name": "Nova Module Methods",
+            "scope": "support.function.nova",
+            "settings": { "foreground": "#89DCEB" }
+        },
+        {
+            "name": "Keywords",
+            "scope": ["keyword.control", "keyword.control.nova"],
+            "settings": { "foreground": "#F28FAD" }
+        },
+        {
+            "name": "Import/Export",
+            "scope": "keyword.declaration.nova",
+            "settings": { "foreground": "#C792EA" }
+        },
+        {
+            "name": "Storage Types (class, function, async)",
+            "scope": [
+                "storage.type",
+                "storage.type.nova",
+                "storage.type.class.nova"
+            ],
+            "settings": { "foreground": "#C792EA" }
+        },
+        {
+            "name": "Storage Modifiers (const, let, var)",
+            "scope": ["storage.modifier", "storage.modifier.nova"],
+            "settings": { "foreground": "#F28FAD" }
+        },
+        {
+            "name": "Class Names",
+            "scope": "entity.name.type.class.nova",
+            "settings": { "foreground": "#FAE3B0", "fontStyle": "bold" }
+        },
+        {
+            "name": "Inherited Class",
+            "scope": "entity.other.inherited-class.nova",
+            "settings": { "foreground": "#89DCEB" }
+        },
+        {
+            "name": "Function Names",
+            "scope": "entity.name.function.nova",
+            "settings": { "foreground": "#96CDFB" }
+        },
+        {
+            "name": "Strings",
+            "scope": ["string.quoted.single.nova", "string.quoted.double.nova"],
+            "settings": { "foreground": "#ABE9B3" }
+        },
+        {
+            "name": "Template Strings",
+            "scope": "string.template.nova",
+            "settings": { "foreground": "#ABE9B3" }
+        },
+        {
+            "name": "Template Expression",
+            "scope": "meta.template.expression.nova",
+            "settings": { "foreground": "#CDD6F4" }
+        },
+        {
+            "name": "Numbers",
+            "scope": "constant.numeric.nova",
+            "settings": { "foreground": "#F8BD96" }
+        },
+        {
+            "name": "Language Constants (true, false, null)",
+            "scope": "constant.language.nova",
+            "settings": { "foreground": "#F28FAD" }
+        },
+        {
+            "name": "Language Variables (this, process, console)",
+            "scope": "variable.language.nova",
+            "settings": { "foreground": "#F28FAD", "fontStyle": "italic" }
+        },
+        {
+            "name": "Operators",
+            "scope": "keyword.operator.nova",
+            "settings": { "foreground": "#F28FAD" }
+        },
+        {
+            "name": "Escape Characters",
+            "scope": "constant.character.escape.nova",
+            "settings": { "foreground": "#F8BD96" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

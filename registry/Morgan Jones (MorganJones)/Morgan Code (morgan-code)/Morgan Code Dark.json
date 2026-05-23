@@ -1,0 +1,94 @@
+{
+    "$schema": "vscode://schemas/color-theme",
+    "name": "Morgan Code Dark",
+    "type": "dark",
+    "colors": {
+        "editor.background": "#0D0E12",
+        "activityBar.background": "#1B1A23",
+        "sideBar.background": "#1B1A23",
+        "sideBarSectionHeader.background": "#1B1A23",
+        "statusBar.background": "#1B1A23",
+        "editorGroupHeader.tabsBackground": "#1B1A23",
+        "editor.foreground": "#605E78",
+        "activityBarBadge.background": "#007acc",
+        "sideBarTitle.foreground": "#bbbbbb"
+    },
+    "tokenColors": [
+        {
+            "name": "Default",
+            "scope": [
+                "",
+                "punctuation.definition.block",
+                "meta.parameters",
+                "storage.type.function.arrow",
+                "meta.brace",
+                "punctuation.terminator",
+                "punctuation.separator",
+                "comment.line",
+                "comment.block.json",
+                "meta.structure.dictionary.json",
+                "punctuation.definition.typeparameters",
+                "keyword.operator.type"
+            ],
+            "settings": { "foreground": "#605E78" }
+        },
+        {
+            "name": "Comments",
+            "scope": ["comment"],
+            "settings": { "fontStyle": "italic" }
+        },
+        {
+            "name": "This",
+            "scope": ["variable.language.this"],
+            "settings": { "foreground": "#FFBD5A" }
+        },
+        {
+            "name": "Strings; JSON & Dotenv values",
+            "scope": [
+                "string",
+                "punctuation.definition.string.begin",
+                "punctuation.definition.string.end",
+                "constant",
+                "source"
+            ],
+            "settings": { "foreground": "#7CFFB8" }
+        },
+        {
+            "name": "Control",
+            "scope": ["keyword.control", "storage.type", "storage.modifier"],
+            "settings": { "foreground": "#E8A16E" }
+        },
+        {
+            "name": "",
+            "scope": ["meta.template"],
+            "settings": { "foreground": "#D899E2" }
+        },
+        {
+            "name": "Imports & variables; JSON, Y(A)ML & TOML keys",
+            "scope": [
+                "meta.import",
+                "variable",
+                "string.json",
+                "keyword.key",
+                "meta.tag.table",
+                "entity.name.tag.yaml"
+            ],
+            "settings": { "foreground": "#F089D9", "fontStyle": "bold" }
+        },
+        {
+            "name": "Types, interfaces & classes",
+            "scope": [
+                "entity.name.type",
+                "meta.class",
+                "support.type.primitive",
+                "keyword.operator.new"
+            ],
+            "settings": { "foreground": "#c993f1" }
+        },
+        {
+            "name": "Functions & methods",
+            "scope": ["entity.name.function"],
+            "settings": { "foreground": "#8BF0F0" }
+        }
+    ]
+}

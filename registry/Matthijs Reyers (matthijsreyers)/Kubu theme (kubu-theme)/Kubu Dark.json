@@ -1,0 +1,602 @@
+{
+    "name": "Kubu",
+    "type": "dark",
+    "semanticTokenColors": { "namespace": "#9fece7" },
+    "colors": {
+        "editorBracketHighlight.foreground1": "#FFFFFF",
+        "editorBracketHighlight.foreground2": "#ffdb99",
+        "editorBracketHighlight.foreground3": "#dbffa5",
+        "editorBracketHighlight.foreground4": "#9cd8ff",
+        "editorBracketHighlight.foreground5": "#e9cbff",
+        "editorBracketHighlight.foreground6": "#ffacb3",
+        "editorBracketHighlight.unexpectedBracket.foreground": "#ff6a6a",
+        "titleBar.activeBackground": "#1e1e1e",
+        "titleBar.inactiveBackground": "#1e1e1e",
+        "terminal.ansiBrightRed": "#ffacb3",
+        "terminal.ansiRed": "#ff929b",
+        "terminal.ansiBrightGreen": "#dbffa5",
+        "terminal.ansiGreen": "#c3e88d",
+        "terminal.ansiBrightYellow": "#ffdb99",
+        "terminal.ansiYellow": "#ffcb6b",
+        "terminal.ansiBrightBlue": "#9cd8ff",
+        "terminal.ansiBlue": "#7bcbff",
+        "terminal.ansiBrightMagenta": "#e9cbff",
+        "terminal.ansiMagenta": "#deb2ff",
+        "terminal.ansiBrightCyan": "#c5fffb",
+        "terminal.ansiCyan": "#9fece7",
+        "terminal.ansiBrightWhite": "#ffffff",
+        "terminal.ansiWhite": "#f0f0f0",
+        "tab.activeBackground": "#2b2b2b",
+        "editor.background": "#2b2b2b",
+        "editor.foreground": "#ffffff",
+        "editorGroupHeader.tabsBackground": "#1e1e1e",
+        "editorGroup.dropBackground": "#3535358F",
+        "editorGroup.border": "#1e1e1e",
+        "tab.inactiveBackground": "#232323",
+        "minimap.selectionHighlight": "#ffffff",
+        "statusBar.background": "#111111",
+        "statusBar.noFolderBackground": "#111111",
+        "statusBar.debuggingBackground": "#cca256",
+        "statusBarItem.hoverBackground": "#1e1e1e",
+        "statusBarItem.activeBackground": "#2b2b2b",
+        "list.activeSelectionBackground": "#2b2b2b",
+        "list.dropBackground": "#434343",
+        "list.inactiveSelectionBackground": "#2b2b2b70",
+        "list.hoverBackground": "#2b2b2b70",
+        "list.focusBackground": "#2b2b2b70",
+        "activityBar.foreground": "#ffffff",
+        "activityBar.background": "#111111",
+        "activityBarBadge.background": "#353535",
+        "activityBarBadge.foreground": "#fff",
+        "sideBarTitle.foreground": "#bbbbbb",
+        "scrollbar.shadow": "#fff",
+        "icon.foreground": "#ffffff",
+        "sideBar.background": "#1e1e1e",
+        "sideBarSectionHeader.background": "#232323"
+    },
+    "tokenColors": [
+        {
+            "name": "Comments",
+            "scope": ["comment", "punctuation.definition.comment"],
+            "settings": { "fontStyle": "italic", "foreground": "#afafaf" }
+        },
+        {
+            "name": "String content",
+            "scope": ["string", "markup.inline.raw.string.markdown"],
+            "settings": { "foreground": "#ffdb99", "fontStyle": "" }
+        },
+        {
+            "name": "String outer quotes",
+            "scope": [
+                "punctuation.definition.string.begin",
+                "punctuation.definition.string.end",
+                "punctuation.definition.raw.markdown",
+                "meta.fstring.python string.interpolated.python string.quoted.single.python storage.type.string.python"
+            ],
+            "settings": { "foreground": "#ffcb6b", "fontStyle": "" }
+        },
+        {
+            "name": "Primitves & numeric constants: Ints, Floats, Bools",
+            "scope": [
+                "constant.numeric.dec",
+                "constant.numeric.decimal",
+                "constant.numeric.float",
+                "constant.numeric",
+                "constant.language.true",
+                "constant.language.false",
+                "constant.language.boolean",
+                "keyword.other.unit.hexadecimal.cpp",
+                "keyword.other.unit.octal.cpp",
+                "constant.language.python",
+                "constant.language.undefined",
+                "constant.language.null",
+                "meta.return.type.ts support.type.primitive.ts",
+                "support.type.primitive.ts",
+                "support.type.builtin.ts",
+                "keyword.type.cs"
+            ],
+            "settings": { "foreground": "#7BCBFF", "fontStyle": "" }
+        },
+        {
+            "name": "Functions",
+            "scope": [
+                "entity.name.function",
+                "entity.name.function.js",
+                "entity.name.function.definition",
+                "entity.name.function.call",
+                "entity.name.function.member",
+                "support.function.magic.python",
+                "source.python meta.function-call.python meta.function-call.generic.python",
+                "keyword.other.definition.coq"
+            ],
+            "settings": { "foreground": "#C3E88D", "fontStyle": "" }
+        },
+        {
+            "name": "Function parameters",
+            "scope": [
+                "variable.parameter.function",
+                "meta.type.annotation.ts meta.type.function.ts meta.parameters.ts variable.parameter.ts"
+            ],
+            "settings": { "foreground": "#ffcb6b", "fontStyle": "" }
+        },
+        {
+            "name": "Operators & control flow",
+            "scope": [
+                "keyword.control",
+                "keyword.operator.expression.of.js",
+                "keyword.operator",
+                "keyword.operator.bitwise.shift.cpp",
+                "meta.type.annotation.ts meta.brace.round.ts",
+                "keyword.other.important.scss",
+                "keyword.other.important.css"
+            ],
+            "settings": { "foreground": "#FF9FEF", "fontStyle": "" }
+        },
+        {
+            "name": "Types n' stuff",
+            "scope": [
+                "storage.modifier",
+                "meta.function.definition.parameters.cpp storage.type",
+                "storage.modifier.specifier.const.cpp",
+                "storage.type",
+                "support.type.python",
+                "support.type.primitive.ts",
+                "constant.character.escape",
+                "keyword.other.fn.rust",
+                "keyword.other.rust",
+                "keyword.other.unit.suffix.floating-point.cpp"
+            ],
+            "settings": { "foreground": "#7bcbff", "fontStyle": "" }
+        },
+        {
+            "name": "Include, import, and that sort of stuff",
+            "scope": [
+                "meta.preprocessor",
+                "keyword.control.directive.define.cpp",
+                "keyword.control.directive.include",
+                "keyword.control.import.python",
+                "storage.modifier.package.java",
+                "keyword.other.package.java",
+                "keyword.control.import",
+                "meta.import.js keyword.control.as.js",
+                "meta.import.js keyword.control.from.js",
+                "meta.import.ts keyword.control.as.ts",
+                "meta.import.ts keyword.control.from.ts",
+                "keyword.other.import.haskell",
+                "keyword.other.module.haskell",
+                "keyword.other.qualified.haskell",
+                "keyword.other.as.haskell",
+                "keyword.other.import.qml",
+                "keyword.other.using.cs",
+                "keyword.other.module.coq"
+            ],
+            "settings": { "foreground": "#ff929b", "fontStyle": "" }
+        },
+        {
+            "name": "Naming for: classes, interfaces, structs, and enums",
+            "scope": [
+                "entity.name.type.class",
+                "entity.name.type.interface",
+                "entity.name.type.struct",
+                "entity.name.type.enum",
+                "variable.language.super",
+                "meta.var.expr.ts meta.var-single-variable.expr.ts meta.type.annotation.ts entity.name.type.ts",
+                "meta.class.ts meta.method.declaration.ts storage.type.ts",
+                "meta.type.parameters.ts entity.name.type.ts",
+                "meta.type.annotation.ts",
+                "entity.other.inherited-class.ts",
+                "entity.other.inherited-class.js",
+                "support.function.magic.python",
+                "entity.name.type.rust",
+                "storage.class.std.rust",
+                "entity.name.function.constructor.cpp entity.name.function.definition.special.constructor.cpp",
+                "meta.function.definition.special.constructor.cpp meta.head.function.definition.special.constructor.cpp entity.name.function.constructor.cpp entity.name.function.definition.special.constructor.cpp",
+                "support.class.qml",
+                "variable.other.readwrite.js"
+            ],
+            "settings": { "foreground": "#9fece7", "fontStyle": "" }
+        },
+        {
+            "name": "This/Self pointer/keyword",
+            "scope": [
+                "variable.language.this",
+                "variable.language.special.self",
+                "keyword.other.this.cs"
+            ],
+            "settings": { "foreground": "#ffcb6b", "fontStyle": "" }
+        },
+        {
+            "name": "Template strings expression brackets",
+            "scope": [
+                "punctuation.definition.template-expression",
+                "meta.fstring.python constant.character.format.placeholder.other.python",
+                "meta.fstring.python constant.character.format.placeholder.other.python"
+            ],
+            "settings": { "foreground": "#ff9fef", "fontStyle": "" }
+        },
+        {
+            "name": "Template string expression",
+            "scope": [
+                "meta.template.expression",
+                "meta.template.expression.js"
+            ],
+            "settings": { "foreground": "#ffffff", "fontStyle": "" }
+        },
+        {
+            "name": "Fix some with coloring for punctuation",
+            "scope": [
+                "punctuation.separator.scope-resolution.constructor.cpp",
+                "punctuation.separator.colon.access.control.cpp",
+                "meta.function.definition.special.constructor.cpp punctuation.section",
+                "entity.name.function.operator.member.cpp"
+            ],
+            "settings": { "foreground": "#fff", "fontStyle": "" }
+        },
+        {
+            "name": "Namespaces and classes",
+            "scope": [
+                "entity.name.scope-resolution.function.definition.cpp",
+                "entity.name.namespace.cpp",
+                "entity.name.function.constructor.cpp",
+                "meta.body.namespace.cpp meta.function.definition.cpp meta.body.function.definition.cpp entity.name.scope-resolution.cpp",
+                "meta.block.class.cpp meta.qualified_type.cpp entity.name.scope-resolution.cpp",
+                "entity.name.type.constructor",
+                "entity.name.function.constructor.cpp",
+                "entity.name.type.namespace.cs",
+                "entity.name.type.cs",
+                "keyword.other.assertion.coq"
+            ],
+            "settings": { "foreground": "#9fece7", "fontStyle": "" }
+        },
+        {
+            "name": "Access control keywords in c++",
+            "scope": [
+                "storage.type.modifier.access.control.private.cpp",
+                "storage.type.modifier.access.control.public.cpp",
+                "storage.type.modifier.access.control.protected.cpp",
+                "keyword.other.proof.coq",
+                "keyword.other.gallina.coq",
+                "keyword.other.vernacular"
+            ],
+            "settings": { "foreground": "#FF9FEF", "fontStyle": "" }
+        },
+        {
+            "name": "Pointer access operator",
+            "scope": [
+                "punctuation.separator.pointer-access.cpp",
+                "keyword.operator.pointer-access"
+            ],
+            "settings": { "foreground": "#7bcbff", "fontStyle": "" }
+        },
+        {
+            "name": "C# Class and namespace fixes",
+            "scope": ["keyword.other.namespace.cs", "keyword.other.class.cs"],
+            "settings": { "foreground": "#7BCBFF", "fontStyle": "" }
+        },
+        {
+            "name": "C# Objects",
+            "scope": ["variable.other.object.cs"],
+            "settings": { "foreground": "#FFCB6B", "fontStyle": "" }
+        },
+        {
+            "name": "Prolog variable",
+            "scope": ["variable.parameter.uppercase.prolog"],
+            "settings": { "foreground": "#FF9FEF", "fontStyle": "" }
+        },
+        {
+            "name": "Prolog cut",
+            "scope": ["keyword.control.cut.prolog"],
+            "settings": { "foreground": "#ffcb6b", "fontStyle": "" }
+        },
+        {
+            "name": "Fact end keyword color fix",
+            "scope": [
+                "keyword.control.fact.end.prolog",
+                "keyword.control.clause.bodyend.prolog"
+            ],
+            "settings": { "foreground": "#ffffff", "fontStyle": "" }
+        },
+        {
+            "name": "Haskell keywords",
+            "scope": [
+                "keyword.other.instance.haskell",
+                "keyword.other.newtype.haskell",
+                "keyword.other.where.haskell",
+                "keyword.other.class.haskell",
+                "keyword.other.data.haskell",
+                "keyword.other.deriving.haskell",
+                "keyword.other.type.haskell",
+                "keyword.other.let.haskell"
+            ],
+            "settings": { "foreground": "#FF9FEF", "fontStyle": "" }
+        },
+        {
+            "name": "Haskell brackets in function definitions",
+            "scope": [
+                "meta.function.type-declaration.haskell entity.name.function.haskell punctuation.paren.haskell"
+            ],
+            "settings": { "foreground": "#cdf196", "fontStyle": "" }
+        },
+        {
+            "name": "Haskell data type instance",
+            "scope": ["constant.other.haskell"],
+            "settings": { "foreground": "#9fece7", "fontStyle": "" }
+        },
+        {
+            "name": "Rust storage modifier keyword",
+            "scope": ["storage.modifier.mut.rust"],
+            "settings": { "foreground": "#DEB2FF", "fontStyle": "" }
+        },
+        {
+            "name": "Rust attributes",
+            "scope": ["meta.attribute.rust"],
+            "settings": { "foreground": "#ff929b", "fontStyle": "" }
+        },
+        {
+            "name": "Rust attribute definition",
+            "scope": ["punctuation.definition.attribute.rust"],
+            "settings": { "foreground": "#ff929b", "fontStyle": "bold" }
+        },
+        {
+            "name": "Special colour for console object",
+            "scope": ["support.class.console.js", "support.class.builtin.js"],
+            "settings": { "foreground": "#9fece7", "fontStyle": "" }
+        },
+        {
+            "name": "Variables are white",
+            "scope": [
+                "variable.other.object.js",
+                "variable.other.object.property.js",
+                "meta.function-call.js",
+                "meta.function-call.ts"
+            ],
+            "settings": { "foreground": "#fff", "fontStyle": "" }
+        },
+        {
+            "name": "Classes & object have special color",
+            "scope": [
+                "entity.name.type.js",
+                "meta.class.ts support.class.builtin.ts"
+            ],
+            "settings": { "foreground": "#9FECE7", "fontStyle": "" }
+        },
+        {
+            "name": "Type colour for typeof operator",
+            "scope": [
+                "keyword.operator.expression.typeof.ts",
+                "keyword.operator.expression.typeof.js"
+            ],
+            "settings": { "foreground": "#9FECE7", "fontStyle": "" }
+        },
+        {
+            "name": "Typescript (& Javascript?) decorators",
+            "scope": [
+                "meta.decorator.ts punctuation.decorator.ts",
+                "meta.decorator.ts meta.function-call.ts entity.name.function.ts",
+                "meta.decorator.ts meta.brace.round.ts"
+            ],
+            "settings": { "foreground": "#FF929B", "fontStyle": "bold" }
+        },
+        {
+            "name": "Decorator argument colours fixes",
+            "scope": [
+                "meta.decorator.ts meta.objectliteral.ts meta.brace.round.ts",
+                "meta.type.annotation.ts meta.object.type.ts",
+                "meta.type.annotation.ts meta.type.tuple.ts meta.brace.square.ts"
+            ],
+            "settings": { "foreground": "#ffffff" }
+        },
+        {
+            "name": "Decorator argument colours fixes",
+            "scope": [
+                "meta.decorator.ts meta.objectliteral.ts meta.function-call.ts entity.name.function.ts"
+            ],
+            "settings": { "foreground": "#C3E88D" }
+        },
+        {
+            "name": "Typeparameters",
+            "scope": [
+                "punctuation.definition.typeparameters.begin.ts",
+                "punctuation.definition.typeparameters.end.ts",
+                "meta.type.parameters.ts punctuation.separator.comma.ts",
+                "meta.type.annotation.ts punctuation.definition.parameters.begin.ts",
+                "meta.type.annotation.ts punctuation.definition.parameters.end.ts"
+            ],
+            "settings": { "foreground": "#fff", "fontStyle": "" }
+        },
+        {
+            "name": "Special Python keywords",
+            "scope": ["support.variable.magic.python"],
+            "settings": { "foreground": "#7bcbff", "fontStyle": "" }
+        },
+        {
+            "name": "Python Built-in functions special colour.",
+            "scope": ["support.function.builtin.python"],
+            "settings": { "foreground": "#9FECE7" }
+        },
+        {
+            "name": "Function decorators & Exceptions",
+            "scope": [
+                "meta.function.decorator.python entity.name.function.decorator.python",
+                "meta.function.decorator.python support.type.python",
+                "meta.function.decorator.python entity.name.function.decorator.python punctuation.definition.decorator.python"
+            ],
+            "settings": { "foreground": "#9FECE7", "fontStyle": "" }
+        },
+        {
+            "name": "Exceptions",
+            "scope": ["support.type.exception.python"],
+            "settings": { "foreground": "#FF929B", "fontStyle": "" }
+        },
+        {
+            "name": "Tag brackets",
+            "scope": [
+                "punctuation.definition.tag.end",
+                "punctuation.definition.tag.begin"
+            ],
+            "settings": { "foreground": "#eb48d0", "fontStyle": "" }
+        },
+        {
+            "name": "Attributes",
+            "scope": ["entity.other.attribute-name"],
+            "settings": { "foreground": "#c3e88d", "fontStyle": "" }
+        },
+        {
+            "name": "Tag name.",
+            "scope": ["entity.name.tag.localname", "entity.name.tag"],
+            "settings": { "foreground": "#FF9FEF", "fontStyle": "" }
+        },
+        {
+            "name": "Custom colour for DOCTYPE HTML tagname",
+            "scope": [
+                "text.html.derivative meta.tag.metadata.doctype.html entity.name.tag.html",
+                "text.html.derivative meta.tag.metadata.doctype.html entity.other.attribute-name.html"
+            ],
+            "settings": { "foreground": "#7BCBFF", "fontStyle": "" }
+        },
+        {
+            "name": "Custom colour for DOCTYPE HTML tag brackets",
+            "scope": [
+                "text.html.derivative meta.tag.metadata.doctype.html punctuation.definition.tag.begin.html",
+                "text.html.derivative meta.tag.metadata.doctype.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#209bec", "fontStyle": "" }
+        },
+        {
+            "name": "CSS variables",
+            "scope": [
+                "variable.css",
+                "meta.function.variable.css variable.argument.css"
+            ],
+            "settings": { "foreground": "#FFDB99", "fontStyle": "" }
+        },
+        {
+            "name": "CSS functions",
+            "scope": ["support.function.misc.css"],
+            "settings": { "foreground": "#C3E88D", "fontStyle": "" }
+        },
+        {
+            "name": "CSS operator colour fix",
+            "scope": [
+                "source.css keyword.operator",
+                "punctuation.definition.entity.css"
+            ],
+            "settings": { "foreground": "#FFF", "fontStyle": "" }
+        },
+        {
+            "name": "CSS classes",
+            "scope": [
+                "entity.other.attribute-name.class.css",
+                "entity.other.attribute-name.class.css punctuation.definition.entity.css"
+            ],
+            "settings": { "foreground": "#ffb982", "fontStyle": "" }
+        },
+        {
+            "name": "CSS id's",
+            "scope": [
+                "entity.other.attribute-name.id.css",
+                "entity.other.attribute-name.id.css punctuation.definition.entity.css"
+            ],
+            "settings": { "foreground": "#FF929B", "fontStyle": "" }
+        },
+        {
+            "name": "CSS pseudo classes",
+            "scope": ["entity.other.attribute-name.pseudo-class.css"],
+            "settings": { "foreground": "#C3E88D", "fontStyle": "" }
+        },
+        {
+            "name": "CSS property values",
+            "scope": ["support.constant.property-value.css"],
+            "settings": { "foreground": "#C3E88D", "fontStyle": "" }
+        },
+        {
+            "name": "SQL keywords",
+            "scope": [
+                "keyword.other.DML.sql",
+                "keyword.other.alias.sql",
+                "keyword.other.sql"
+            ],
+            "settings": { "foreground": "#7BCBFF", "fontStyle": "bold" }
+        },
+        {
+            "name": "SQL datbase name",
+            "scope": ["constant.other.database-name.sql"],
+            "settings": { "foreground": "#FFFFFF", "fontStyle": "" }
+        },
+        {
+            "name": "Markdown header 1",
+            "scope": ["heading.1.markdown"],
+            "settings": { "foreground": "#7bcbff", "fontStyle": "bold" }
+        },
+        {
+            "name": "Markdown header 2",
+            "scope": ["heading.2.markdown"],
+            "settings": { "foreground": "#deb2ff", "fontStyle": "bold" }
+        },
+        {
+            "name": "Markdown header 3",
+            "scope": ["heading.3.markdown"],
+            "settings": { "foreground": "#ff929b", "fontStyle": "bold" }
+        },
+        {
+            "name": "Markdown header 4",
+            "scope": ["heading.4.markdown"],
+            "settings": { "foreground": "#ffb982", "fontStyle": "bold" }
+        },
+        {
+            "name": "Markdown header 5",
+            "scope": ["heading.5.markdown"],
+            "settings": { "foreground": "#c3e88d", "fontStyle": "bold" }
+        },
+        {
+            "name": "JSON Key - Level 0",
+            "scope": [
+                "source.json meta.structure.dictionary.json support.type.property-name.json"
+            ],
+            "settings": { "foreground": "#7bcbff" }
+        },
+        {
+            "name": "JSON Key - Level 1",
+            "scope": [
+                "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+            ],
+            "settings": { "foreground": "#deb2ff" }
+        },
+        {
+            "name": "JSON Key - Level 2",
+            "scope": [
+                "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+            ],
+            "settings": { "foreground": "#ff929b" }
+        },
+        {
+            "name": "JSON Key - Level 3",
+            "scope": [
+                "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+            ],
+            "settings": { "foreground": "#ffb982" }
+        },
+        {
+            "name": "JSON Key - Level 4",
+            "scope": [
+                "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+            ],
+            "settings": { "foreground": "#ffcb6b" }
+        },
+        {
+            "name": "JSON Key - Level 5",
+            "scope": [
+                "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+            ],
+            "settings": { "foreground": "#c3e88d" }
+        },
+        {
+            "name": "JSON Key - Level 6",
+            "scope": [
+                "source.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json meta.structure.dictionary.value.json meta.structure.dictionary.json support.type.property-name.json"
+            ],
+            "settings": { "foreground": "#7bcbff" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

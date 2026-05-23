@@ -1,0 +1,3611 @@
+{
+    "name": "Aeon Digital Dark",
+    "type": "dark",
+    "colors": {
+        "editor.background": "#111111",
+        "editor.lineHighlightBackground": "#222222",
+        "editor.selectionBackground": "#333333",
+        "editor.foreground": "#CCCCCC",
+        "editorCursor.foreground": "#AAAAAA",
+        "editorWhitespace.foreground": "#888888",
+        "editorIndentGuide.background": "#333333",
+        "editorIndentGuide.activeBackground": "#333333"
+    },
+    "tokenColors": [
+        {
+            "name": "XML :: DOCTYPE Properties",
+            "scope": [
+                "text.xml meta.tag.sgml.doctype.xml keyword.other.doctype.xml",
+                "text.xml meta.tag.sgml.doctype.xml variable.language.documentroot.xml",
+                "text.xml meta.tag.sgml.doctype.xml"
+            ],
+            "settings": { "foreground": "#826447" }
+        },
+        {
+            "name": "XML :: DOCTYPE Identifiers and DTDs",
+            "scope": ["text.xml meta.tag.sgml.doctype.xml"],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "XML :: CDATA Block Open/Close",
+            "scope": [
+                "text.xml punctuation.definition.string.begin.xml",
+                "text.xml punctuation.definition.string.end.xml"
+            ],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "XML :: CDATA Content",
+            "scope": ["text.xml string.unquoted.cdata.xml"],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "XML :: Comment Block Open/Close",
+            "scope": [
+                "text.xml comment.block.xml punctuation.definition.comment.xml"
+            ],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "XML :: Comment Block Content",
+            "scope": ["text.xml comment.block.xml"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "XML :: Tag Open/Close",
+            "scope": ["punctuation.definition.tag.xml"],
+            "settings": { "foreground": "#AD7945" }
+        },
+        {
+            "name": "XML :: Tag Name",
+            "scope": [
+                "text.xml meta.tag.preprocessor.xml entity.name.tag.xml",
+                "text.xml meta.tag.xml entity.name.tag.localname.xml",
+                "text.xml meta.tag.no-content.xml",
+                "text.xml meta.tag.xml entity.other.attribute-name.namespace.xml",
+                "text.xml meta.tag.xml entity.name.tag.namespace.xml"
+            ],
+            "settings": { "foreground": "#AD7945" }
+        },
+        {
+            "name": "XML :: Ponctuaction Namespace Separator",
+            "scope": [
+                "text.xml meta.tag.xml entity.other.attribute-name.xml punctuation.separator.namespace.xml"
+            ],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "XML :: Attribute Name",
+            "scope": [
+                "entity.other.attribute-name.xml",
+                "entity.other.attribute-name.localname.xml"
+            ],
+            "settings": { "foreground": "#C29971" }
+        },
+        {
+            "name": "XML :: Attribute Value",
+            "scope": [
+                "text.xml meta.tag.preprocessor.xml string.quoted.double.xml",
+                "text.xml meta.tag.xml string.quoted.double.xml",
+                "text.xml meta.tag.no-content.xml string.quoted.double.xml"
+            ],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "XML :: General",
+            "scope": ["text.xml"],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "HTML :: DOCTYPE | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.metadata.doctype.html punctuation.definition.tag.begin.html",
+                "meta.tag.metadata.doctype.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "HTML :: DOCTYPE | TagName",
+            "scope": ["meta.tag.metadata.doctype.html"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "HTML :: DOCTYPE | Properties Name",
+            "scope": [
+                "meta.tag.metadata.doctype.html entity.other.attribute-name.html"
+            ],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "HTML :: CDATA | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.metadata.cdata.html punctuation.definition.tag.begin.html",
+                "meta.tag.metadata.cdata.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "HTML :: CDATA | Content",
+            "scope": [
+                "meta.tag.metadata.cdata.html string.other.inline-data.html"
+            ],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "HTML :: Comment | Open/Close Punctuaction",
+            "scope": ["punctuation.definition.comment.html"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "HTML :: Comment | Content",
+            "scope": ["comment.block.html"],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "HTML :: Text",
+            "scope": ["text.html.basic"],
+            "settings": { "foreground": "#BFBFBF" }
+        },
+        {
+            "name": "HTML :: All Entity",
+            "scope": [
+                "constant.character.entity.numeric.decimal.html",
+                "constant.character.entity.named.amp.html",
+                "constant.character.entity.named.apos.html",
+                "constant.character.entity.named.quot.html",
+                "constant.character.entity.named.lt.html",
+                "constant.character.entity.named.gt.html",
+                "constant.character.entity.named.Agrave.html",
+                "constant.character.entity.named.Aacute.html",
+                "constant.character.entity.named.Acirc.html",
+                "constant.character.entity.named.Atilde.html",
+                "constant.character.entity.named.Auml.html",
+                "constant.character.entity.named.Aring.html",
+                "constant.character.entity.named.AElig.html",
+                "constant.character.entity.named.Ccedil.html",
+                "constant.character.entity.named.Egrave.html",
+                "constant.character.entity.named.Eacute.html",
+                "constant.character.entity.named.Ecirc.html",
+                "constant.character.entity.named.Euml.html",
+                "constant.character.entity.named.Igrave.html",
+                "constant.character.entity.named.Iacute.html",
+                "constant.character.entity.named.Icirc.html",
+                "constant.character.entity.named.Iuml.html",
+                "constant.character.entity.named.ETH.html",
+                "constant.character.entity.named.Ntilde.html",
+                "constant.character.entity.named.Ograve.html",
+                "constant.character.entity.named.Oacute.html",
+                "constant.character.entity.named.Ocirc.html",
+                "constant.character.entity.named.Otilde.html",
+                "constant.character.entity.named.Ouml.html",
+                "constant.character.entity.named.Oslash.html",
+                "constant.character.entity.named.Ugrave.html",
+                "constant.character.entity.named.Uacute.html",
+                "constant.character.entity.named.Ucirc.html",
+                "constant.character.entity.named.Uuml.html",
+                "constant.character.entity.named.Yacute.html",
+                "constant.character.entity.named.THORN.html",
+                "constant.character.entity.named.szlig.html",
+                "constant.character.entity.named.agrave.html",
+                "constant.character.entity.named.aacute.html",
+                "constant.character.entity.named.acirc.html",
+                "constant.character.entity.named.atilde.html",
+                "constant.character.entity.named.auml.html",
+                "constant.character.entity.named.aring.html",
+                "constant.character.entity.named.aelig.html",
+                "constant.character.entity.named.ccedil.html",
+                "constant.character.entity.named.egrave.html",
+                "constant.character.entity.named.eacute.html",
+                "constant.character.entity.named.ecirc.html",
+                "constant.character.entity.named.euml.html",
+                "constant.character.entity.named.igrave.html",
+                "constant.character.entity.named.iacute.html",
+                "constant.character.entity.named.icirc.html",
+                "constant.character.entity.named.iuml.html",
+                "constant.character.entity.named.eth.html",
+                "constant.character.entity.named.ntilde.html",
+                "constant.character.entity.named.ograve.html",
+                "constant.character.entity.named.oacute.html",
+                "constant.character.entity.named.ocirc.html",
+                "constant.character.entity.named.otilde.html",
+                "constant.character.entity.named.ouml.html",
+                "constant.character.entity.named.oslash.html",
+                "constant.character.entity.named.ugrave.html",
+                "constant.character.entity.named.uacute.html",
+                "constant.character.entity.named.ucirc.html",
+                "constant.character.entity.named.uuml.html",
+                "constant.character.entity.named.yacute.html",
+                "constant.character.entity.named.thorn.html",
+                "constant.character.entity.named.yuml.html",
+                "constant.character.entity.named.nbsp.html",
+                "constant.character.entity.named.iexcl.html",
+                "constant.character.entity.named.cent.html",
+                "constant.character.entity.named.pound.html",
+                "constant.character.entity.named.curren.html",
+                "constant.character.entity.named.yen.html",
+                "constant.character.entity.named.brvbar.html",
+                "constant.character.entity.named.sect.html",
+                "constant.character.entity.named.uml.html",
+                "constant.character.entity.named.copy.html",
+                "constant.character.entity.named.ordf.html",
+                "constant.character.entity.named.laquo.html",
+                "constant.character.entity.named.not.html",
+                "constant.character.entity.named.shy.html",
+                "constant.character.entity.named.reg.html",
+                "constant.character.entity.named.macr.html",
+                "constant.character.entity.named.deg.html",
+                "constant.character.entity.named.plusmn.html",
+                "constant.character.entity.named.sup2.html",
+                "constant.character.entity.named.sup3.html",
+                "constant.character.entity.named.acute.html",
+                "constant.character.entity.named.micro.html",
+                "constant.character.entity.named.para.html",
+                "constant.character.entity.named.cedil.html",
+                "constant.character.entity.named.sup1.html",
+                "constant.character.entity.named.ordm.html",
+                "constant.character.entity.named.raquo.html",
+                "constant.character.entity.named.frac14.html",
+                "constant.character.entity.named.frac12.html",
+                "constant.character.entity.named.frac34.html",
+                "constant.character.entity.named.iquest.html",
+                "constant.character.entity.named.times.html",
+                "constant.character.entity.named.divide.html",
+                "constant.character.entity.named.forall.html",
+                "constant.character.entity.named.part.html",
+                "constant.character.entity.named.exist.html",
+                "constant.character.entity.named.empty.html",
+                "constant.character.entity.named.nabla.html",
+                "constant.character.entity.named.isin.html",
+                "constant.character.entity.named.notin.html",
+                "constant.character.entity.named.ni.html",
+                "constant.character.entity.named.prod.html",
+                "constant.character.entity.named.sum.html",
+                "constant.character.entity.named.minus.html",
+                "constant.character.entity.named.lowast.html",
+                "constant.character.entity.named.radic.html",
+                "constant.character.entity.named.prop.html",
+                "constant.character.entity.named.infin.html",
+                "constant.character.entity.named.ang.html",
+                "constant.character.entity.named.and.html",
+                "constant.character.entity.named.or.html",
+                "constant.character.entity.named.cap.html",
+                "constant.character.entity.named.cup.html",
+                "constant.character.entity.named.int.html",
+                "constant.character.entity.named.there4.html",
+                "constant.character.entity.named.sim.html",
+                "constant.character.entity.named.cong.html",
+                "constant.character.entity.named.asymp.html",
+                "constant.character.entity.named.ne.html",
+                "constant.character.entity.named.equiv.html",
+                "constant.character.entity.named.le.html",
+                "constant.character.entity.named.ge.html",
+                "constant.character.entity.named.sub.html",
+                "constant.character.entity.named.sup.html",
+                "constant.character.entity.named.nsub.html",
+                "constant.character.entity.named.sube.html",
+                "constant.character.entity.named.supe.html",
+                "constant.character.entity.named.oplus.html",
+                "constant.character.entity.named.otimes.html",
+                "constant.character.entity.named.perp.html",
+                "constant.character.entity.named.sdot.html",
+                "constant.character.entity.named.Alpha.html",
+                "constant.character.entity.named.Beta.html",
+                "constant.character.entity.named.Gamma.html",
+                "constant.character.entity.named.Delta.html",
+                "constant.character.entity.named.Epsilon.html",
+                "constant.character.entity.named.Zeta.html",
+                "constant.character.entity.named.Eta.html",
+                "constant.character.entity.named.Theta.html",
+                "constant.character.entity.named.Iota.html",
+                "constant.character.entity.named.Kappa.html",
+                "constant.character.entity.named.Lambda.html",
+                "constant.character.entity.named.Mu.html",
+                "constant.character.entity.named.Nu.html",
+                "constant.character.entity.named.Xi.html",
+                "constant.character.entity.named.Omicron.html",
+                "constant.character.entity.named.Pi.html",
+                "constant.character.entity.named.Rho.html",
+                "constant.character.entity.named.Sigma.html",
+                "constant.character.entity.named.Tau.html",
+                "constant.character.entity.named.Upsilon.html",
+                "constant.character.entity.named.Phi.html",
+                "constant.character.entity.named.Chi.html",
+                "constant.character.entity.named.Psi.html",
+                "constant.character.entity.named.Omega.html",
+                "constant.character.entity.named.alpha.html",
+                "constant.character.entity.named.beta.html",
+                "constant.character.entity.named.gamma.html",
+                "constant.character.entity.named.delta.html",
+                "constant.character.entity.named.epsilon.html",
+                "constant.character.entity.named.zeta.html",
+                "constant.character.entity.named.eta.html",
+                "constant.character.entity.named.theta.html",
+                "constant.character.entity.named.iota.html",
+                "constant.character.entity.named.kappa.html",
+                "constant.character.entity.named.lambda.html",
+                "constant.character.entity.named.mu.html",
+                "constant.character.entity.named.nu.html",
+                "constant.character.entity.named.xi.html",
+                "constant.character.entity.named.omicron.html",
+                "constant.character.entity.named.pi.html",
+                "constant.character.entity.named.rho.html",
+                "constant.character.entity.named.sigmaf.html",
+                "constant.character.entity.named.sigma.html",
+                "constant.character.entity.named.tau.html",
+                "constant.character.entity.named.upsilon.html",
+                "constant.character.entity.named.phi.html",
+                "constant.character.entity.named.chi.html",
+                "constant.character.entity.named.psi.html",
+                "constant.character.entity.named.omega.html",
+                "constant.character.entity.named.thetasym.html",
+                "constant.character.entity.named.upsih.html",
+                "constant.character.entity.named.piv.html",
+                "constant.character.entity.named.OElig.html",
+                "constant.character.entity.named.oelig.html",
+                "constant.character.entity.named.Scaron.html",
+                "constant.character.entity.named.scaron.html",
+                "constant.character.entity.named.Yuml.html",
+                "constant.character.entity.named.fnof.html",
+                "constant.character.entity.named.circ.html",
+                "constant.character.entity.named.tilde.html",
+                "constant.character.entity.named.ensp.html",
+                "constant.character.entity.named.emsp.html",
+                "constant.character.entity.named.thinsp.html",
+                "constant.character.entity.named.zwnj.html",
+                "constant.character.entity.named.zwj.html",
+                "constant.character.entity.named.lrm.html",
+                "constant.character.entity.named.rlm.html",
+                "constant.character.entity.named.ndash.html",
+                "constant.character.entity.named.mdash.html",
+                "constant.character.entity.named.lsquo.html",
+                "constant.character.entity.named.rsquo.html",
+                "constant.character.entity.named.sbquo.html",
+                "constant.character.entity.named.ldquo.html",
+                "constant.character.entity.named.rdquo.html",
+                "constant.character.entity.named.bdquo.html",
+                "constant.character.entity.named.dagger.html",
+                "constant.character.entity.named.Dagger.html",
+                "constant.character.entity.named.bull.html",
+                "constant.character.entity.named.hellip.html",
+                "constant.character.entity.named.permil.html",
+                "constant.character.entity.named.prime.html",
+                "constant.character.entity.named.Prime.html",
+                "constant.character.entity.named.lsaquo.html",
+                "constant.character.entity.named.rsaquo.html",
+                "constant.character.entity.named.oline.html",
+                "constant.character.entity.named.euro.html",
+                "constant.character.entity.named.trade.html",
+                "constant.character.entity.named.larr.html",
+                "constant.character.entity.named.uarr.html",
+                "constant.character.entity.named.rarr.html",
+                "constant.character.entity.named.darr.html",
+                "constant.character.entity.named.harr.html",
+                "constant.character.entity.named.crarr.html",
+                "constant.character.entity.named.lceil.html",
+                "constant.character.entity.named.rceil.html",
+                "constant.character.entity.named.lfloor.html",
+                "constant.character.entity.named.rfloor.html",
+                "constant.character.entity.named.loz.html",
+                "constant.character.entity.named.spades.html",
+                "constant.character.entity.named.clubs.html",
+                "constant.character.entity.named.hearts.html",
+                "constant.character.entity.named.diams.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: SVG | Open/Close Punctuaction",
+            "scope": [
+                "meta.element.structure.svg.html punctuation.definition.tag.begin.html",
+                "meta.element.structure.svg.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#8C96AF" }
+        },
+        {
+            "name": "HTML :: SVG | TagName",
+            "scope": ["meta.element.structure.svg.html entity.name.tag.html"],
+            "settings": { "foreground": "#636F8D" }
+        },
+        {
+            "name": "HTML :: SVG | Properties Name",
+            "scope": [
+                "meta.element.structure.svg.html punctuation.definition.string.begin.html",
+                "meta.element.structure.svg.html punctuation.definition.string.end.html",
+                "meta.element.structure.svg.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#8C96AF" }
+        },
+        {
+            "name": "HTML :: Basic Structure | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.structure.html.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.html.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.html.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.html.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.head.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.head.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.head.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.head.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.body.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.body.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.body.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.body.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#853A3A" }
+        },
+        {
+            "name": "HTML :: Basic Structure | TagName",
+            "scope": [
+                "meta.tag.structure.html.start.html entity.name.tag.html",
+                "meta.tag.structure.html.end.html entity.name.tag.html",
+                "meta.tag.structure.head.start.html entity.name.tag.html",
+                "meta.tag.structure.head.end.html entity.name.tag.html",
+                "meta.tag.structure.body.start.html entity.name.tag.html",
+                "meta.tag.structure.body.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#853A3A" }
+        },
+        {
+            "name": "HTML :: Basic Structure | Attribute Quotes",
+            "scope": [
+                "meta.tag.structure.html.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.html.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.head.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.head.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.body.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.body.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Basic Structure | Attribute Value",
+            "scope": [
+                "meta.tag.structure.html.start.html string.quoted.double.html",
+                "meta.tag.structure.head.start.html string.quoted.double.html",
+                "meta.tag.structure.body.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Body Structure Display Flow | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.structure.article.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.article.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.article.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.article.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.aside.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.aside.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.aside.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.aside.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.div.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.div.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.div.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.div.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.footer.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.footer.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.footer.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.footer.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.header.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.header.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.header.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.header.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.main.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.main.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.main.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.main.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.nav.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.nav.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.nav.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.nav.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.section.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.section.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.section.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.section.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#B88080" }
+        },
+        {
+            "name": "HTML :: Body Structure Display Flow | TagName",
+            "scope": [
+                "meta.tag.structure.article.start.html entity.name.tag.html",
+                "meta.tag.structure.article.end.html entity.name.tag.html",
+                "meta.tag.structure.aside.start.html entity.name.tag.html",
+                "meta.tag.structure.aside.end.html entity.name.tag.html",
+                "meta.tag.structure.div.start.html entity.name.tag.html",
+                "meta.tag.structure.div.end.html entity.name.tag.html",
+                "meta.tag.structure.footer.start.html entity.name.tag.html",
+                "meta.tag.structure.footer.end.html entity.name.tag.html",
+                "meta.tag.structure.header.start.html entity.name.tag.html",
+                "meta.tag.structure.header.end.html entity.name.tag.html",
+                "meta.tag.structure.main.start.html entity.name.tag.html",
+                "meta.tag.structure.main.end.html entity.name.tag.html",
+                "meta.tag.structure.nav.start.html entity.name.tag.html",
+                "meta.tag.structure.nav.end.html entity.name.tag.html",
+                "meta.tag.structure.section.start.html entity.name.tag.html",
+                "meta.tag.structure.section.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#853A3A" }
+        },
+        {
+            "name": "HTML :: Body Structure Display Flow | Attribute Quotes",
+            "scope": [
+                "meta.tag.structure.article.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.article.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.aside.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.aside.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.div.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.div.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.footer.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.footer.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.header.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.header.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.main.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.main.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.nav.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.nav.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.section.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.section.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Body Structure Display Flow | Attribute Value",
+            "scope": [
+                "meta.tag.structure.article.start.html string.quoted.double.html",
+                "meta.tag.structure.aside.start.html string.quoted.double.html",
+                "meta.tag.structure.div.start.html string.quoted.double.html",
+                "meta.tag.structure.footer.start.html string.quoted.double.html",
+                "meta.tag.structure.header.start.html string.quoted.double.html",
+                "meta.tag.structure.main.start.html string.quoted.double.html",
+                "meta.tag.structure.nav.start.html string.quoted.double.html",
+                "meta.tag.structure.section.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Body Structure Display NoFlow | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.structure.dialog.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.dialog.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.dialog.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.dialog.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.template.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.template.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.template.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.template.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.progress.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.progress.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.progress.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.progress.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#468C8C" }
+        },
+        {
+            "name": "HTML :: Body Structure Display NoFlow | TagName",
+            "scope": [
+                "meta.tag.structure.dialog.start.html entity.name.tag.html",
+                "meta.tag.structure.dialog.end.html entity.name.tag.html",
+                "meta.tag.structure.template.start.html entity.name.tag.html",
+                "meta.tag.structure.template.end.html entity.name.tag.html",
+                "meta.tag.structure.progress.start.html entity.name.tag.html",
+                "meta.tag.structure.progress.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#2D5D5D" }
+        },
+        {
+            "name": "HTML :: Body Structure Display NoFlow | Attribute Quotes",
+            "scope": [
+                "meta.tag.structure.dialog.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.dialog.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.template.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.template.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.progress.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.progress.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#438B8B" }
+        },
+        {
+            "name": "HTML :: Body Structure Display NoFlow | Attribute Value",
+            "scope": [
+                "meta.tag.structure.dialog.start.html string.quoted.double.html",
+                "meta.tag.structure.template.start.html string.quoted.double.html",
+                "meta.tag.structure.progress.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#438B8B" }
+        },
+        {
+            "name": "HTML :: MetaData Container Block | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.structure.colgroup.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.colgroup.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.colgroup.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.colgroup.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.datalist.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.datalist.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.datalist.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.datalist.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.map.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.map.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.map.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.map.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.optgroup.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.optgroup.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.optgroup.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.optgroup.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#57617B" }
+        },
+        {
+            "name": "HTML :: MetaData Container Block | TagName",
+            "scope": [
+                "meta.tag.structure.colgroup.start.html entity.name.tag.html",
+                "meta.tag.structure.colgroup.end.html entity.name.tag.html",
+                "meta.tag.structure.datalist.start.html entity.name.tag.html",
+                "meta.tag.structure.datalist.end.html entity.name.tag.html",
+                "meta.tag.structure.map.start.html entity.name.tag.html",
+                "meta.tag.structure.map.end.html entity.name.tag.html",
+                "meta.tag.structure.optgroup.start.html entity.name.tag.html",
+                "meta.tag.structure.optgroup.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#57617B" }
+        },
+        {
+            "name": "HTML :: MetaData Container Block | Attribute Quotes",
+            "scope": [
+                "meta.tag.structure.colgroup.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.colgroup.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.datalist.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.datalist.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.map.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.map.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.optgroup.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.optgroup.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#8C96AF" }
+        },
+        {
+            "name": "HTML :: MetaData Container Block | Attribute Value",
+            "scope": [
+                "meta.tag.structure.colgroup.start.html string.quoted.double.html",
+                "meta.tag.structure.datalist.start.html string.quoted.double.html",
+                "meta.tag.structure.map.start.html string.quoted.double.html",
+                "meta.tag.structure.optgroup.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#8C96AF" }
+        },
+        {
+            "name": "HTML :: MetaData DataTag | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.inline.area.void.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.area.void.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.col.void.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.col.void.html punctuation.definition.tag.end.html",
+                "meta.tag.metadata.meta.void.html punctuation.definition.tag.begin.html",
+                "meta.tag.metadata.meta.void.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.option.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.option.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.option.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.option.end.html punctuation.definition.tag.end.html",
+                "meta.tag.object.param.void.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.param.void.html punctuation.definition.tag.end.html",
+                "meta.tag.object.source.void.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.source.void.html punctuation.definition.tag.end.html",
+                "meta.tag.metadata.title.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.metadata.title.start.html punctuation.definition.tag.end.html",
+                "meta.tag.metadata.title.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.metadata.title.end.html punctuation.definition.tag.end.html",
+                "meta.tag.object.track.void.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.track.void.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#636F8D" }
+        },
+        {
+            "name": "HTML :: MetaData DataTag | TagName",
+            "scope": [
+                "meta.tag.inline.area.void.html entity.name.tag.html",
+                "meta.tag.structure.col.void.html entity.name.tag.html",
+                "meta.tag.metadata.meta.void.html entity.name.tag.html",
+                "meta.tag.structure.option.start.html entity.name.tag.html",
+                "meta.tag.structure.option.end.html entity.name.tag.html",
+                "meta.tag.object.param.void.html entity.name.tag.html",
+                "meta.tag.object.source.void.html entity.name.tag.html",
+                "meta.tag.metadata.title.start.html entity.name.tag.html",
+                "meta.tag.metadata.title.end.html entity.name.tag.html",
+                "meta.tag.object.track.void.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#636F8D" }
+        },
+        {
+            "name": "HTML :: MetaData DataTag | Attribute Quotes",
+            "scope": [
+                "meta.tag.inline.area.void.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.area.void.html punctuation.definition.string.end.html",
+                "meta.tag.structure.col.void.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.col.void.html punctuation.definition.string.end.html",
+                "meta.tag.metadata.meta.void.html punctuation.definition.string.begin.html",
+                "meta.tag.metadata.meta.void.html punctuation.definition.string.end.html",
+                "meta.tag.structure.option.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.option.start.html punctuation.definition.string.end.html",
+                "meta.tag.object.param.void.html punctuation.definition.string.begin.html",
+                "meta.tag.object.param.void.html punctuation.definition.string.end.html",
+                "meta.tag.object.source.void.html punctuation.definition.string.begin.html",
+                "meta.tag.object.source.void.html punctuation.definition.string.end.html",
+                "meta.tag.metadata.title.start.html punctuation.definition.string.begin.html",
+                "meta.tag.metadata.title.start.html punctuation.definition.string.end.html",
+                "meta.tag.object.track.void.html punctuation.definition.string.begin.html",
+                "meta.tag.object.track.void.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#8C96AF" }
+        },
+        {
+            "name": "HTML :: MetaData DataTag | Attribute Value",
+            "scope": [
+                "meta.tag.inline.area.void.html string.quoted.double.html",
+                "meta.tag.structure.col.void.html string.quoted.double.html",
+                "meta.tag.metadata.meta.void.html string.quoted.double.html",
+                "meta.tag.structure.option.start.html string.quoted.double.html",
+                "meta.tag.object.param.void.html string.quoted.double.html",
+                "meta.tag.object.source.void.html string.quoted.double.html",
+                "meta.tag.metadata.title.start.html string.quoted.double.html",
+                "meta.tag.object.track.void.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#8C96AF" }
+        },
+        {
+            "name": "HTML :: External Resource | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.metadata.link.void.html punctuation.definition.tag.begin.html",
+                "meta.tag.metadata.link.void.html punctuation.definition.tag.end.html",
+                "meta.tag.metadata.noscript.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.metadata.noscript.start.html punctuation.definition.tag.end.html",
+                "meta.tag.metadata.noscript.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.metadata.noscript.end.html punctuation.definition.tag.end.html",
+                "meta.tag.metadata.script.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.metadata.script.start.html punctuation.definition.tag.end.html",
+                "meta.tag.metadata.script.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.metadata.script.end.html punctuation.definition.tag.end.html",
+                "meta.tag.metadata.style.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.metadata.style.start.html punctuation.definition.tag.end.html",
+                "meta.tag.metadata.style.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.metadata.style.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#5B5B9C" }
+        },
+        {
+            "name": "HTML :: External Resource | TagName",
+            "scope": [
+                "meta.tag.metadata.link.void.html entity.name.tag.html",
+                "meta.tag.metadata.noscript.start.html entity.name.tag.html",
+                "meta.tag.metadata.noscript.end.html entity.name.tag.html",
+                "meta.tag.metadata.script.start.html entity.name.tag.html",
+                "meta.tag.metadata.script.end.html entity.name.tag.html",
+                "meta.tag.metadata.style.start.html entity.name.tag.html",
+                "meta.tag.metadata.style.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#5B5B9C" }
+        },
+        {
+            "name": "HTML :: External Resource | Attribute Quotes",
+            "scope": [
+                "meta.tag.metadata.link.void.html punctuation.definition.string.begin.html",
+                "meta.tag.metadata.link.void.html punctuation.definition.string.end.html",
+                "meta.tag.metadata.noscript.start.html punctuation.definition.string.begin.html",
+                "meta.tag.metadata.noscript.start.html punctuation.definition.string.end.html",
+                "meta.tag.metadata.script.start.html punctuation.definition.string.begin.html",
+                "meta.tag.metadata.script.start.html punctuation.definition.string.end.html",
+                "meta.tag.metadata.style.start.html punctuation.definition.string.begin.html",
+                "meta.tag.metadata.style.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#7A7AB1" }
+        },
+        {
+            "name": "HTML :: External Resource | Attribute Value",
+            "scope": [
+                "meta.tag.metadata.link.void.html string.quoted.double.html",
+                "meta.tag.metadata.noscript.start.html string.quoted.double.html",
+                "meta.tag.metadata.script.start.html string.quoted.double.html",
+                "meta.tag.metadata.style.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#7A7AB1" }
+        },
+        {
+            "name": "HTML :: External Media Block | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.object.audio.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.audio.start.html punctuation.definition.tag.end.html",
+                "meta.tag.object.audio.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.audio.end.html punctuation.definition.tag.end.html",
+                "meta.tag.object.canvas.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.canvas.start.html punctuation.definition.tag.end.html",
+                "meta.tag.object.canvas.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.canvas.end.html punctuation.definition.tag.end.html",
+                "meta.tag.object.embed.void.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.embed.void.html punctuation.definition.tag.end.html",
+                "meta.tag.object.iframe.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.iframe.start.html punctuation.definition.tag.end.html",
+                "meta.tag.object.iframe.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.iframe.end.html punctuation.definition.tag.end.html",
+                "meta.tag.object.object.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.object.start.html punctuation.definition.tag.end.html",
+                "meta.tag.object.object.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.object.end.html punctuation.definition.tag.end.html",
+                "meta.tag.object.picture.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.picture.start.html punctuation.definition.tag.end.html",
+                "meta.tag.object.picture.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.picture.end.html punctuation.definition.tag.end.html",
+                "meta.tag.object.video.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.video.start.html punctuation.definition.tag.end.html",
+                "meta.tag.object.video.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.video.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#8C96AF" }
+        },
+        {
+            "name": "HTML :: External Media Block | TagName",
+            "scope": [
+                "meta.tag.object.audio.start.html entity.name.tag.html",
+                "meta.tag.object.audio.end.html entity.name.tag.html",
+                "meta.tag.object.canvas.start.html entity.name.tag.html",
+                "meta.tag.object.canvas.end.html entity.name.tag.html",
+                "meta.tag.object.embed.void.html entity.name.tag.html",
+                "meta.tag.object.iframe.start.html entity.name.tag.html",
+                "meta.tag.object.iframe.end.html entity.name.tag.html",
+                "meta.tag.object.object.start.html entity.name.tag.html",
+                "meta.tag.object.object.end.html entity.name.tag.html",
+                "meta.tag.object.picture.start.html entity.name.tag.html",
+                "meta.tag.object.picture.end.html entity.name.tag.html",
+                "meta.tag.object.video.start.html entity.name.tag.html",
+                "meta.tag.object.video.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#636F8D" }
+        },
+        {
+            "name": "HTML :: External Media Block | Attribute Quotes",
+            "scope": [
+                "meta.tag.object.audio.start.html punctuation.definition.string.begin.html",
+                "meta.tag.object.audio.start.html punctuation.definition.string.end.html",
+                "meta.tag.object.canvas.start.html punctuation.definition.string.begin.html",
+                "meta.tag.object.canvas.start.html punctuation.definition.string.end.html",
+                "meta.tag.object.embed.void.html punctuation.definition.string.begin.html",
+                "meta.tag.object.embed.void.html punctuation.definition.string.end.html",
+                "meta.tag.object.iframe.start.html punctuation.definition.string.begin.html",
+                "meta.tag.object.iframe.start.html punctuation.definition.string.end.html",
+                "meta.tag.object.object.start.html punctuation.definition.string.begin.html",
+                "meta.tag.object.object.start.html punctuation.definition.string.end.html",
+                "meta.tag.object.picture.start.html punctuation.definition.string.begin.html",
+                "meta.tag.object.picture.start.html punctuation.definition.string.end.html",
+                "meta.tag.object.video.start.html punctuation.definition.string.begin.html",
+                "meta.tag.object.video.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#8C96AF" }
+        },
+        {
+            "name": "HTML :: External Media Block | Attribute Value",
+            "scope": [
+                "meta.tag.object.audio.start.html string.quoted.double.html",
+                "meta.tag.object.canvas.start.html string.quoted.double.html",
+                "meta.tag.object.embed.void.html string.quoted.double.html",
+                "meta.tag.object.iframe.start.html string.quoted.double.html",
+                "meta.tag.object.object.start.html string.quoted.double.html",
+                "meta.tag.object.picture.start.html string.quoted.double.html",
+                "meta.tag.object.video.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#8C96AF" }
+        },
+        {
+            "name": "HTML :: Special Content Block | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.structure.details.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.details.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.details.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.details.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.figure.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.figure.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.figure.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.figure.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.ruby.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.ruby.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.ruby.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.ruby.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#CF8D58" }
+        },
+        {
+            "name": "HTML :: Special Content Block | TagName",
+            "scope": [
+                "meta.tag.structure.details.start.html entity.name.tag.html",
+                "meta.tag.structure.details.end.html entity.name.tag.html",
+                "meta.tag.structure.figure.start.html entity.name.tag.html",
+                "meta.tag.structure.figure.end.html entity.name.tag.html",
+                "meta.tag.inline.ruby.start.html entity.name.tag.html",
+                "meta.tag.inline.ruby.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#AD6932" }
+        },
+        {
+            "name": "HTML :: Special Content Block | Attribute Quotes",
+            "scope": [
+                "meta.tag.structure.details.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.details.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.figure.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.figure.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.ruby.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.ruby.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#8D5629" }
+        },
+        {
+            "name": "HTML :: Special Content Block | Attribute Value",
+            "scope": [
+                "meta.tag.structure.details.start.html string.quoted.double.html",
+                "meta.tag.structure.figure.start.html string.quoted.double.html",
+                "meta.tag.inline.ruby.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#8D5629" }
+        },
+        {
+            "name": "HTML :: Special Content Legend | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.structure.figcaption.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.figcaption.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.figcaption.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.figcaption.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.summary.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.summary.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.summary.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.summary.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#AD6932" }
+        },
+        {
+            "name": "HTML :: Special Content Legend | TagName",
+            "scope": [
+                "meta.tag.structure.figcaption.start.html entity.name.tag.html",
+                "meta.tag.structure.figcaption.end.html entity.name.tag.html",
+                "meta.tag.structure.summary.start.html entity.name.tag.html",
+                "meta.tag.structure.summary.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#AD6932" }
+        },
+        {
+            "name": "HTML :: Special Content Legend | Attribute Quotes",
+            "scope": [
+                "meta.tag.structure.figcaption.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.figcaption.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.summary.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.summary.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#8D5629" }
+        },
+        {
+            "name": "HTML :: Special Content Legend | Attribute Value",
+            "scope": [
+                "meta.tag.structure.figcaption.start.html string.quoted.double.html",
+                "meta.tag.structure.summary.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#8D5629" }
+        },
+        {
+            "name": "HTML :: Special Content Inline | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.inline.rp.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.rp.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.rp.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.rp.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.rt.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.rt.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.rt.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.rt.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#AD6932" }
+        },
+        {
+            "name": "HTML :: Special Content Inline | TagName",
+            "scope": [
+                "meta.tag.inline.rp.start.html entity.name.tag.html",
+                "meta.tag.inline.rp.end.html entity.name.tag.html",
+                "meta.tag.inline.rt.start.html entity.name.tag.html",
+                "meta.tag.inline.rt.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#AD6932" }
+        },
+        {
+            "name": "HTML :: Special Content Inline | Attribute Quotes",
+            "scope": [
+                "meta.tag.inline.rp.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.rp.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.rt.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.rt.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#8D5629" }
+        },
+        {
+            "name": "HTML :: Special Content Inline | Attribute Value",
+            "scope": [
+                "meta.tag.inline.rp.start.html string.quoted.double.html",
+                "meta.tag.inline.rt.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#8D5629" }
+        },
+        {
+            "name": "HTML :: Image | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.object.img.void.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.img.void.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#8C96AF" }
+        },
+        {
+            "name": "HTML :: Image | TagName",
+            "scope": ["meta.tag.object.img.void.html entity.name.tag.html"],
+            "settings": { "foreground": "#636F8D" }
+        },
+        {
+            "name": "HTML :: Image | Attribute Quotes",
+            "scope": [
+                "meta.tag.object.img.void.html punctuation.definition.string.begin.html",
+                "meta.tag.object.img.void.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#8C96AF" }
+        },
+        {
+            "name": "HTML :: Image | Attribute Value",
+            "scope": [
+                "meta.tag.object.img.void.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#8C96AF" }
+        },
+        {
+            "name": "HTML :: Form Main Container | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.structure.form.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.form.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.form.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.form.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.fieldset.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.fieldset.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.fieldset.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.fieldset.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#B88080" }
+        },
+        {
+            "name": "HTML :: Form Main Container | TagName",
+            "scope": [
+                "meta.tag.structure.form.start.html entity.name.tag.html",
+                "meta.tag.structure.form.end.html entity.name.tag.html",
+                "meta.tag.structure.fieldset.start.html entity.name.tag.html",
+                "meta.tag.structure.fieldset.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#8F4F4F" }
+        },
+        {
+            "name": "HTML :: Form Main Container | Attribute Quotes",
+            "scope": [
+                "meta.tag.structure.form.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.form.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.fieldset.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.fieldset.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Form Main Container | Attribute Value",
+            "scope": [
+                "meta.tag.structure.form.start.html string.quoted.double.html",
+                "meta.tag.structure.fieldset.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Form FieldSet Data | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.structure.legend.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.legend.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.legend.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.legend.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#8F4F4F" }
+        },
+        {
+            "name": "HTML :: Form FieldSet Data | TagName",
+            "scope": [
+                "meta.tag.structure.legend.start.html entity.name.tag.html",
+                "meta.tag.structure.legend.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#8F4F4F" }
+        },
+        {
+            "name": "HTML :: Form FieldSet Data | Attribute Quotes",
+            "scope": [
+                "meta.tag.structure.legend.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.legend.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Form FieldSet Data | Attribute Value",
+            "scope": [
+                "meta.tag.structure.legend.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Form Components | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.structure.label.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.label.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.label.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.label.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.button.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.button.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.button.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.button.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.input.void.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.input.void.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.output.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.output.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.output.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.output.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.select.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.select.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.select.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.select.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.textarea.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.textarea.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.textarea.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.textarea.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#A75F5F" }
+        },
+        {
+            "name": "HTML :: Form Components | TagName",
+            "scope": [
+                "meta.tag.structure.label.start.html entity.name.tag.html",
+                "meta.tag.structure.label.end.html entity.name.tag.html",
+                "meta.tag.structure.button.start.html entity.name.tag.html",
+                "meta.tag.structure.button.end.html entity.name.tag.html",
+                "meta.tag.structure.input.void.html entity.name.tag.html",
+                "meta.tag.structure.output.start.html entity.name.tag.html",
+                "meta.tag.structure.output.end.html entity.name.tag.html",
+                "meta.tag.structure.select.start.html entity.name.tag.html",
+                "meta.tag.structure.select.end.html entity.name.tag.html",
+                "meta.tag.structure.textarea.start.html entity.name.tag.html",
+                "meta.tag.structure.textarea.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#A75F5F" }
+        },
+        {
+            "name": "HTML :: Form Components | Attribute Quotes",
+            "scope": [
+                "meta.tag.structure.label.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.label.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.button.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.button.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.input.void.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.input.void.html punctuation.definition.string.end.html",
+                "meta.tag.structure.output.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.output.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.select.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.select.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.textarea.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.textarea.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#B88080" }
+        },
+        {
+            "name": "HTML :: Form Components | Attribute Value",
+            "scope": [
+                "meta.tag.structure.label.start.html string.quoted.double.html",
+                "meta.tag.structure.button.start.html string.quoted.double.html",
+                "meta.tag.structure.input.void.html string.quoted.double.html",
+                "meta.tag.structure.output.start.html string.quoted.double.html",
+                "meta.tag.structure.select.start.html string.quoted.double.html",
+                "meta.tag.structure.textarea.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#B88080" }
+        },
+        {
+            "name": "HTML :: Structured Text Main Container | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.structure.dl.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.dl.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.dl.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.dl.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.ol.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.ol.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.ol.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.ol.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.ul.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.ul.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.ul.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.ul.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.table.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.table.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.table.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.table.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#B88080" }
+        },
+        {
+            "name": "HTML :: Structured Text Main Container | TagName",
+            "scope": [
+                "meta.tag.structure.dl.start.html entity.name.tag.html",
+                "meta.tag.structure.dl.end.html entity.name.tag.html",
+                "meta.tag.structure.ol.start.html entity.name.tag.html",
+                "meta.tag.structure.ol.end.html entity.name.tag.html",
+                "meta.tag.structure.ul.start.html entity.name.tag.html",
+                "meta.tag.structure.ul.end.html entity.name.tag.html",
+                "meta.tag.structure.table.start.html entity.name.tag.html",
+                "meta.tag.structure.table.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#8F4F4F" }
+        },
+        {
+            "name": "HTML :: Structured Text Main Container | Attribute Quotes",
+            "scope": [
+                "meta.tag.structure.dl.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.dl.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.ol.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.ol.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.ul.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.ul.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.table.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.table.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Structured Text Main Container | Attribute Value",
+            "scope": [
+                "meta.tag.structure.dl.start.html string.quoted.double.html",
+                "meta.tag.structure.ol.start.html string.quoted.double.html",
+                "meta.tag.structure.ul.start.html string.quoted.double.html",
+                "meta.tag.structure.table.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Structured Text Legend | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.structure.caption.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.caption.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.caption.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.caption.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.dt.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.dt.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.dt.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.dt.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#8F4F4F" }
+        },
+        {
+            "name": "HTML :: Structured Text Legend | TagName",
+            "scope": [
+                "meta.tag.structure.caption.start.html entity.name.tag.html",
+                "meta.tag.structure.caption.end.html entity.name.tag.html",
+                "meta.tag.structure.dt.start.html entity.name.tag.html",
+                "meta.tag.structure.dt.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#8F4F4F" }
+        },
+        {
+            "name": "HTML :: Structured Text Legend | Attribute Quotes",
+            "scope": [
+                "meta.tag.structure.caption.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.caption.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.dt.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.dt.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Structured Text Legend | Attribute Value",
+            "scope": [
+                "meta.tag.structure.caption.start.html string.quoted.double.html",
+                "meta.tag.structure.dt.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Structured Text Internal Container | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.structure.tbody.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.tbody.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.tbody.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.tbody.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.tfoot.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.tfoot.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.tfoot.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.tfoot.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.thead.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.thead.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.thead.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.thead.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.tr.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.tr.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.tr.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.tr.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#B88080" }
+        },
+        {
+            "name": "HTML :: Structured Text Internal Container | TagName",
+            "scope": [
+                "meta.tag.structure.tbody.start.html entity.name.tag.html",
+                "meta.tag.structure.tbody.end.html entity.name.tag.html",
+                "meta.tag.structure.tfoot.start.html entity.name.tag.html",
+                "meta.tag.structure.tfoot.end.html entity.name.tag.html",
+                "meta.tag.structure.thead.start.html entity.name.tag.html",
+                "meta.tag.structure.thead.end.html entity.name.tag.html",
+                "meta.tag.structure.tr.start.html entity.name.tag.html",
+                "meta.tag.structure.tr.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#A75F5F" }
+        },
+        {
+            "name": "HTML :: Structured Text Internal Container | Attribute Quotes",
+            "scope": [
+                "meta.tag.structure.tbody.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.tbody.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.tfoot.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.tfoot.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.thead.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.thead.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.tr.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.tr.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Structured Text Internal Container | Attribute Value",
+            "scope": [
+                "meta.tag.structure.tbody.start.html string.quoted.double.html",
+                "meta.tag.structure.tfoot.start.html string.quoted.double.html",
+                "meta.tag.structure.thead.start.html string.quoted.double.html",
+                "meta.tag.structure.tr.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Structured Text Internal Cel | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.structure.dd.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.dd.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.dd.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.dd.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.li.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.li.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.li.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.li.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.td.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.td.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.td.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.td.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.th.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.th.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.th.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.th.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#A75F5F" }
+        },
+        {
+            "name": "HTML :: Structured Text Internal Cel | TagName",
+            "scope": [
+                "meta.tag.structure.dd.start.html entity.name.tag.html",
+                "meta.tag.structure.dd.end.html entity.name.tag.html",
+                "meta.tag.structure.li.start.html entity.name.tag.html",
+                "meta.tag.structure.li.end.html entity.name.tag.html",
+                "meta.tag.structure.td.start.html entity.name.tag.html",
+                "meta.tag.structure.td.end.html entity.name.tag.html",
+                "meta.tag.structure.th.start.html entity.name.tag.html",
+                "meta.tag.structure.th.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#A75F5F" }
+        },
+        {
+            "name": "HTML :: Structured Text Internal Cel | Attribute Quotes",
+            "scope": [
+                "meta.tag.structure.dd.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.dd.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.li.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.li.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.td.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.td.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.th.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.th.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#B88080" }
+        },
+        {
+            "name": "HTML :: Structured Text Internal Cel | Attribute Value",
+            "scope": [
+                "meta.tag.structure.dd.start.html string.quoted.double.html",
+                "meta.tag.structure.li.start.html string.quoted.double.html",
+                "meta.tag.structure.td.start.html string.quoted.double.html",
+                "meta.tag.structure.th.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#B88080" }
+        },
+        {
+            "name": "HTML :: Text Containers | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.structure.address.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.address.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.address.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.address.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.blockquote.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.blockquote.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.blockquote.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.blockquote.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.p.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.p.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.p.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.p.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.pre.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.pre.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.pre.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.pre.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#B88080" }
+        },
+        {
+            "name": "HTML :: Text Containers | TagName",
+            "scope": [
+                "meta.tag.structure.address.start.html entity.name.tag.html",
+                "meta.tag.structure.address.end.html entity.name.tag.html",
+                "meta.tag.structure.blockquote.start.html entity.name.tag.html",
+                "meta.tag.structure.blockquote.end.html entity.name.tag.html",
+                "meta.tag.structure.p.start.html entity.name.tag.html",
+                "meta.tag.structure.p.end.html entity.name.tag.html",
+                "meta.tag.structure.pre.start.html entity.name.tag.html",
+                "meta.tag.structure.pre.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#8F4F4F" }
+        },
+        {
+            "name": "HTML :: Text Containers | Attribute Quotes",
+            "scope": [
+                "meta.tag.structure.address.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.address.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.blockquote.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.blockquote.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.p.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.p.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.pre.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.pre.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Text Containers | Attribute Value",
+            "scope": [
+                "meta.tag.structure.address.start.html string.quoted.double.html",
+                "meta.tag.structure.blockquote.start.html string.quoted.double.html",
+                "meta.tag.structure.p.start.html string.quoted.double.html",
+                "meta.tag.structure.pre.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Text Headers | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.structure.h1.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.h1.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.h1.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.h1.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.h2.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.h2.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.h2.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.h2.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.h3.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.h3.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.h3.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.h3.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.h4.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.h4.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.h4.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.h4.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.h5.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.h5.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.h5.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.h5.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.h6.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.h6.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.h6.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.h6.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#B88080" }
+        },
+        {
+            "name": "HTML :: Text Headers | TagName",
+            "scope": [
+                "meta.tag.structure.h1.start.html entity.name.tag.html",
+                "meta.tag.structure.h1.end.html entity.name.tag.html",
+                "meta.tag.structure.h2.start.html entity.name.tag.html",
+                "meta.tag.structure.h2.end.html entity.name.tag.html",
+                "meta.tag.structure.h3.start.html entity.name.tag.html",
+                "meta.tag.structure.h3.end.html entity.name.tag.html",
+                "meta.tag.structure.h4.start.html entity.name.tag.html",
+                "meta.tag.structure.h4.end.html entity.name.tag.html",
+                "meta.tag.structure.h5.start.html entity.name.tag.html",
+                "meta.tag.structure.h5.end.html entity.name.tag.html",
+                "meta.tag.structure.h6.start.html entity.name.tag.html",
+                "meta.tag.structure.h6.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#8F4F4F" }
+        },
+        {
+            "name": "HTML :: Text Headers | Attribute Quotes",
+            "scope": [
+                "meta.tag.structure.h1.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.h1.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.h2.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.h2.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.h3.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.h3.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.h4.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.h4.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.h5.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.h5.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.h6.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.h6.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Text Headers | Attribute Value",
+            "scope": [
+                "meta.tag.structure.h1.start.html string.quoted.double.html",
+                "meta.tag.structure.h2.start.html string.quoted.double.html",
+                "meta.tag.structure.h3.start.html string.quoted.double.html",
+                "meta.tag.structure.h4.start.html string.quoted.double.html",
+                "meta.tag.structure.h5.start.html string.quoted.double.html",
+                "meta.tag.structure.h6.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "HTML :: Text Flow Markup | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.inline.br.void.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.br.void.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.hr.void.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.hr.void.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.wbr.void.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.wbr.void.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#766895" }
+        },
+        {
+            "name": "HTML :: Text Flow Markup | TagName",
+            "scope": [
+                "meta.tag.inline.br.void.html entity.name.tag.html",
+                "meta.tag.structure.hr.void.html entity.name.tag.html",
+                "meta.tag.inline.wbr.void.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#766895" }
+        },
+        {
+            "name": "HTML :: Text Commom Markup | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.inline.a.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.a.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.a.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.a.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.abbr.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.abbr.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.abbr.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.abbr.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.b.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.b.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.b.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.b.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.cite.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.cite.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.cite.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.cite.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.code.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.code.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.code.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.code.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.bdi.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.bdi.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.bdi.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.bdi.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.bdo.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.bdo.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.bdo.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.bdo.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.data.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.data.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.data.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.data.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.del.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.del.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.del.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.del.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.dfn.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.dfn.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.dfn.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.dfn.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.em.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.em.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.em.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.em.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.i.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.i.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.i.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.i.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.ins.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.ins.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.ins.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.ins.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.kbd.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.kbd.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.kbd.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.kbd.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.mark.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.mark.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.mark.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.mark.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.meter.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.meter.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.meter.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.meter.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.q.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.q.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.q.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.q.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.s.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.s.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.s.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.s.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.samp.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.samp.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.samp.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.samp.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.small.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.small.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.small.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.small.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.span.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.span.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.span.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.span.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.strong.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.strong.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.strong.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.strong.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.sub.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.sub.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.sub.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.sub.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.sup.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.sup.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.sup.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.sup.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.time.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.time.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.time.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.time.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.u.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.u.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.u.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.u.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.var.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.var.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.var.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.var.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.wbr.void.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.wbr.void.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#B88080" }
+        },
+        {
+            "name": "HTML :: Text Commom Markup | TagName",
+            "scope": [
+                "meta.tag.inline.a.start.html entity.name.tag.html",
+                "meta.tag.inline.a.end.html entity.name.tag.html",
+                "meta.tag.inline.abbr.start.html entity.name.tag.html",
+                "meta.tag.inline.abbr.end.html entity.name.tag.html",
+                "meta.tag.inline.b.start.html entity.name.tag.html",
+                "meta.tag.inline.b.end.html entity.name.tag.html",
+                "meta.tag.inline.cite.start.html entity.name.tag.html",
+                "meta.tag.inline.cite.end.html entity.name.tag.html",
+                "meta.tag.inline.code.start.html entity.name.tag.html",
+                "meta.tag.inline.code.end.html entity.name.tag.html",
+                "meta.tag.inline.bdi.start.html entity.name.tag.html",
+                "meta.tag.inline.bdi.end.html entity.name.tag.html",
+                "meta.tag.inline.bdo.start.html entity.name.tag.html",
+                "meta.tag.inline.bdo.end.html entity.name.tag.html",
+                "meta.tag.inline.data.start.html entity.name.tag.html",
+                "meta.tag.inline.data.end.html entity.name.tag.html",
+                "meta.tag.inline.del.start.html entity.name.tag.html",
+                "meta.tag.inline.del.end.html entity.name.tag.html",
+                "meta.tag.inline.dfn.start.html entity.name.tag.html",
+                "meta.tag.inline.dfn.end.html entity.name.tag.html",
+                "meta.tag.inline.em.start.html entity.name.tag.html",
+                "meta.tag.inline.em.end.html entity.name.tag.html",
+                "meta.tag.inline.i.start.html entity.name.tag.html",
+                "meta.tag.inline.i.end.html entity.name.tag.html",
+                "meta.tag.inline.ins.start.html entity.name.tag.html",
+                "meta.tag.inline.ins.end.html entity.name.tag.html",
+                "meta.tag.inline.kbd.start.html entity.name.tag.html",
+                "meta.tag.inline.kbd.end.html entity.name.tag.html",
+                "meta.tag.inline.mark.start.html entity.name.tag.html",
+                "meta.tag.inline.mark.end.html entity.name.tag.html",
+                "meta.tag.structure.meter.start.html entity.name.tag.html",
+                "meta.tag.structure.meter.end.html entity.name.tag.html",
+                "meta.tag.inline.q.start.html entity.name.tag.html",
+                "meta.tag.inline.q.end.html entity.name.tag.html",
+                "meta.tag.inline.s.start.html entity.name.tag.html",
+                "meta.tag.inline.s.end.html entity.name.tag.html",
+                "meta.tag.inline.samp.start.html entity.name.tag.html",
+                "meta.tag.inline.samp.end.html entity.name.tag.html",
+                "meta.tag.inline.small.start.html entity.name.tag.html",
+                "meta.tag.inline.small.end.html entity.name.tag.html",
+                "meta.tag.inline.span.start.html entity.name.tag.html",
+                "meta.tag.inline.span.end.html entity.name.tag.html",
+                "meta.tag.inline.strong.start.html entity.name.tag.html",
+                "meta.tag.inline.strong.end.html entity.name.tag.html",
+                "meta.tag.inline.sub.start.html entity.name.tag.html",
+                "meta.tag.inline.sub.end.html entity.name.tag.html",
+                "meta.tag.inline.sup.start.html entity.name.tag.html",
+                "meta.tag.inline.sup.end.html entity.name.tag.html",
+                "meta.tag.inline.time.start.html entity.name.tag.html",
+                "meta.tag.inline.time.end.html entity.name.tag.html",
+                "meta.tag.inline.u.start.html entity.name.tag.html",
+                "meta.tag.inline.u.end.html entity.name.tag.html",
+                "meta.tag.inline.var.start.html entity.name.tag.html",
+                "meta.tag.inline.var.end.html entity.name.tag.html",
+                "meta.tag.inline.wbr.void.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#B88080" }
+        },
+        {
+            "name": "HTML :: Text Commom Markup | Attribute Quotes",
+            "scope": [
+                "meta.tag.inline.a.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.a.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.abbr.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.abbr.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.b.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.b.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.cite.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.cite.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.code.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.code.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.bdi.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.bdi.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.bdo.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.bdo.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.data.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.data.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.del.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.del.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.dfn.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.dfn.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.em.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.em.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.i.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.i.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.ins.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.ins.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.kbd.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.kbd.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.mark.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.mark.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.meter.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.meter.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.q.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.q.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.s.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.s.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.samp.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.samp.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.small.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.small.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.span.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.span.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.strong.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.strong.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.sub.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.sub.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.sup.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.sup.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.time.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.time.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.u.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.u.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.var.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.var.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.wbr.void.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.wbr.void.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#8C96AF" }
+        },
+        {
+            "name": "HTML :: Text Commom Markup | Attribute Value",
+            "scope": [
+                "meta.tag.inline.a.start.html string.quoted.double.html",
+                "meta.tag.inline.abbr.start.html string.quoted.double.html",
+                "meta.tag.inline.b.start.html string.quoted.double.html",
+                "meta.tag.inline.cite.start.html string.quoted.double.html",
+                "meta.tag.inline.code.start.html string.quoted.double.html",
+                "meta.tag.inline.bdi.start.html string.quoted.double.html",
+                "meta.tag.inline.bdo.start.html string.quoted.double.html",
+                "meta.tag.inline.data.start.html string.quoted.double.html",
+                "meta.tag.inline.del.start.html string.quoted.double.html",
+                "meta.tag.inline.dfn.start.html string.quoted.double.html",
+                "meta.tag.inline.em.start.html string.quoted.double.html",
+                "meta.tag.inline.i.start.html string.quoted.double.html",
+                "meta.tag.inline.ins.start.html string.quoted.double.html",
+                "meta.tag.inline.kbd.start.html string.quoted.double.html",
+                "meta.tag.inline.mark.start.html string.quoted.double.html",
+                "meta.tag.structure.meter.start.html string.quoted.double.html",
+                "meta.tag.inline.q.start.html string.quoted.double.html",
+                "meta.tag.inline.s.start.html string.quoted.double.html",
+                "meta.tag.inline.samp.start.html string.quoted.double.html",
+                "meta.tag.inline.small.start.html string.quoted.double.html",
+                "meta.tag.inline.span.start.html string.quoted.double.html",
+                "meta.tag.inline.strong.start.html string.quoted.double.html",
+                "meta.tag.inline.sub.start.html string.quoted.double.html",
+                "meta.tag.inline.sup.start.html string.quoted.double.html",
+                "meta.tag.inline.time.start.html string.quoted.double.html",
+                "meta.tag.inline.u.start.html string.quoted.double.html",
+                "meta.tag.inline.var.start.html string.quoted.double.html",
+                "meta.tag.inline.wbr.void.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#8C96AF" }
+        },
+        {
+            "name": "HTML :: Obsolete | Open/Close Punctuaction",
+            "scope": [
+                "meta.tag.inline.acronym.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.acronym.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.acronym.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.acronym.end.html punctuation.definition.tag.end.html",
+                "meta.tag.object.applet.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.applet.start.html punctuation.definition.tag.end.html",
+                "meta.tag.object.applet.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.applet.end.html punctuation.definition.tag.end.html",
+                "meta.tag.metadata.base.void.html punctuation.definition.tag.begin.html",
+                "meta.tag.metadata.base.void.html punctuation.definition.tag.end.html",
+                "meta.tag.metadata.basefont.void.html punctuation.definition.tag.begin.html",
+                "meta.tag.metadata.basefont.void.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.big.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.big.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.big.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.big.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.center.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.center.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.center.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.center.end.html punctuation.definition.tag.end.html",
+                "meta.tag.other.dir.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.other.dir.start.html punctuation.definition.tag.end.html",
+                "meta.tag.other.dir.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.other.dir.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.font.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.font.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.font.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.font.end.html punctuation.definition.tag.end.html",
+                "meta.tag.object.frame.void.html punctuation.definition.tag.begin.html",
+                "meta.tag.object.frame.void.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.frameset.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.frameset.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.frameset.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.frameset.end.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.noframes.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.noframes.start.html punctuation.definition.tag.end.html",
+                "meta.tag.structure.noframes.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.structure.noframes.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.strike.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.strike.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.strike.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.strike.end.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.tt.start.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.tt.start.html punctuation.definition.tag.end.html",
+                "meta.tag.inline.tt.end.html punctuation.definition.tag.begin.html",
+                "meta.tag.inline.tt.end.html punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#88A958" }
+        },
+        {
+            "name": "HTML :: Obsolete | TagName",
+            "scope": [
+                "meta.tag.inline.acronym.start.html entity.name.tag.html",
+                "meta.tag.inline.acronym.end.html entity.name.tag.html",
+                "meta.tag.object.applet.start.html entity.name.tag.html",
+                "meta.tag.object.applet.end.html entity.name.tag.html",
+                "meta.tag.metadata.base.void.html entity.name.tag.html",
+                "meta.tag.metadata.basefont.void.html entity.name.tag.html",
+                "meta.tag.inline.big.start.html entity.name.tag.html",
+                "meta.tag.inline.big.end.html entity.name.tag.html",
+                "meta.tag.structure.center.start.html entity.name.tag.html",
+                "meta.tag.structure.center.end.html entity.name.tag.html",
+                "meta.tag.other.dir.start.html entity.name.tag.html",
+                "meta.tag.other.dir.end.html entity.name.tag.html",
+                "meta.tag.inline.font.start.html entity.name.tag.html",
+                "meta.tag.inline.font.end.html entity.name.tag.html",
+                "meta.tag.object.frame.void.html entity.name.tag.html",
+                "meta.tag.structure.frameset.start.html entity.name.tag.html",
+                "meta.tag.structure.frameset.end.html entity.name.tag.html",
+                "meta.tag.structure.noframes.start.html entity.name.tag.html",
+                "meta.tag.structure.noframes.end.html entity.name.tag.html",
+                "meta.tag.inline.strike.start.html entity.name.tag.html",
+                "meta.tag.inline.strike.end.html entity.name.tag.html",
+                "meta.tag.inline.tt.start.html entity.name.tag.html",
+                "meta.tag.inline.tt.end.html entity.name.tag.html"
+            ],
+            "settings": { "foreground": "#88A958" }
+        },
+        {
+            "name": "HTML :: Obsolete | Attribute Quotes",
+            "scope": [
+                "meta.tag.inline.acronym.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.acronym.start.html punctuation.definition.string.end.html",
+                "meta.tag.object.applet.start.html punctuation.definition.string.begin.html",
+                "meta.tag.object.applet.start.html punctuation.definition.string.end.html",
+                "meta.tag.metadata.base.void.html punctuation.definition.string.begin.html",
+                "meta.tag.metadata.base.void.html punctuation.definition.string.end.html",
+                "meta.tag.metadata.basefont.void.html punctuation.definition.string.begin.html",
+                "meta.tag.metadata.basefont.void.html punctuation.definition.string.end.html",
+                "meta.tag.inline.big.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.big.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.center.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.center.start.html punctuation.definition.string.end.html",
+                "meta.tag.other.dir.start.html punctuation.definition.string.begin.html",
+                "meta.tag.other.dir.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.font.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.font.start.html punctuation.definition.string.end.html",
+                "meta.tag.object.frame.void.html punctuation.definition.string.begin.html",
+                "meta.tag.object.frame.void.html punctuation.definition.string.end.html",
+                "meta.tag.structure.frameset.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.frameset.start.html punctuation.definition.string.end.html",
+                "meta.tag.structure.noframes.start.html punctuation.definition.string.begin.html",
+                "meta.tag.structure.noframes.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.strike.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.strike.start.html punctuation.definition.string.end.html",
+                "meta.tag.inline.tt.start.html punctuation.definition.string.begin.html",
+                "meta.tag.inline.tt.start.html punctuation.definition.string.end.html"
+            ],
+            "settings": { "foreground": "#D6EAB9" }
+        },
+        {
+            "name": "HTML :: Obsolete | Attribute Value",
+            "scope": [
+                "meta.tag.inline.acronym.start.html string.quoted.double.html",
+                "meta.tag.object.applet.start.html string.quoted.double.html",
+                "meta.tag.metadata.base.void.html string.quoted.double.html",
+                "meta.tag.metadata.basefont.void.html string.quoted.double.html",
+                "meta.tag.inline.big.start.html string.quoted.double.html",
+                "meta.tag.structure.center.start.html string.quoted.double.html",
+                "meta.tag.other.dir.start.html string.quoted.double.html",
+                "meta.tag.inline.font.start.html string.quoted.double.html",
+                "meta.tag.object.frame.void.html string.quoted.double.html",
+                "meta.tag.structure.frameset.start.html string.quoted.double.html",
+                "meta.tag.structure.noframes.start.html string.quoted.double.html",
+                "meta.tag.inline.strike.start.html string.quoted.double.html",
+                "meta.tag.inline.tt.start.html string.quoted.double.html"
+            ],
+            "settings": { "foreground": "#D6EAB9" }
+        },
+        {
+            "name": "CSS :: Comment Block Open/Close",
+            "scope": [
+                "punctuation.definition.comment.begin.css",
+                "punctuation.definition.comment.close.css"
+            ],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "CSS :: Comment Block Content",
+            "scope": ["comment.block.css"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "CSS :: Rule Name",
+            "scope": ["meta.selector.css"],
+            "settings": { "foreground": "#BB88BB" }
+        },
+        {
+            "name": "CSS :: Id Hash",
+            "scope": ["entity.other.attribute-name.id.css"],
+            "settings": { "foreground": "#995599" }
+        },
+        {
+            "name": "CSS :: Id Name",
+            "scope": ["entity.other.attribute-name.id.css"],
+            "settings": { "foreground": "#995599" }
+        },
+        {
+            "name": "CSS :: Class Dot",
+            "scope": ["entity.other.attribute-name.class.css"],
+            "settings": { "foreground": "#BB88BB" }
+        },
+        {
+            "name": "CSS :: Class Name",
+            "scope": ["entity.other.attribute-name.class.css"],
+            "settings": { "foreground": "#BB88BB" }
+        },
+        {
+            "name": "CSS :: Tag Name",
+            "scope": ["entity.name.tag.css"],
+            "settings": { "foreground": "#BB88BB" }
+        },
+        {
+            "name": "CSS :: Pseudo Element Ponctuaction",
+            "scope": [
+                "entity.other.attribute-name.pseudo-element.css punctuation.definition.entity.css",
+                "entity.other.attribute-name.pseudo-class.css punctuation.definition.entity.css"
+            ],
+            "settings": { "foreground": "#DBBCDB" }
+        },
+        {
+            "name": "CSS :: Pseudo Element",
+            "scope": [
+                "meta.selector.css entity.other.attribute-name.pseudo-element.css",
+                "meta.selector.css entity.other.attribute-name.pseudo-class.css"
+            ],
+            "settings": { "foreground": "#DBBCDB" }
+        },
+        {
+            "name": "CSS :: Element Attribute Brackets",
+            "scope": [
+                "meta.attribute-selector.css punctuation.definition.entity.begin.bracket.square.css",
+                "meta.attribute-selector.css punctuation.definition.entity.end.bracket.square.css"
+            ],
+            "settings": { "foreground": "#734D73" }
+        },
+        {
+            "name": "CSS :: Element Attribute Name",
+            "scope": [
+                "meta.attribute-selector.css entity.other.attribute-name.css"
+            ],
+            "settings": { "foreground": "#734D73" }
+        },
+        {
+            "name": "CSS :: Element Attribute Value",
+            "scope": ["meta.attribute-selector.css string.quoted.double.css"],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "CSS :: Operators",
+            "scope": ["meta.selector.css keyword.operator.combinator.css"],
+            "settings": { "foreground": "#995599" }
+        },
+        {
+            "name": "CSS :: Rule Open/Close",
+            "scope": ["punctuation.section.property-list.css"],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "CSS :: Property Name",
+            "scope": [
+                "meta.property-name.css",
+                "support.type.property-name.css"
+            ],
+            "settings": { "foreground": "#888888" }
+        },
+        {
+            "name": "CSS :: Property Separator",
+            "scope": ["punctuation.separator.key-value.css"],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "CSS :: Property Terminator",
+            "scope": ["punctuation.terminator.rule.css"],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "CSS :: Value",
+            "scope": ["meta.property-value.css"],
+            "settings": { "foreground": "#CCCCCC" }
+        },
+        {
+            "name": "CSS :: Value Quotes",
+            "scope": [
+                "punctuation.definition.string.begin.css",
+                "punctuation.definition.string.end.css"
+            ],
+            "settings": { "foreground": "#CCCCCC" }
+        },
+        {
+            "name": "CSS :: Value Quoted",
+            "scope": ["string.quoted.double.css", "string.quoted.single.css"],
+            "settings": { "foreground": "#CCCCCC", "fontStyle": "italic" }
+        },
+        {
+            "name": "CSS :: Value Numeric",
+            "scope": ["constant.numeric.css"],
+            "settings": { "foreground": "#CCCCCC" }
+        },
+        {
+            "name": "CSS :: Value Numeric Unit",
+            "scope": [
+                "constant.numeric.css keyword.other.unit.css",
+                "keyword.other.unit.ponctuaction.css"
+            ],
+            "settings": { "foreground": "#B89A9A" }
+        },
+        {
+            "name": "CSS :: Value Function",
+            "scope": ["source.css support.function"],
+            "settings": { "foreground": "#8A6666", "fontStyle": "italic" }
+        },
+        {
+            "name": "CSS :: AT-Rule Symbol",
+            "scope": ["punctuation.definition.keyword.css"],
+            "settings": { "foreground": "#C26565" }
+        },
+        {
+            "name": "CSS :: AT-Rule Control",
+            "scope": [
+                "keyword.control.at-rule.font-face.css",
+                "keyword.control.at-rule.media.css",
+                "keyword.control.at-rule.page.css"
+            ],
+            "settings": { "foreground": "#C26565", "fontStyle": "italic" }
+        },
+        {
+            "name": "CSS :: AT-Rule Constants",
+            "scope": [
+                "meta.at-rule.media.header.css support.constant.font-face.css",
+                "meta.at-rule.media.header.css support.constant.media.css",
+                "meta.at-rule.media.header.css support.constant.page.css"
+            ],
+            "settings": { "foreground": "#C26565" }
+        },
+        {
+            "name": "CSS :: AT-Rule Logical Operator",
+            "scope": [
+                "keyword.operator.logical.only.media.css",
+                "keyword.operator.logical.and.media.css",
+                "keyword.operator.logical.or.media.css",
+                "keyword.operator.logical.not.media.css"
+            ],
+            "settings": { "foreground": "#999999", "fontStyle": "italic" }
+        },
+        {
+            "name": "JavaScript :: Comment : Line Open",
+            "scope": [
+                "comment.line.double-slash.js punctuation.definition.comment.js"
+            ],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "JavaScript :: Comment : Line Content",
+            "scope": ["comment.line.double-slash.js"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "JavaScript :: Comment : Block Open/Close",
+            "scope": [
+                "comment.block.js punctuation.definition.comment.js",
+                "comment.block.documentation.js punctuation.definition.comment.js"
+            ],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "JavaScript :: Comment : Block Content",
+            "scope": ["comment.block.js", "comment.block.documentation.js"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "JavaScript :: Comment : Doc Keyword",
+            "scope": [
+                "punctuation.definition.block.tag.jsdoc",
+                "storage.type.class.jsdoc"
+            ],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "JavaScript :: Comment : Doc Type Variable",
+            "scope": ["variable.other.jsdoc"],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "JavaScript :: Expression Terminator : End instruction [;]; Separator [,]",
+            "scope": [
+                "punctuation.terminator.statement.js",
+                "punctuation.separator.parameter.js"
+            ],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "JavaScript :: Quotes : Single; Double",
+            "scope": [
+                "source.js string.quoted.single.js punctuation.definition.string.begin.js",
+                "source.js string.quoted.single.js punctuation.definition.string.end.js",
+                "source.js string.quoted.double.js punctuation.definition.string.begin.js",
+                "source.js string.quoted.double.js punctuation.definition.string.end.js"
+            ],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "JavaScript :: Quoted Strings : Single; Double",
+            "scope": [
+                "source.js string.quoted.single.js",
+                "source.js string.quoted.double.js"
+            ],
+            "settings": { "foreground": "#B88080" }
+        },
+        {
+            "name": "JavaScript :: Quoted Strings : Variable Name",
+            "scope": ["string.quoted.double.php variable.other.php"],
+            "settings": { "foreground": "#AFB5D1" }
+        },
+        {
+            "name": "JavaScript :: Numeric : Decimal; Hex; Octal",
+            "scope": [
+                "constant.numeric.decimal.js",
+                "constant.numeric.hex.js",
+                "constant.numeric.octal.js"
+            ],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "JavaScript :: Operators : Assignment; String Concat; Comparison; Increment; Decrement; Aritmetic",
+            "scope": [
+                "keyword.operator.assignment.js",
+                "punctuation.separator.key-value.js",
+                "keyword.operator.arithmetic.js",
+                "keyword.operator.comparison.js",
+                "keyword.operator.increment.js",
+                "keyword.operator.decrement.js",
+                "keyword.operator.ternary.js"
+            ],
+            "settings": { "foreground": "#888888" }
+        },
+        {
+            "name": "JavaScript :: Operators : Logical",
+            "scope": ["keyword.operator.logical.js"],
+            "settings": { "foreground": "#888888" }
+        },
+        {
+            "name": "JavaScript :: Constant Name",
+            "scope": [
+                "variable.other.constant.js",
+                "constant.language.undefined.js",
+                "constant.language.null.js",
+                "constant.language.boolean.true.js",
+                "constant.language.boolean.false.js"
+            ],
+            "settings": { "foreground": "#888888", "fontStyle": "bold" }
+        },
+        {
+            "name": "JavaScript :: Variable Type",
+            "scope": [
+                "storage.type.js",
+                "storage.type.class.js",
+                "storage.type.property.js"
+            ],
+            "settings": { "foreground": "#6586A8" }
+        },
+        {
+            "name": "JavaScript :: Variable Name",
+            "scope": [
+                "variable.other.readwrite.js",
+                "variable.parameter.js",
+                "variable.other.object.js",
+                "variable.other.property.js",
+                "meta.object-literal.key.js",
+                "variable.other.object.js",
+                "support.variable.property.js"
+            ],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "JavaScript :: Class : This",
+            "scope": ["variable.language.this.js"],
+            "settings": { "foreground": "#888888" }
+        },
+        {
+            "name": "JavaScript :: Class : Declare; Call Name",
+            "scope": ["support.class.builtin.js"],
+            "settings": { "foreground": "#888888" }
+        },
+        {
+            "name": "JavaScript :: Class : Operator Call Method",
+            "scope": ["punctuation.accessor.js"],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "JavaScript :: Keywords : Function",
+            "scope": [
+                "storage.type.function.js",
+                "keyword.operator.expression.delete.js"
+            ],
+            "settings": { "foreground": "#6586A8" }
+        },
+        {
+            "name": "JavaScript :: Function : Name Definition",
+            "scope": [
+                "meta.definition.function.js entity.name.function.js",
+                "meta.definition.variable.js entity.name.function.js",
+                "meta.definition.method.js entity.name.function.js",
+                "entity.name.type.class.js"
+            ],
+            "settings": { "foreground": "#8A6666" }
+        },
+        {
+            "name": "JavaScript :: Function : Bracket Arguments; Assign Return Operator",
+            "scope": [
+                "punctuation.definition.parameters.begin.js",
+                "punctuation.definition.parameters.end.js"
+            ],
+            "settings": { "foreground": "#CCCCCC", "fontStyle": "bold" }
+        },
+        {
+            "name": "JavaScript :: Function : Call Name",
+            "scope": ["meta.function-call.js entity.name.function.js"],
+            "settings": { "foreground": "#888888" }
+        },
+        {
+            "name": "JavaScript :: Brackets : Round ()",
+            "scope": ["meta.brace.round.js"],
+            "settings": { "foreground": "#BBBBBB", "fontStyle": "bold" }
+        },
+        {
+            "name": "JavaScript :: Brackets : Square []",
+            "scope": ["meta.brace.square.js"],
+            "settings": { "foreground": "#BBBBBB", "fontStyle": "bold" }
+        },
+        {
+            "name": "JavaScript :: Brackets : Curly {}",
+            "scope": ["punctuation.definition.block.js"],
+            "settings": { "foreground": "#BBBBBB", "fontStyle": "bold" }
+        },
+        {
+            "name": "JavaScript :: Brackets : Angle <>",
+            "scope": [],
+            "settings": { "foreground": "#CCCCCC" }
+        },
+        {
+            "name": "JavaScript :: Keywords : new",
+            "scope": ["keyword.operator.new.js"],
+            "settings": { "foreground": "#6586A8" }
+        },
+        {
+            "name": "JavaScript :: Keywords : return",
+            "scope": ["keyword.control.flow.js"],
+            "settings": { "foreground": "#6586A8" }
+        },
+        {
+            "name": "JavaScript :: Keywords : special",
+            "scope": [],
+            "settings": { "foreground": "#838794" }
+        },
+        {
+            "name": "JavaScript :: Keywords : general structures",
+            "scope": [
+                "keyword.control.loop.js",
+                "keyword.control.switch.js",
+                "keyword.control.conditional.js"
+            ],
+            "settings": { "foreground": "#838794" }
+        },
+        {
+            "name": "JavaScript :: Keywords : try; catch; finally",
+            "scope": ["keyword.control.trycatch.js"],
+            "settings": { "foreground": "#6586A8" }
+        },
+        {
+            "name": "JSON :: Comment Block Open/Close",
+            "scope": [
+                "comment.block.json punctuation.definition.comment.json",
+                "comment.block.documentation.json punctuation.definition.comment.json"
+            ],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "JSON :: Comment Block Content",
+            "scope": [
+                "meta.structure.dictionary.json comment.block.json",
+                "meta.structure.dictionary.json comment.block.documentation.json"
+            ],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "JSON :: Open/Close",
+            "scope": [
+                "meta.structure.dictionary.json punctuation.definition.dictionary.begin.json",
+                "meta.structure.dictionary.json punctuation.definition.dictionary.end.json"
+            ],
+            "settings": { "foreground": "#BBBBBB", "fontStyle": "bold" }
+        },
+        {
+            "name": "JSON :: Quotes",
+            "scope": [
+                "support.type.property-name.json punctuation.support.type.property-name.begin.json",
+                "support.type.property-name.json punctuation.support.type.property-name.end.json",
+                "string.quoted.double.json punctuation.definition.string.begin.json",
+                "string.quoted.double.json punctuation.definition.string.end.json"
+            ],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "JSON :: Key-Value Separator",
+            "scope": ["punctuation.separator.dictionary.key-value.json"],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "JSON :: Comma",
+            "scope": ["punctuation.separator.dictionary.pair.json"],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "JSON :: Constant - true/false/null",
+            "scope": ["constant.language.json"],
+            "settings": { "foreground": "#6F77BB" }
+        },
+        {
+            "name": "JSON :: Property Quoted Name",
+            "scope": ["support.type.property-name.json"],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "JSON :: Property Value String",
+            "scope": [
+                "meta.structure.dictionary.value.json string.quoted.double.json"
+            ],
+            "settings": { "foreground": "#B88080" }
+        },
+        {
+            "name": "JSON :: Property Value Numeric",
+            "scope": ["constant.numeric.json"],
+            "settings": { "foreground": "#947F7F" }
+        },
+        {
+            "name": "JSON :: General",
+            "scope": ["source.json"],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "PHP :: Comment : Line Open",
+            "scope": [
+                "comment.line.double-slash.php punctuation.definition.comment.php"
+            ],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "PHP :: Comment : Line Content",
+            "scope": ["comment.line.double-slash.php"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "PHP :: Comment : Block Open/Close",
+            "scope": [
+                "comment.block.php punctuation.definition.comment.php",
+                "comment.block.documentation.phpdoc.php punctuation.definition.comment.php"
+            ],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "PHP :: Comment : Block Content",
+            "scope": [
+                "comment.block.php",
+                "comment.block.documentation.phpdoc.php"
+            ],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "PHP :: Comment : Doc Keyword",
+            "scope": ["keyword.other.phpdoc.php"],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "PHP :: Comment : Doc Type Variable",
+            "scope": ["meta.other.type.phpdoc.php keyword.other.type.php"],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "PHP :: CodeBlock : Open/Close",
+            "scope": [
+                "punctuation.section.embedded.begin.php",
+                "punctuation.section.embedded.end.php"
+            ],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "PHP :: Keywords : Namespace/Package; use; as",
+            "scope": [
+                "keyword.other.namespace.php",
+                "keyword.other.use.php",
+                "keyword.other.use-as.php"
+            ],
+            "settings": { "foreground": "#888888" }
+        },
+        {
+            "name": "PHP :: Namespace Definition Name",
+            "scope": ["entity.name.type.namespace.php"],
+            "settings": { "foreground": "#999999", "fontStyle": "bold" }
+        },
+        {
+            "name": "PHP :: Keywords Values : Namespace/Package; alias",
+            "scope": [
+                "support.other.namespace.php",
+                "meta.use.php support.class.php",
+                "entity.other.alias.php"
+            ],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "PHP :: Namespace Separator",
+            "scope": ["punctuation.separator.inheritance.php"],
+            "settings": { "foreground": "#888888", "fontStyle": "bold" }
+        },
+        {
+            "name": "PHP :: Expression Terminator : End instruction [;]; Separator [,]",
+            "scope": [
+                "punctuation.terminator.expression.php",
+                "punctuation.separator.delimiter.php"
+            ],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "PHP :: Quoted Strings : Single; Double",
+            "scope": [
+                "string.quoted.single.php",
+                "string.quoted.double.php",
+                "string.regexp.single-quoted.php",
+                "string.regexp.double-quoted.php"
+            ],
+            "settings": { "foreground": "#6771A8" }
+        },
+        {
+            "name": "PHP :: Quoted Strings : Variable Name",
+            "scope": ["string.quoted.double.php variable.other.php"],
+            "settings": { "foreground": "#AFB5D1" }
+        },
+        {
+            "name": "PHP :: Numeric : Decimal; Hex; Octal",
+            "scope": [
+                "constant.numeric.decimal.php",
+                "constant.numeric.hex.php",
+                "constant.numeric.octal.php"
+            ],
+            "settings": { "foreground": "#6699AA" }
+        },
+        {
+            "name": "PHP :: Operators : Assignment; String Concat; Comparison; Increment; Decrement; Aritmetic",
+            "scope": [
+                "keyword.operator.assignment.php",
+                "keyword.operator.key.php",
+                "keyword.operator.string.php",
+                "keyword.operator.comparison.php",
+                "keyword.operator.increment-decrement.php",
+                "keyword.operator.arithmetic.php",
+                "keyword.operator.type.php"
+            ],
+            "settings": { "foreground": "#888888" }
+        },
+        {
+            "name": "PHP :: Operators : Logical",
+            "scope": ["keyword.operator.logical.php"],
+            "settings": { "foreground": "#888888" }
+        },
+        {
+            "name": "PHP :: Storage Modifier : private; protected; public; abstract; final",
+            "scope": [
+                "storage.modifier.php",
+                "storage.modifier.abstract.php",
+                "storage.modifier.final.php"
+            ],
+            "settings": { "foreground": "#6586A8" }
+        },
+        {
+            "name": "PHP :: Constant Name",
+            "scope": ["constant.other.php", "constant.language.php"],
+            "settings": { "foreground": "#888888", "fontStyle": "bold" }
+        },
+        {
+            "name": "PHP :: Variable Type",
+            "scope": ["storage.type.php", "keyword.other.type.php"],
+            "settings": { "foreground": "#6586A8" }
+        },
+        {
+            "name": "PHP :: Variable Signals : Nullable; Reference",
+            "scope": [
+                "keyword.operator.nullable-type.php",
+                "storage.modifier.reference.php"
+            ],
+            "settings": { "foreground": "#888888", "fontStyle": "bold" }
+        },
+        {
+            "name": "PHP :: Variable Name",
+            "scope": [
+                "variable.other.php",
+                "variable.other.class.php",
+                "variable.other.property.php"
+            ],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "PHP :: Keywords : Class; Interface; Trait; Extends; Implements",
+            "scope": [
+                "storage.type.class.php",
+                "storage.type.interface.php",
+                "storage.type.trait.php",
+                "storage.modifier.extends.php",
+                "storage.modifier.implements.php"
+            ],
+            "settings": { "foreground": "#6586A8" }
+        },
+        {
+            "name": "PHP :: Class Name",
+            "scope": ["entity.name.type.class.php"],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "PHP :: Inherited ClassName; Interface Name",
+            "scope": ["entity.other.inherited-class.php"],
+            "settings": {
+                "foreground": "#7788CC",
+                "fontStyle": "underline italic"
+            }
+        },
+        {
+            "name": "PHP :: Class : This",
+            "scope": ["variable.language.this.php"],
+            "settings": { "foreground": "#888888" }
+        },
+        {
+            "name": "PHP :: Class : Declare; Call Name",
+            "scope": [
+                "support.class.php",
+                "support.class.builtin.php",
+                "support.class.exception.php"
+            ],
+            "settings": { "foreground": "#888888" }
+        },
+        {
+            "name": "PHP :: Class : Operator Call Method",
+            "scope": ["keyword.operator.class.php"],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "PHP :: Keywords : Function",
+            "scope": ["storage.type.function.php"],
+            "settings": { "foreground": "#6586A8" }
+        },
+        {
+            "name": "PHP :: Function : Name Definition",
+            "scope": ["entity.name.function.php"],
+            "settings": { "foreground": "#8A6666" }
+        },
+        {
+            "name": "PHP :: Function : Argument Type",
+            "scope": [
+                "meta.function.parameter.typehinted.php keyword.other.type.php",
+                "meta.function.parameter.typehinted.php support.other.namespace.php",
+                "meta.function.parameter.typehinted.php punctuation.separator.inheritance.php"
+            ],
+            "settings": { "foreground": "#888888" }
+        },
+        {
+            "name": "PHP :: Function : Bracket Arguments; Assign Return Operator",
+            "scope": [
+                "punctuation.definition.parameters.begin.bracket.round.php",
+                "punctuation.definition.parameters.end.bracket.round.php",
+                "keyword.operator.return-value.php"
+            ],
+            "settings": { "foreground": "#CCCCCC" }
+        },
+        {
+            "name": "PHP :: Function : Call Name",
+            "scope": [
+                "source.php support.function",
+                "meta.method-call.php entity.name.function.php",
+                "keyword.control.import.include.php"
+            ],
+            "settings": { "foreground": "#8A6666" }
+        },
+        {
+            "name": "PHP :: Brackets : Round ()",
+            "scope": [
+                "punctuation.definition.begin.bracket.round.php",
+                "punctuation.definition.end.bracket.round.php",
+                "punctuation.definition.arguments.begin.bracket.round.php",
+                "punctuation.definition.arguments.end.bracket.round.php",
+                "punctuation.definition.array.begin.bracket.round.php",
+                "punctuation.definition.array.end.bracket.round.php"
+            ],
+            "settings": { "foreground": "#BBBBBB", "fontStyle": "bold" }
+        },
+        {
+            "name": "PHP :: Brackets : Square []",
+            "scope": [
+                "punctuation.section.array.begin.php",
+                "punctuation.section.array.end.php"
+            ],
+            "settings": { "foreground": "#BBBBBB", "fontStyle": "bold" }
+        },
+        {
+            "name": "PHP :: Brackets : Curly {}",
+            "scope": [
+                "punctuation.definition.end.bracket.curly.php",
+                "punctuation.definition.end.bracket.curly.php"
+            ],
+            "settings": { "foreground": "#BBBBBB", "fontStyle": "bold" }
+        },
+        {
+            "name": "PHP :: Brackets : Angle <>",
+            "scope": [],
+            "settings": { "foreground": "#CCCCCC" }
+        },
+        {
+            "name": "PHP :: Keywords : new",
+            "scope": ["keyword.other.new.php"],
+            "settings": { "foreground": "#6586A8" }
+        },
+        {
+            "name": "PHP :: Keywords : return",
+            "scope": ["keyword.control.return.php"],
+            "settings": { "foreground": "#6586A8" }
+        },
+        {
+            "name": "PHP :: Keywords : special",
+            "scope": ["keyword.other.clone.php"],
+            "settings": { "foreground": "#838794" }
+        },
+        {
+            "name": "PHP :: Keywords : general structures",
+            "scope": [
+                "keyword.control.for.php",
+                "keyword.control.foreach.php",
+                "keyword.control.switch.php",
+                "keyword.control.case.php",
+                "keyword.control.default.php",
+                "keyword.control.break.php",
+                "keyword.control.while.php",
+                "keyword.control.do.php",
+                "keyword.control.if.php",
+                "keyword.control.elseif.php",
+                "keyword.control.else.php"
+            ],
+            "settings": { "foreground": "#838794" }
+        },
+        {
+            "name": "PHP :: Keywords : try; catch; finally",
+            "scope": [
+                "keyword.control.exception.php",
+                "keyword.control.exception.catch.php"
+            ],
+            "settings": { "foreground": "#6586A8" }
+        },
+        {
+            "name": "SQL :: Comment",
+            "scope": [
+                "comment.block.c punctuation.definition.comment.sql",
+                "punctuation.definition.comment.sql",
+                "punctuation.definition.comment.sql",
+                "comment.block.c"
+            ],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "SQL :: Default",
+            "scope": ["source.sql"],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "SQL :: Keyword General",
+            "scope": [
+                "keyword.mysql",
+                "keyword.other.sql",
+                "keyword.other.DML.sql"
+            ],
+            "settings": { "foreground": "#888888" }
+        },
+        {
+            "name": "SQL :: Keywords",
+            "scope": [
+                "keyword.other.alias.sql",
+                "keyword.other.DDL.create.II.sql",
+                "keyword.other.order.sql",
+                "constant.other.database-name.sql"
+            ],
+            "settings": { "foreground": "#888888" }
+        },
+        {
+            "name": "SQL :: Function",
+            "scope": [
+                "support.function.aggregate.sql",
+                "support.function.string.sql"
+            ],
+            "settings": { "foreground": "#8A6666" }
+        },
+        {
+            "name": "SQL :: Operator",
+            "scope": ["keyword.operator.comparison.sql"],
+            "settings": { "foreground": "#888888" }
+        },
+        {
+            "name": "SQL :: String Quoted Value",
+            "scope": ["string.quoted.single.sql", "string.quoted.double.sql"],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "SQL :: Number Value",
+            "scope": ["constant.numeric.sql"],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "Makefile :: Comment Line Hash",
+            "scope": ["punctuation.definition.comment.makefile"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "Makefile :: Comment Line Content",
+            "scope": ["comment.line.number-sign.makefile"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "Makefile :: Support Built-in Function ",
+            "scope": [
+                "support.function.target.PHONY.makefile",
+                "support.function.target.SUFFIXES.makefile",
+                "support.function.target.DEFAULT.makefile",
+                "support.function.target.PRECIOUS.makefile",
+                "support.function.target.INTERMEDIATE.makefile",
+                "support.function.target.SECONDARY.makefile",
+                "support.function.target.SECONDEXPANSION.makefile",
+                "support.function.target.DELETE_ON_ERROR.makefile",
+                "support.function.target.IGNORE.makefile",
+                "support.function.target.LOW_RESOLUTION_TIME.makefile",
+                "support.function.target.SILENT.makefile",
+                "support.function.target.EXPORT_ALL_VARIABLES.makefile",
+                "support.function.target.NOTPARALLEL.makefile",
+                "support.function.target.ONESHELL.makefile",
+                "support.function.target.POSIX.makefile"
+            ],
+            "settings": { "foreground": "#987C57" }
+        },
+        {
+            "name": "Makefile :: Controlers",
+            "scope": ["keyword.control.include.makefile"],
+            "settings": { "foreground": "#CA9286" }
+        },
+        {
+            "name": "Makefile :: Variables Declaration",
+            "scope": ["variable.other.makefile"],
+            "settings": { "foreground": "#B37468" }
+        },
+        {
+            "name": "Makefile :: Variables Use",
+            "scope": ["string.interpolated.makefile variable.other.makefile"],
+            "settings": { "foreground": "#ca9286" }
+        },
+        {
+            "name": "Makefile :: Variables Ponctuaction",
+            "scope": ["punctuation.definition.variable.makefile"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "Makefile :: Function Names",
+            "scope": ["entity.name.function.target.makefile"],
+            "settings": { "foreground": "#ca7339" }
+        },
+        {
+            "name": "Makefile :: Function Prerequisites name",
+            "scope": ["meta.scope.prerequisites.makefile"],
+            "settings": { "foreground": "#F0C2A2" }
+        },
+        {
+            "name": "Makefile :: Function Escape Continuation Character",
+            "scope": ["constant.character.escape.continuation.makefile"],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "Makefile :: Function Escape Continuation Character teste",
+            "scope": ["meta.scope.recipe.makefile"],
+            "settings": { "foreground": "#A9A9A9" }
+        },
+        {
+            "name": "Dockerfile :: Comment Line Hash",
+            "scope": ["punctuation.definition.comment.dockerfile"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "Dockerfile :: Comment Line Content",
+            "scope": ["comment.line.number-sign.dockerfile"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "Dockerfile :: Comment Special Method",
+            "scope": ["keyword.other.special-method.dockerfile"],
+            "settings": { "foreground": "#5B93B8" }
+        },
+        {
+            "name": "Dockerfile :: Quoted Values",
+            "scope": [
+                "string.quoted.double.dockerfile",
+                "string.quoted.single.dockerfile"
+            ],
+            "settings": { "foreground": "#A9A9A9" }
+        },
+        {
+            "name": "Dockerfile :: Values",
+            "scope": ["source.dockerfile"],
+            "settings": { "foreground": "#CCCCCC" }
+        },
+        {
+            "name": "Docker-Compose :: Comment Line Hash",
+            "scope": ["punctuation.definition.comment.yaml"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "Docker-Compose :: Comment Line Content",
+            "scope": ["comment.line.number-sign.yaml"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "Docker-Compose :: Property",
+            "scope": ["entity.name.tag.yaml"],
+            "settings": { "foreground": "#D66787" }
+        },
+        {
+            "name": "Docker-Compose :: Value",
+            "scope": [
+                "string.quoted.single.yaml",
+                "string.unquoted.plain.out.yaml"
+            ],
+            "settings": { "foreground": "#A9A9A9" }
+        },
+        {
+            "name": "Docker-Compose :: Ponctuaction Block Sequence",
+            "scope": ["punctuation.definition.block.sequence.item.yaml"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "Markdown :: Punctuation Headers",
+            "scope": [
+                "punctuation.definition.heading.markdown",
+                "markup.heading.setext.1.markdown",
+                "markup.heading.setext.2.markdown"
+            ],
+            "settings": { "foreground": "#5A5CAD", "fontStyle": "bold" }
+        },
+        {
+            "name": "Markdown :: Content Headers",
+            "scope": ["markup.heading.markdown entity.name.section.markdown"],
+            "settings": { "foreground": "#5A5CAD", "fontStyle": "bold" }
+        },
+        {
+            "name": "Markdown :: Punctuation Quote",
+            "scope": [
+                "markup.quote.markdown beginning.punctuation.definition.quote.markdown"
+            ],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "Markdown :: Content Quoted",
+            "scope": ["markup.quote.markdown meta.paragraph.markdown"],
+            "settings": { "foreground": "#666666", "fontStyle": "italic" }
+        },
+        {
+            "name": "Markdown :: Punctuation List",
+            "scope": [
+                "markup.list.unnumbered.markdown beginning.punctuation.definition.list.markdown",
+                "markup.list.numbered.markdown beginning.punctuation.definition.list.markdown"
+            ],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "Markdown :: Content List",
+            "scope": [
+                "markup.list.unnumbered.markdown meta.paragraph.markdown",
+                "markup.list.numbered.markdown meta.paragraph.markdown"
+            ],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "Markdown :: Link Title Open/Close",
+            "scope": [
+                "meta.link.inline.markdown punctuation.definition.string.begin.markdown",
+                "meta.link.inline.markdown punctuation.definition.string.end.markdown"
+            ],
+            "settings": { "foreground": "#8284CC", "fontStyle": "bold" }
+        },
+        {
+            "name": "Markdown :: Link Title",
+            "scope": [
+                "meta.link.inline.markdown string.other.link.title.markdown"
+            ],
+            "settings": { "foreground": "#8284CC", "fontStyle": "bold" }
+        },
+        {
+            "name": "Markdown :: Link URL Open/Close",
+            "scope": [
+                "meta.link.inline.markdown punctuation.definition.metadata.markdown"
+            ],
+            "settings": { "foreground": "#8284CC", "fontStyle": "bold" }
+        },
+        {
+            "name": "Markdown :: Link URL",
+            "scope": [
+                "meta.link.inline.markdown markup.underline.link.markdown"
+            ],
+            "settings": {
+                "foreground": "#666666",
+                "fontStyle": "underline italic"
+            }
+        },
+        {
+            "name": "Markdown :: Image Definition",
+            "scope": [
+                "meta.image.inline.markdown punctuation.definition.string.begin.markdown",
+                "meta.image.inline.markdown punctuation.definition.string.end.markdown"
+            ],
+            "settings": { "foreground": "#8284CC", "fontStyle": "bold" }
+        },
+        {
+            "name": "Markdown :: Image Definition Title",
+            "scope": [
+                "meta.image.inline.markdown string.other.link.description.markdown"
+            ],
+            "settings": { "foreground": "#8284CC", "fontStyle": "bold" }
+        },
+        {
+            "name": "Markdown :: Image URL Open/Close",
+            "scope": [
+                "meta.image.inline.markdown punctuation.definition.metadata.markdown"
+            ],
+            "settings": { "foreground": "#666666", "fontStyle": "bold" }
+        },
+        {
+            "name": "Markdown :: Image URL",
+            "scope": [
+                "meta.image.inline.markdown markup.underline.link.image.markdown"
+            ],
+            "settings": {
+                "foreground": "#666666",
+                "fontStyle": "underline italic"
+            }
+        },
+        {
+            "name": "Markdown :: Image URL Description",
+            "scope": [
+                "meta.image.inline.markdown string.other.link.description.title.markdown",
+                "meta.link.inline.markdown string.other.link.description.title.markdown punctuation.definition.string.begin.markdown",
+                "meta.link.inline.markdown string.other.link.description.title.markdown punctuation.definition.string.end.markdown"
+            ],
+            "settings": { "foreground": "#AAAAAA" }
+        },
+        {
+            "name": "Markdown :: Block Fenced Code Open/Close",
+            "scope": [
+                "markup.fenced_code.block.markdown punctuation.definition.markdown"
+            ],
+            "settings": { "foreground": "#5D8FAF" }
+        },
+        {
+            "name": "Markdown :: Block Fenced Code Language Name",
+            "scope": [
+                "markup.fenced_code.block.markdown fenced_code.block.language"
+            ],
+            "settings": { "foreground": "#245E83" }
+        },
+        {
+            "name": "Markdown :: Block Fenced Code Content",
+            "scope": ["markup.fenced_code.block.markdown"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "Markdown :: Punctuation Bold",
+            "scope": [
+                "markup.bold.markdown punctuation.definition.bold.markdown"
+            ],
+            "settings": { "fontStyle": "bold" }
+        },
+        {
+            "name": "Markdown :: Bold Content",
+            "scope": ["markup.bold.markdown"],
+            "settings": { "fontStyle": "bold" }
+        },
+        {
+            "name": "Markdown :: Punctuation Italic",
+            "scope": [
+                "markup.italic.markdown punctuation.definition.italic.markdown"
+            ],
+            "settings": { "fontStyle": "italic" }
+        },
+        {
+            "name": "Markdown :: Italic Content",
+            "scope": ["markup.italic.markdown"],
+            "settings": { "fontStyle": "italic" }
+        },
+        {
+            "name": "Markdown :: General",
+            "scope": ["text.html.markdown meta.paragraph.markdown"],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "Markdown :: Content Raw",
+            "scope": ["markup.raw.block.markdown"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "Markdown :: Separator",
+            "scope": ["meta.separator.markdown"],
+            "settings": { "foreground": "#AAAAAA" }
+        },
+        {
+            "name": "Go :: General Code",
+            "scope": ["source.go"],
+            "settings": { "foreground": "#EEEEEE" }
+        },
+        {
+            "name": "Go :: Comment",
+            "scope": [
+                "punctuation.definition.comment.go",
+                "comment.line.double-slash.go",
+                "comment.block.go"
+            ],
+            "settings": { "foreground": "#555555" }
+        },
+        {
+            "name": "Go :: Quote",
+            "scope": [
+                "punctuation.definition.string.begin.go",
+                "punctuation.definition.string.end.go"
+            ],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "Go :: Quoted Strings : Single; Double; Raw",
+            "scope": [
+                "string.quoted.single.go",
+                "string.quoted.double.go",
+                "string.quoted.raw.go"
+            ],
+            "settings": { "foreground": "#DBCF64" }
+        },
+        {
+            "name": "Go :: Numeric : Decimal; Hex; Octal",
+            "scope": [
+                "constant.numeric.decimal.go",
+                "constant.numeric.hexadecimal.go",
+                "keyword.other.unit.hexadecimal.go"
+            ],
+            "settings": { "foreground": "#9073CE" }
+        },
+        {
+            "name": "Go :: Punctuaction : Brackets : Round ()",
+            "scope": [
+                "punctuation.definition.begin.bracket.round.go",
+                "punctuation.definition.end.bracket.round.go"
+            ],
+            "settings": { "foreground": "#999999", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Punctuaction : Brackets : Square []",
+            "scope": [
+                "punctuation.definition.begin.bracket.square.go",
+                "punctuation.definition.end.bracket.square.go"
+            ],
+            "settings": { "foreground": "#999999", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Punctuaction : Brackets : Curly {}",
+            "scope": [
+                "punctuation.definition.begin.bracket.curly.go",
+                "punctuation.definition.end.bracket.curly.go"
+            ],
+            "settings": { "foreground": "#999999", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Punctuaction : comma; semicolon; colon; period",
+            "scope": [
+                "punctuation.terminator.go",
+                "punctuation.other.comma.go",
+                "punctuation.other.period.go",
+                "punctuation.other.colon.go"
+            ],
+            "settings": { "foreground": "#999999", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Punctuaction : address pointer",
+            "scope": ["keyword.operator.address.go"],
+            "settings": { "foreground": "#999999", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Operators : Assignment( := ); String Concat( + ); Increment( ++ ); Decrement( -- ); Aritmetic",
+            "scope": [
+                "keyword.operator.assignment.go",
+                "keyword.operator.increment.go",
+                "keyword.operator.decrement.go",
+                "keyword.operator.arithmetic.go"
+            ],
+            "settings": { "foreground": "#999999", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Operators : Logical( && || ! ); Comparison( < > <= >= == ); Channel( <- )",
+            "scope": [
+                "keyword.operator.logical.go",
+                "keyword.operator.comparison.go",
+                "keyword.operator.channel.go"
+            ],
+            "settings": { "foreground": "#999999", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Keywords : Package; Const; Type; Interface; Struct; Func",
+            "scope": [
+                "keyword.package.go",
+                "keyword.const.go",
+                "keyword.type.go",
+                "keyword.interface.go",
+                "keyword.struct.go",
+                "keyword.function.go"
+            ],
+            "settings": { "foreground": "#BF598D", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Package : Name",
+            "scope": ["entity.name.type.package.go"],
+            "settings": { "foreground": "#6586A8", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Const : Name",
+            "scope": ["variable.other.constant.go"],
+            "settings": { "foreground": "#8B72B0" }
+        },
+        {
+            "name": "Go :: Block[Type] : Struct | Interface : Name",
+            "scope": ["entity.name.type.go"],
+            "settings": { "foreground": "#8B72B0" }
+        },
+        {
+            "name": "Go :: Block[Type] : Struct : Property Name",
+            "scope": ["variable.other.property.go"],
+            "settings": { "foreground": "#AAAAAA", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Block[Type] : Struct : Type Name || Function : Type Name || Type Name",
+            "scope": [
+                "storage.type.boolean.go",
+                "storage.type.string.go",
+                "storage.type.numeric.go",
+                "storage.type.rune.go",
+                "storage.type.byte.go",
+                "storage.type.error.go",
+                "entity.name.type.any.go"
+            ],
+            "settings": { "foreground": "#7B8ABA", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Block[Type] : Interface : Function : Definition Name || Function : Call",
+            "scope": ["entity.name.function.support.go"],
+            "settings": { "foreground": "#A39477" }
+        },
+        {
+            "name": "Go :: Block[Type] | Interface : Function : Parameter Name || Block[Func] | : Parameter Name",
+            "scope": ["variable.parameter.go"],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "Go :: Block[Func] : Definition Name",
+            "scope": ["entity.name.function.go"],
+            "settings": { "foreground": "#C49A41" }
+        },
+        {
+            "name": "Go :: Keyword : Import",
+            "scope": ["keyword.control.import.go"],
+            "settings": { "foreground": "#BF598D", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Block[Import] : Brackets",
+            "scope": [
+                "punctuation.definition.imports.begin.bracket.round.go",
+                "punctuation.definition.imports.end.bracket.round.go"
+            ],
+            "settings": { "foreground": "#999999", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Block[Import] : Paths",
+            "scope": ["entity.name.import.go"],
+            "settings": { "foreground": "#DBCF64" }
+        },
+        {
+            "name": "Go :: Block[Import] : Alias",
+            "scope": ["variable.other.import.go"],
+            "settings": { "foreground": "#7B8ABA", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Controls : if-else; switch; case; continue; break; defer; go; goto; return",
+            "scope": ["keyword.control.go", "keyword.channel.go"],
+            "settings": { "foreground": "#787BB4", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Keyword : map",
+            "scope": ["keyword.map.go"],
+            "settings": { "foreground": "#52659D", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Keyword : var",
+            "scope": ["keyword.var.go"],
+            "settings": { "foreground": "#52659D", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Keyword : true|false",
+            "scope": ["constant.language.boolean.go"],
+            "settings": { "foreground": "#DBBC65", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Keyword : nil",
+            "scope": ["constant.language.null.go"],
+            "settings": { "foreground": "#DBBC65", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Builtin",
+            "scope": ["entity.name.function.support.builtin.go"],
+            "settings": { "foreground": "#B18F4D", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Label",
+            "scope": ["variable.other.label.go"],
+            "settings": { "foreground": "#2C7681", "fontStyle": "bold" }
+        },
+        {
+            "name": "Go :: Variable : Name",
+            "scope": ["variable.other.assignment.go", "variable.other.go"],
+            "settings": { "foreground": "#BBBBBB" }
+        },
+        {
+            "name": "Shell :: Default Source",
+            "scope": ["source.shell"],
+            "settings": { "foreground": "#999999", "fontStyle": "bold" }
+        },
+        {
+            "name": "Shell :: Default Source",
+            "scope": ["source.shell"],
+            "settings": { "foreground": "#999999", "fontStyle": "bold" }
+        },
+        {
+            "name": "Shell :: Shebang",
+            "scope": ["punctuation.definition.comment.shebang.shell"],
+            "settings": { "foreground": "#3B4252" }
+        },
+        {
+            "name": "Shell :: Shebang Line",
+            "scope": ["meta.shebang.shell"],
+            "settings": { "foreground": "#727989" }
+        },
+        {
+            "name": "Shell :: Comment Line Hash",
+            "scope": ["punctuation.definition.comment.shell"],
+            "settings": { "foreground": "#777777" }
+        },
+        {
+            "name": "Shell :: Comment Line Content",
+            "scope": ["comment.line.number-sign.shell"],
+            "settings": { "foreground": "#777777" }
+        },
+        {
+            "name": "Shell :: String : Quotes",
+            "scope": [
+                "punctuation.definition.string.begin.shell",
+                "punctuation.definition.string.end.shell"
+            ],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "Shell :: String : Un|Quoted",
+            "scope": [
+                "string.quoted.single.shell",
+                "string.quoted.double.shell",
+                "string.unquoted.shell",
+                "meta.argument.shell"
+            ],
+            "settings": { "foreground": "#B0B5BE" }
+        },
+        {
+            "name": "Shell :: Brackets : Round ()",
+            "scope": ["punctuation.definition.arguments.shell"],
+            "settings": { "foreground": "#777777" }
+        },
+        {
+            "name": "Shell :: Brackets : Square []",
+            "scope": [
+                "punctuation.definition.logical-expression.shell",
+                "punctuation.definition.bracket.named-array.shell",
+                "punctuation.section.array.shell"
+            ],
+            "settings": { "foreground": "#777777" }
+        },
+        {
+            "name": "Shell :: Brackets : Curly {}",
+            "scope": ["punctuation.definition.group.shell"],
+            "settings": { "foreground": "#777777" }
+        },
+        {
+            "name": "Shell :: Keyword : Control",
+            "scope": [
+                "keyword.control.shell",
+                "keyword.control.if.shell",
+                "keyword.control.elif.shell",
+                "keyword.control.else.shell",
+                "keyword.control.fi.shell",
+                "keyword.control.then.shell",
+                "keyword.control.case.shell",
+                "keyword.control.esac.shell",
+                "keyword.control.while.shell",
+                "keyword.control.for.shell",
+                "keyword.control.in.shell",
+                "keyword.control.do.shell",
+                "keyword.control.done.shell",
+                "keyword.control.return.shell"
+            ],
+            "settings": { "foreground": "#567CA0" }
+        },
+        {
+            "name": "Shell :: Keyword : Return | Break | Continue",
+            "scope": [
+                "keyword.control.break.shell",
+                "keyword.control.continue.shell"
+            ],
+            "settings": { "foreground": "#458C96" }
+        },
+        {
+            "name": "Shell :: Function : Keyword",
+            "scope": ["storage.type.function.shell"],
+            "settings": { "foreground": "#224B72" }
+        },
+        {
+            "name": "Shell :: Function : Declaration",
+            "scope": ["entity.name.function.shell"],
+            "settings": { "foreground": "#365F86" }
+        },
+        {
+            "name": "Shell :: Function | Command : Call",
+            "scope": [
+                "entity.name.function.call.shell",
+                "entity.name.function.call.shell entity.name.command.shell",
+                "meta.function.body.shell entity.name.function.call.shell entity.name.command.shell"
+            ],
+            "settings": { "foreground": "#B49C6C" }
+        },
+        {
+            "name": "Shell :: Function | Command : Call : Dashed Option",
+            "scope": [
+                "constant.other.option.dash.shell",
+                "constant.other.option"
+            ],
+            "settings": { "foreground": "#777777" }
+        },
+        {
+            "name": "Shell :: Builtin",
+            "scope": ["keyword.other.shell", "support.function.builtin.shell"],
+            "settings": { "foreground": "#458C96" }
+        },
+        {
+            "name": "Shell :: Variable : Modifier",
+            "scope": [
+                "storage.modifier.local.shell",
+                "storage.modifier.readonly.shell",
+                "storage.modifier.export.shell",
+                "storage.modifier.unset.shell",
+                "storage.modifier.declare.shell"
+            ],
+            "settings": { "foreground": "#535B6D" }
+        },
+        {
+            "name": "Shell :: Variable : Option",
+            "scope": ["constant.other.option.shell"],
+            "settings": { "foreground": "#777777" }
+        },
+        {
+            "name": "Shell :: Variable : Assigment",
+            "scope": ["variable.other.assignment.shell"],
+            "settings": { "foreground": "#A88873" }
+        },
+        {
+            "name": "Shell :: Variable : Dollar Sign and curly",
+            "scope": [
+                "punctuation.definition.variable.shell",
+                "punctuation.definition.variable.shell variable.other.normal.shell",
+                "punctuation.definition.variable.shell variable.parameter.positional.shell"
+            ],
+            "settings": { "foreground": "#535B6D" }
+        },
+        {
+            "name": "Shell :: Variable : Operator",
+            "scope": ["keyword.operator.expansion.shell"],
+            "settings": { "foreground": "#777777" }
+        },
+        {
+            "name": "Shell :: Variable : Name",
+            "scope": [
+                "variable.other.normal.shell",
+                "meta.for.in.shell variable.other.for.shell",
+                "variable.parameter.positional.shell"
+            ],
+            "settings": { "foreground": "#969696" }
+        },
+        {
+            "name": "Shell :: Variable : Array : Key",
+            "scope": [
+                "entity.other.attribute-name.bracket.shell",
+                "meta.parameter-expansion",
+                "meta.parameter-expansion string.quoted.double.shell"
+            ],
+            "settings": { "foreground": "#969696" }
+        },
+        {
+            "name": "Shell :: Case : Pattern",
+            "scope": [
+                "meta.case.entry.pattern.shell",
+                "meta.case.entry.pattern.shell string.quoted.double.shell"
+            ],
+            "settings": { "foreground": "#777777" }
+        },
+        {
+            "name": "Shell :: Operators : $?",
+            "scope": ["variable.language.special.shell"],
+            "settings": { "foreground": "#777777" }
+        },
+        {
+            "name": "Shell :: Operators : Subshell $( ... )",
+            "scope": ["punctuation.definition.subshell.single.shell"],
+            "settings": { "foreground": "#567CA0" }
+        },
+        {
+            "name": "Shell :: Operators : Aritmetic (( ... ))",
+            "scope": ["punctuation.section.arithmetic.double.shell"],
+            "settings": { "foreground": "#567CA0" }
+        },
+        {
+            "name": "Shell :: Operators : Logical",
+            "scope": ["keyword.operator.logical.shell"],
+            "settings": { "foreground": "#777777" }
+        },
+        {
+            "name": "Shell :: Operators : Redirect sign < >",
+            "scope": ["keyword.operator.redirect.shell"],
+            "settings": { "foreground": "#777777" }
+        },
+        {
+            "name": "Shell :: Operators : Heredoc sign <<",
+            "scope": ["keyword.operator.heredoc.shell"],
+            "settings": { "foreground": "#777777" }
+        },
+        {
+            "name": "Shell :: Operators : Heredoc delimiter",
+            "scope": ["punctuation.definition.string.heredoc.delimiter.shell"],
+            "settings": { "foreground": "#555555" }
+        },
+        {
+            "name": "Shell :: Operators : Herestring <<<",
+            "scope": ["keyword.operator.herestring.shell"],
+            "settings": { "foreground": "#777777" }
+        },
+        {
+            "name": "INI :: Comment Line Hash",
+            "scope": ["punctuation.definition.comment.ini"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "INI :: Comment Line Content",
+            "scope": ["comment.line.number-sign.ini"],
+            "settings": { "foreground": "#666666" }
+        },
+        {
+            "name": "INI :: SOURCE",
+            "scope": ["source.ini"],
+            "settings": { "foreground": "#999999" }
+        },
+        {
+            "name": "INI :: Variable : Name",
+            "scope": ["keyword.other.definition.ini"],
+            "settings": { "foreground": "#799BB9" }
+        },
+        {
+            "name": "INI :: Variable : Equal",
+            "scope": ["punctuation.separator.key-value.ini"],
+            "settings": { "foreground": "#BBBBBB" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

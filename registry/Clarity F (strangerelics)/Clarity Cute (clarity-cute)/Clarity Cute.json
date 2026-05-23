@@ -1,0 +1,135 @@
+{
+    "name": "Clarity Cute",
+    "type": "light",
+    "colors": {
+        "foreground": "#333",
+        "disabledForeground": "#9a9a9a",
+        "editor.background": "#fff8fe",
+        "editor.foreground": "#333",
+        "activityBar.background": "#2F74D0",
+        "editorPane.background": "#fff8fe",
+        "sideBar.background": "#fff5fe",
+        "titleBar.activeBackground": "#fff5fe",
+        "titleBar.inactiveBackground": "#fff8fe",
+        "panel.background": "#fff5fe",
+        "tab.inactiveBackground": "#fff5fe",
+        "editorGroupHeader.tabsBackground": "#fff5fe",
+        "statusBar.background": "#2F74D0",
+        "button.background": "#2F74D0",
+        "notifications.background": "#fff8fe",
+        "button.secondaryBackground": "#766a75",
+        "editor.selectionBackground": "#f8c5f3",
+        "minimap.selectionHighlight": "#f8c5f3",
+        "minimapSlider.background": "#ffffff77",
+        "minimapSlider.hoverBackground": "#ffffff77",
+        "minimapSlider.activeBackground": "#ffffffc8",
+        "scrollbarSlider.background": "#f7e3f8",
+        "scrollbarSlider.hoverBackground": "#ff96e7",
+        "scrollbarSlider.activeBackground": "#ed70d0",
+        "panel.border": "#e2cbe3",
+        "sideBarSectionHeader.background": "#fff5fe",
+        "terminal.background": "#fff8fe",
+        "editorLineNumber.foreground": "#e2cbe3",
+        "editor.lineHighlightBorder": "#00000000",
+        "editor.lineHighlightBackground": "#fdebfb"
+    },
+    "tokenColors": [
+        {
+            "name": "Embedded",
+            "scope": [
+                "source meta.tag",
+                "source source.css",
+                "source meta.embedded.block"
+            ],
+            "settings": { "foreground": "#2F74D0" }
+        },
+        {
+            "name": "JSX embedded",
+            "scope": ["source meta.tag meta.embedded.expression"],
+            "settings": { "foreground": "#333" }
+        },
+        {
+            "name": "Comments",
+            "scope": ["comment", "punctuation.definition.comment"],
+            "settings": { "fontStyle": "bold", "foreground": "#FF4848" }
+        },
+        {
+            "name": "Documentation",
+            "scope": [
+                "comment.line.documentation",
+                "comment.block.documentation",
+                "comment.block.documentation punctuation.definition.comment"
+            ],
+            "settings": { "fontStyle": "", "foreground": "#62A9FF" }
+        },
+        {
+            "name": "Exports",
+            "scope": "keyword.control.export",
+            "settings": { "foreground": "#fcb4ec", "fontStyle": "" }
+        },
+        {
+            "name": "Invalid - Illegal",
+            "scope": "invalid.illegal",
+            "settings": { "foreground": "#FF4848" }
+        },
+        {
+            "name": "Constants",
+            "scope": [
+                "constant.language",
+                "support.constant",
+                "constant.numeric",
+                "constant.character",
+                "string"
+            ],
+            "settings": { "foreground": "#FF68DD" }
+        },
+        {
+            "name": "css-in-js constants",
+            "scope": [
+                "source.js source.css constant.numeric",
+                "source.js source.css constant.character",
+                "source.js source.css constant",
+                "source.js source.css string",
+                "source.js source.css constant.language",
+                "source.js source.css support.constant"
+            ],
+            "settings": { "foreground": "#FF68DD" }
+        },
+        {
+            "name": "Function Declarations",
+            "scope": [
+                "entity.name.function",
+                "entity.name.type",
+                "support.function",
+                "entity.other.inherited-class",
+                "support.class"
+            ],
+            "settings": { "fontStyle": "" }
+        },
+        {
+            "name": "Function usage",
+            "scope": [
+                "meta.function-call entity.name.function",
+                "meta.function-call support.function",
+                "support.class.component"
+            ],
+            "settings": { "fontStyle": "bold" }
+        },
+        {
+            "name": "Strings: Escape Sequences",
+            "scope": "constant.character.escape",
+            "settings": { "foreground": "#FF97E8" }
+        },
+        {
+            "name": "Template Strings",
+            "scope": ["meta.template.expression"],
+            "settings": { "foreground": "#333" }
+        },
+        {
+            "name": "CSS Attribute Names",
+            "scope": ["source.css entity.other.attribute-name"],
+            "settings": { "fontStyle": "bold" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

@@ -1,0 +1,178 @@
+{
+    "$schema": "vscode://schemas/color-theme",
+    "name": "Valinor Arien",
+    "author": "Diego Brocanelli",
+    "maintainers": ["Diego Brocanelli <diegod2@msn.com>"],
+    "semanticClass": "theme.valinor.arien",
+    "type": "dark",
+    "semanticHighlighting": true,
+    "colors": {
+        "editor.background": "#181616",
+        "editor.foreground": "#c5c9c5",
+        "editorCursor.foreground": "#c8c093",
+        "editor.lineHighlightBackground": "#1f1f28",
+        "editor.selectionBackground": "#2d4f67",
+        "editor.selectionHighlightBackground": "#2d4f6788",
+        "editor.wordHighlightBackground": "#2d4f6766",
+        "editorWhitespace.foreground": "#363646",
+        "editorIndentGuide.background1": "#2d4f67",
+        "editorRuler.foreground": "#2d4f67",
+        "editorLineNumber.foreground": "#2d4f67",
+        "editorLineNumber.activeForeground": "#c5c9c5",
+        "sideBar.background": "#252526",
+        "sideBar.foreground": "#c5c9c5",
+        "sideBarTitle.foreground": "#e46876",
+        "sideBarSectionHeader.background": "#1f1f28",
+        "sideBarSectionHeader.foreground": "#e46876",
+        "statusBar.background": "#223249",
+        "statusBar.foreground": "#c5c9c5",
+        "activityBar.background": "#252526",
+        "activityBar.foreground": "#c5c9c5",
+        "activityBarBadge.background": "#e46876",
+        "activityBarBadge.foreground": "#181616",
+        "terminal.background": "#181616",
+        "terminal.foreground": "#c5c9c5",
+        "terminalCursor.foreground": "#c8c093",
+        "button.background": "#e46876",
+        "button.foreground": "#181616",
+        "editorLink.activeForeground": "#e46876",
+        "list.activeSelectionBackground": "#e46876",
+        "list.activeSelectionForeground": "#000",
+        "list.inactiveSelectionBackground": "#e46876",
+        "list.inactiveSelectionForeground": "#000",
+        "list.hoverBackground": "#e46876",
+        "list.focusHighlightForeground": "#c8c093",
+        "list.highlightForeground": "#c8c093",
+        "tab.activeBackground": "#181616",
+        "tab.activeForeground": "#c5c9c5",
+        "tab.inactiveBackground": "#252526",
+        "tab.inactiveForeground": "#c5c9c5",
+        "panel.background": "#252526",
+        "titleBar.activeBackground": "#252526",
+        "quickInput.background": "#252526",
+        "editorWidget.background": "#252526",
+        "quickInput.foreground": "#c5c9c5",
+        "quickInputList.focusBackground": "#e46876",
+        "quickInputList.focusForeground": "#181616",
+        "pickerGroup.foreground": "#e46876",
+        "pickerGroup.border": "#2d4f67"
+    },
+    "tokenColors": [
+        {
+            "name": "Keywords & Storage – italic (valinor-patch)",
+            "scope": [
+                "keyword.control",
+                "keyword.operator.expression",
+                "keyword.operator.new",
+                "keyword.control.new",
+                "storage.type",
+                "storage.modifier",
+                "keyword.other.use",
+                "keyword.other.namespace",
+                "storage.modifier.extends",
+                "entity.other.inherited-class",
+                "variable.language",
+                "variable.language.this",
+                "variable.language.self",
+                "variable.language.super",
+                "variable.language.parent",
+                "variable.language punctuation.definition.variable.php",
+                "punctuation.definition.variable.php",
+                "keyword.control.php",
+                "keyword.control.flow",
+                "keyword.control.async-modifier",
+                "keyword.control.import",
+                "keyword.control.export",
+                "keyword.control.from",
+                "keyword.control.return"
+            ],
+            "settings": { "fontStyle": "italic" }
+        },
+        {
+            "scope": ["comment", "punctuation.definition.comment"],
+            "settings": { "foreground": "#727169", "fontStyle": "italic" }
+        },
+        {
+            "scope": [
+                "keyword",
+                "keyword.control",
+                "keyword.operator.expression"
+            ],
+            "settings": { "foreground": "#e46876" }
+        },
+        {
+            "scope": ["storage", "storage.type", "storage.modifier"],
+            "settings": { "foreground": "#957fb8" }
+        },
+        { "scope": ["variable"], "settings": { "foreground": "#c5c9c5" } },
+        {
+            "scope": ["variable.language"],
+            "settings": { "foreground": "#ff9e3b", "fontStyle": "italic" }
+        },
+        {
+            "scope": [
+                "string",
+                "string.quoted",
+                "punctuation.definition.string"
+            ],
+            "settings": { "foreground": "#98bb6c" }
+        },
+        {
+            "scope": ["constant", "constant.numeric", "constant.language"],
+            "settings": { "foreground": "#ffa066" }
+        },
+        {
+            "scope": ["entity.name.function", "support.function"],
+            "settings": { "foreground": "#7e9cd8" }
+        },
+        {
+            "scope": [
+                "entity.name.type.class",
+                "entity.name.class",
+                "support.class"
+            ],
+            "settings": { "foreground": "#7fb4ca" }
+        },
+        {
+            "scope": ["entity.other.inherited-class"],
+            "settings": { "foreground": "#7fb4ca", "fontStyle": "italic" }
+        },
+        {
+            "scope": ["entity.name.tag"],
+            "settings": { "foreground": "#e46876" }
+        },
+        {
+            "scope": ["entity.other.attribute-name"],
+            "settings": { "foreground": "#7aa89f", "fontStyle": "italic" }
+        },
+        {
+            "scope": ["support.type", "support.class"],
+            "settings": { "foreground": "#7fb4ca" }
+        },
+        {
+            "name": "Function parameters",
+            "scope": ["variable.parameter", "entity.name.variable.parameter"],
+            "settings": { "fontStyle": "italic" }
+        },
+        {
+            "name": "Keyword new",
+            "scope": ["keyword.control.new", "keyword.operator.new"],
+            "settings": { "fontStyle": "bold italic" }
+        },
+        {
+            "name": "Markup italic",
+            "scope": ["markup.italic"],
+            "settings": { "fontStyle": "italic" }
+        },
+        {
+            "name": "Markup bold",
+            "scope": ["markup.bold"],
+            "settings": { "fontStyle": "bold" }
+        },
+        {
+            "name": "Markup heading",
+            "scope": ["markup.heading"],
+            "settings": { "foreground": "#7e9cd8", "fontStyle": "bold" }
+        }
+    ]
+}

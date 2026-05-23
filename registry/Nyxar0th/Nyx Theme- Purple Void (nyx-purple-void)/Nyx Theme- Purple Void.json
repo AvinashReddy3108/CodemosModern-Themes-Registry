@@ -1,0 +1,164 @@
+{
+    "$schema": "vscode://schemas/color-theme",
+    "name": "Nyx Theme — Purple Void",
+    "type": "dark",
+    "semanticHighlighting": true,
+    "colors": {
+        "editor.background": "#0B0316",
+        "editor.foreground": "#EDE9FE",
+        "editorLineNumber.foreground": "#6B4A99",
+        "editorLineNumber.activeForeground": "#C084FC",
+        "editor.selectionBackground": "#2A1440",
+        "editor.selectionHighlightBackground": "#00000000",
+        "editor.inactiveSelectionBackground": "#1A0A2F",
+        "editorCursor.foreground": "#E0E0E6",
+        "editorCursor.background": "#4B4A57",
+        "editor.wordHighlightBackground": "#7C3AED33",
+        "editor.wordHighlightStrongBackground": "#A855F733",
+        "editorBracketMatch.border": "#C084FC",
+        "editorBracketMatch.background": "#2A144080",
+        "editorIndentGuide.background1": "#1A0A2F",
+        "editorIndentGuide.activeBackground1": "#7C3AED",
+        "editorWhitespace.foreground": "#1A0A2F",
+        "activityBar.background": "#140424",
+        "activityBar.foreground": "#EDE9FE",
+        "activityBar.inactiveForeground": "#7A61A5",
+        "activityBarBadge.background": "#A855F7",
+        "activityBarBadge.foreground": "#F9FAFB",
+        "sideBar.background": "#140424",
+        "sideBar.foreground": "#D6BCFA",
+        "sideBarSectionHeader.background": "#140424",
+        "sideBarSectionHeader.foreground": "#C4B5FD",
+        "list.hoverBackground": "#191624",
+        "list.foreground": "#C4B5FD",
+        "list.activeSelectionBackground": "#2A1440",
+        "list.activeSelectionForeground": "#FFFFFF",
+        "tab.activeBackground": "#0F031B",
+        "tab.activeForeground": "#FFFFFF",
+        "tab.activeBorderTop": "#C084FC",
+        "tab.activeBorder": "#C084FC40",
+        "tab.inactiveBackground": "#140424",
+        "tab.inactiveForeground": "#7A61A5",
+        "editorGroupHeader.tabsBackground": "#140424",
+        "editorGroup.border": "#0F031B",
+        "statusBar.background": "#140424",
+        "statusBar.foreground": "#C4B5FD",
+        "statusBar.debuggingBackground": "#7C3AED",
+        "statusBar.debuggingForeground": "#0B0316",
+        "titleBar.activeBackground": "#140424",
+        "titleBar.activeForeground": "#EDE9FE",
+        "panel.background": "#0B0316",
+        "peekViewEditor.background": "#00000000",
+        "peekViewResult.background": "#00000000",
+        "peekView.border": "#C084FC",
+        "scrollbarSlider.background": "#7C3AED33",
+        "scrollbarSlider.hoverBackground": "#A855F733",
+        "scrollbarSlider.activeBackground": "#C084FC66",
+        "badge.background": "#2A1440",
+        "badge.foreground": "#EDE9FE",
+        "errorForeground": "#F43F5E",
+        "editorError.foreground": "#F43F5E",
+        "editorWarning.foreground": "#FBBF24",
+        "editorInfo.foreground": "#7C3AED",
+        "editorHint.foreground": "#A78BFA"
+    },
+    "tokenColors": [
+        {
+            "name": "Comments",
+            "scope": ["comment"],
+            "settings": { "foreground": "#7A6FA2", "fontStyle": "italic" }
+        },
+        {
+            "name": "Keywords",
+            "scope": ["keyword", "storage.type", "storage.modifier"],
+            "settings": { "foreground": "#E9D5FF", "fontStyle": "bold" }
+        },
+        {
+            "name": "Strings",
+            "scope": ["string"],
+            "settings": { "foreground": "#CFFAFE" }
+        },
+        {
+            "name": "Template string interpolation (subtle)",
+            "scope": [
+                "punctuation.definition.template-expression.begin",
+                "punctuation.definition.template-expression.end"
+            ],
+            "settings": { "foreground": "#A3A1C0" }
+        },
+        {
+            "name": "Numbers",
+            "scope": ["constant.numeric"],
+            "settings": { "foreground": "#FDE047" }
+        },
+        {
+            "name": "Constants",
+            "scope": ["variable.other.constant"],
+            "settings": { "foreground": "#F472B6" }
+        },
+        {
+            "name": "Functions",
+            "scope": ["entity.name.function", "support.function"],
+            "settings": { "foreground": "#7DD3FC" }
+        },
+        {
+            "name": "Variables",
+            "scope": ["variable"],
+            "settings": { "foreground": "#F5F3FF" }
+        },
+        {
+            "name": "Punctuation (dimmed)",
+            "scope": ["punctuation", "meta.brace", "meta.brackets"],
+            "settings": { "foreground": "#6B7280" }
+        },
+        {
+            "name": ".env keys (DISCORD_TOKEN, DB_USER, etc.)",
+            "scope": [
+                "source.env variable",
+                "source.env variable.other",
+                "source.env support.type.property-name",
+                "source.env entity.name.section",
+                "source.env meta.definition.variable"
+            ],
+            "settings": { "foreground": "#E9D5FF", "fontStyle": "bold" }
+        },
+        {
+            "name": ".env equals sign",
+            "scope": [
+                "source.env punctuation.separator.key-value",
+                "source.env keyword.operator.assignment"
+            ],
+            "settings": { "foreground": "#C7C7D6" }
+        },
+        {
+            "name": ".env values",
+            "scope": [
+                "source.env string.unquoted",
+                "source.env string.quoted",
+                "source.env constant.character.escape"
+            ],
+            "settings": { "foreground": "#B9F3FF" }
+        },
+        {
+            "name": ".env comments",
+            "scope": ["source.env comment", "comment.line.number-sign.env"],
+            "settings": { "foreground": "#6E6689", "fontStyle": "italic" }
+        }
+    ],
+    "semanticTokenColors": {
+        "keyword": "#E9D5FF",
+        "modifier": "#E9D5FF",
+        "function": "#7DD3FC",
+        "method": "#A5F3FC",
+        "class": "#A78BFA",
+        "namespace": "#C084FC",
+        "string": "#CFFAFE",
+        "number": "#FDE047",
+        "boolean": "#FDE047",
+        "parameter": { "foreground": "#FBCFE8", "fontStyle": "italic" },
+        "property": "#D8B4FE",
+        "variable": "#F5F3FF",
+        "comment": "#7A6FA2",
+        "variable.unused": { "foreground": "#4B5563", "fontStyle": "italic" }
+    }
+}

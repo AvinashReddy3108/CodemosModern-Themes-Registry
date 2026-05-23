@@ -1,0 +1,78 @@
+{
+    "name": "Spock Docs Light",
+    "type": "light",
+    "colors": {
+        "editor.background": "#f4f6f8",
+        "editor.foreground": "#2d3748",
+        "editor.lineHighlightBackground": "#e2e8f0",
+        "editorCursor.foreground": "#2d3748",
+        "editor.selectionBackground": "#cbd5e0",
+        "editor.inactiveSelectionBackground": "#e2e8f0"
+    },
+    "tokenColors": [
+        {
+            "name": "Comments",
+            "scope": ["comment", "punctuation.definition.comment"],
+            "settings": { "foreground": "#2F855A", "fontStyle": "italic" }
+        },
+        {
+            "name": "Strings",
+            "scope": ["string", "string.quoted"],
+            "settings": { "foreground": "#DD6B20" }
+        },
+        {
+            "name": "Numbers",
+            "scope": ["constant.numeric"],
+            "settings": { "foreground": "#B7791F" }
+        },
+        {
+            "name": "Java & Groovy Keywords",
+            "scope": [
+                "keyword",
+                "keyword.control",
+                "keyword.operator.new",
+                "storage.type",
+                "storage.modifier",
+                "storage.type.groovy",
+                "keyword.control.groovy",
+                "keyword.other.groovy"
+            ],
+            "settings": { "foreground": "#2F855A" }
+        },
+        {
+            "name": "Spock Block Keywords",
+            "scope": ["keyword.other.spock", "meta.block.spock"],
+            "settings": { "foreground": "#319795", "fontStyle": "bold" }
+        },
+        {
+            "name": "Annotations",
+            "scope": ["storage.type.annotation", "entity.name.type.annotation"],
+            "settings": { "foreground": "#805AD5" }
+        },
+        {
+            "name": "Class Names",
+            "scope": ["entity.name.type", "entity.name.class", "support.class"],
+            "settings": { "foreground": "#2B6CB0" }
+        },
+        {
+            "name": "Method Names",
+            "scope": [
+                "entity.name.function",
+                "meta.method",
+                "support.function"
+            ],
+            "settings": { "foreground": "#B7791F" }
+        },
+        {
+            "name": "Variables & Identifiers",
+            "scope": ["variable", "variable.other", "identifier"],
+            "settings": { "foreground": "#2D3748" }
+        },
+        {
+            "name": "Operators",
+            "scope": ["keyword.operator"],
+            "settings": { "foreground": "#4A5568" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

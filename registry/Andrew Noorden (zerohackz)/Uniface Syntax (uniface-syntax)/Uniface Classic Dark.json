@@ -1,0 +1,239 @@
+{
+    "$schema": "vscode://schemas/color-theme",
+    "name": "Uniface Classic Dark",
+    "type": "dark",
+    "colors": {
+        "editor.background": "#1E1E1E",
+        "editor.foreground": "#D4D4D4",
+        "editorLineNumber.foreground": "#5A9BD5",
+        "editorLineNumber.activeForeground": "#FFFFFF",
+        "editor.selectionBackground": "#264F78",
+        "editor.inactiveSelectionBackground": "#3A3D41",
+        "editorCursor.foreground": "#FFFFFF",
+        "editor.lineHighlightBackground": "#2A2A2A",
+        "editorGutter.background": "#252526",
+        "sideBar.background": "#252526",
+        "sideBar.foreground": "#CCCCCC",
+        "sideBarSectionHeader.background": "#0078D4",
+        "sideBarSectionHeader.foreground": "#FFFFFF",
+        "tab.activeBackground": "#1E1E1E",
+        "tab.inactiveBackground": "#2D2D2D",
+        "activityBar.background": "#333333",
+        "activityBar.foreground": "#FFFFFF",
+        "statusBar.background": "#007ACC",
+        "statusBar.foreground": "#FFFFFF"
+    },
+    "tokenColors": [
+        {
+            "name": "Comments - Light Green (readable on dark)",
+            "scope": [
+                "comment",
+                "comment.line.semicolon.uniface",
+                "comment.block.xml.uniface"
+            ],
+            "settings": { "foreground": "#6A9955", "fontStyle": "" }
+        },
+        {
+            "name": "Comment Markers (#Comment) - Cyan",
+            "scope": ["keyword.other.comment-marker.uniface"],
+            "settings": { "foreground": "#4EC9B0", "fontStyle": "" }
+        },
+        {
+            "name": "Strings in ProcScript - Light Purple/Orchid",
+            "scope": [
+                "string.quoted.double.uniface",
+                "string.quoted.single.uniface"
+            ],
+            "settings": { "foreground": "#CE9178" }
+        },
+        {
+            "name": "Strings in XML attributes - Orange",
+            "scope": [
+                "string",
+                "string.quoted.xml.uniface",
+                "string.quoted.double.xml.uniface"
+            ],
+            "settings": { "foreground": "#CE9178" }
+        },
+        {
+            "name": "Section Headers (Declarations, Script) - Light Blue Bold",
+            "scope": ["keyword.other.section.uniface"],
+            "settings": { "foreground": "#569CD6", "fontStyle": "bold" }
+        },
+        {
+            "name": "Keywords - Operation - Light Blue Bold",
+            "scope": ["keyword.control.operation.uniface"],
+            "settings": { "foreground": "#569CD6", "fontStyle": "bold" }
+        },
+        {
+            "name": "Keywords - Entry/End - Light Blue Bold",
+            "scope": ["keyword.control.entry.uniface"],
+            "settings": { "foreground": "#569CD6", "fontStyle": "bold" }
+        },
+        {
+            "name": "Keywords - Block (params, variables, triggers) - Light Blue",
+            "scope": ["keyword.control.block.uniface"],
+            "settings": { "foreground": "#569CD6", "fontStyle": "" }
+        },
+        {
+            "name": "Keywords - Control Flow (if, while, for) - Light Blue",
+            "scope": [
+                "keyword.control.flow.uniface",
+                "keyword.control.return.uniface"
+            ],
+            "settings": { "foreground": "#C586C0" }
+        },
+        {
+            "name": "Keywords - Calls and Operations - Light Blue",
+            "scope": [
+                "keyword.other.call.uniface",
+                "keyword.other.database.uniface",
+                "keyword.other.message.uniface",
+                "keyword.other.list.uniface",
+                "keyword.other.trigger.uniface",
+                "keyword.other.edit.uniface"
+            ],
+            "settings": { "foreground": "#569CD6" }
+        },
+        {
+            "name": "Data Types (string, numeric, boolean, etc.) - Magenta/Pink",
+            "scope": ["storage.type.uniface"],
+            "settings": { "foreground": "#FF79C6" }
+        },
+        {
+            "name": "Direction Modifiers (in, out, inout) - Magenta/Pink",
+            "scope": ["storage.modifier.direction.uniface"],
+            "settings": { "foreground": "#FF79C6" }
+        },
+        {
+            "name": "Display Format DIS(...) - Magenta/Pink",
+            "scope": ["storage.modifier.format.uniface"],
+            "settings": { "foreground": "#FF79C6" }
+        },
+        {
+            "name": "Built-in Functions ($text, $status, etc.) - Sky Blue",
+            "scope": [
+                "support.function.builtin.error.uniface",
+                "support.function.builtin.status.uniface",
+                "support.function.builtin.system.uniface",
+                "support.function.builtin.string.uniface",
+                "support.function.builtin.numeric.uniface",
+                "support.function.builtin.conversion.uniface",
+                "support.function.builtin.component.uniface",
+                "support.function.builtin.list.uniface",
+                "support.function.builtin.file.uniface",
+                "support.function.builtin.generic.uniface"
+            ],
+            "settings": { "foreground": "#9CDCFE" }
+        },
+        {
+            "name": "System Variables ($$sysdate, $$GEBRUIKER) - Sky Blue",
+            "scope": ["variable.language.system.uniface"],
+            "settings": { "foreground": "#9CDCFE" }
+        },
+        {
+            "name": "Component Variables ($DIALOOGTYPES, $S1) - Sky Blue",
+            "scope": ["variable.language.component.uniface"],
+            "settings": { "foreground": "#9CDCFE" }
+        },
+        {
+            "name": "Slice Variables ($S2[1:1]) - Sky Blue",
+            "scope": ["variable.other.slice.uniface"],
+            "settings": { "foreground": "#9CDCFE" }
+        },
+        {
+            "name": "Result Variables ($status, $result, $dberror) - Sky Blue",
+            "scope": ["variable.language.result.uniface"],
+            "settings": { "foreground": "#9CDCFE" }
+        },
+        {
+            "name": "Temp Variables ($dtm_rnte_bld$) - Sky Blue",
+            "scope": ["variable.language.temp.uniface"],
+            "settings": { "foreground": "#9CDCFE" }
+        },
+        {
+            "name": "Operators - Light Gray",
+            "scope": [
+                "keyword.operator.assignment.uniface",
+                "keyword.operator.comparison.uniface",
+                "keyword.operator.arithmetic.uniface",
+                "keyword.operator.concatenation.uniface",
+                "keyword.operator.datetime.uniface"
+            ],
+            "settings": { "foreground": "#D4D4D4" }
+        },
+        {
+            "name": "Logical Operators (and, or, not) - Light Blue",
+            "scope": ["keyword.operator.logical.uniface"],
+            "settings": { "foreground": "#569CD6" }
+        },
+        {
+            "name": "Numbers - Light Green",
+            "scope": [
+                "constant.numeric.float.uniface",
+                "constant.numeric.integer.uniface"
+            ],
+            "settings": { "foreground": "#B5CEA8" }
+        },
+        {
+            "name": "Boolean and Null Constants - Light Blue",
+            "scope": [
+                "constant.language.boolean.uniface",
+                "constant.language.null.uniface"
+            ],
+            "settings": { "foreground": "#569CD6" }
+        },
+        {
+            "name": "Function Names (after entry, operation) - Yellow/Gold",
+            "scope": [
+                "entity.name.function.uniface",
+                "entity.name.function.operation.uniface",
+                "entity.name.function.trigger.uniface",
+                "entity.name.function.call.uniface"
+            ],
+            "settings": { "foreground": "#DCDCAA" }
+        },
+        {
+            "name": "Variables (Global, Parameter, Local) - Light Gray",
+            "scope": [
+                "variable.other.global.uniface",
+                "variable.parameter.uniface",
+                "variable.other.local.uniface",
+                "variable.other.interpolated.uniface"
+            ],
+            "settings": { "foreground": "#D4D4D4" }
+        },
+        {
+            "name": "Field References (DV1.DE, ENTITY.FIELD) - Light Cyan",
+            "scope": [
+                "variable.other.field.uniface",
+                "variable.other.field.path.uniface"
+            ],
+            "settings": { "foreground": "#4FC1FF" }
+        },
+        {
+            "name": "Escape Characters - Orange",
+            "scope": ["constant.character.escape.uniface"],
+            "settings": { "foreground": "#D7BA7D" }
+        },
+        {
+            "name": "XML Tags - Dim Gray (de-emphasized)",
+            "scope": [
+                "entity.name.tag.xml.uniface",
+                "punctuation.definition.tag.begin.xml.uniface",
+                "punctuation.definition.tag.end.xml.uniface"
+            ],
+            "settings": { "foreground": "#6A6A6A" }
+        },
+        {
+            "name": "XML Attributes - Dim Gray (de-emphasized)",
+            "scope": ["entity.other.attribute-name.xml.uniface"],
+            "settings": { "foreground": "#6A6A6A" }
+        },
+        {
+            "name": "XML Entities - Light Purple",
+            "scope": ["constant.character.entity.xml.uniface"],
+            "settings": { "foreground": "#C586C0" }
+        }
+    ]
+}

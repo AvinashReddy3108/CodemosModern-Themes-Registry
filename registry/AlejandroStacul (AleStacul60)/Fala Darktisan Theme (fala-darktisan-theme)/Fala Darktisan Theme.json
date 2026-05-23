@@ -1,0 +1,263 @@
+{
+    "name": "Fala Darktisan Theme",
+    "type": "dark",
+    "colors": {
+        "editor.background": "#1e1e1e",
+        "editor.foreground": "#d47dd2",
+        "editor.lineHighlightBackground": "#282828",
+        "editor.selectionBackground": "#3e4451",
+        "editorCursor.foreground": "#fffff8",
+        "editorWhitespace.foreground": "#404040",
+        "editorIndentGuide.background": "#404040",
+        "editorIndentGuide.activeBackground": "#606060"
+    },
+    "tokenColors": [
+        {
+            "name": "Comments",
+            "scope": [
+                "comment",
+                "comment.block",
+                "comment.line",
+                "comment.block.documentation",
+                "comment.line.blade",
+                "comment.block.php",
+                "comment.line.js",
+                "comment.block.js",
+                "comment.line.json",
+                "comment.block.json",
+                "punctuation.definition.comment",
+                "punctuation.definition.comment.line",
+                "punctuation.definition.comment.block"
+            ],
+            "settings": { "foreground": "#59634d", "fontStyle": "italic" }
+        },
+        {
+            "name": "PHP Tags",
+            "scope": [
+                "punctuation.section.embedded.begin.php",
+                "punctuation.section.embedded.end.php"
+            ],
+            "settings": { "foreground": "#8af0e8" }
+        },
+        {
+            "name": "Blade Syntax",
+            "scope": [
+                "keyword.control.blade",
+                "entity.name.function.blade",
+                "punctuation.section.embedded.begin.blade",
+                "punctuation.section.embedded.end.blade"
+            ],
+            "settings": { "foreground": "#c5a3ff", "fontStyle": "bold" }
+        },
+        {
+            "name": "Eloquent & DB",
+            "scope": [
+                "support.class.php",
+                "support.function.php",
+                "support.class.builder.php",
+                "entity.name.function.builder.php"
+            ],
+            "settings": { "foreground": "#8af0e8", "fontStyle": "bold" }
+        },
+        {
+            "name": "Laravel Helpers",
+            "scope": ["support.function.construct.php"],
+            "settings": { "foreground": "#a8c97d", "fontStyle": "italic" }
+        },
+        {
+            "name": "React Components",
+            "scope": [
+                "entity.name.tag.custom.jsx",
+                "entity.name.tag.custom.tsx",
+                "support.class.component.jsx",
+                "support.class.component.tsx",
+                "entity.name.function.jsx",
+                "entity.name.function.tsx"
+            ],
+            "settings": { "foreground": "#c5a3ff", "fontStyle": "bold" }
+        },
+        {
+            "name": "React Hooks",
+            "scope": [
+                "variable.function.react",
+                "support.type.object.module.js",
+                "variable.function.hook.jsx",
+                "variable.function.hook.tsx"
+            ],
+            "settings": { "foreground": "#8af0e8", "fontStyle": "italic bold" }
+        },
+        {
+            "name": "HTML/JSX Tags",
+            "scope": [
+                "entity.name.tag.html",
+                "entity.name.tag.blade",
+                "entity.name.tag.jsx",
+                "entity.name.tag.tsx"
+            ],
+            "settings": { "foreground": "#c5a3ff" }
+        },
+        {
+            "name": "HTML/JSX Attributes",
+            "scope": [
+                "entity.other.attribute-name",
+                "entity.other.attribute-name.blade",
+                "entity.other.attribute-name.html",
+                "entity.other.attribute-name.jsx",
+                "entity.other.attribute-name.tsx"
+            ],
+            "settings": { "foreground": "#8af0e8" }
+        },
+        {
+            "name": "JS/TS Functions",
+            "scope": [
+                "entity.name.function.js",
+                "entity.name.function.ts",
+                "entity.name.method.js",
+                "entity.name.method.ts",
+                "meta.method.js",
+                "meta.method.ts"
+            ],
+            "settings": { "foreground": "#a8c97d" }
+        },
+        {
+            "name": "JS/TS Variables",
+            "scope": [
+                "variable.other.readwrite.js",
+                "variable.other.readwrite.ts",
+                "variable.other.constant.js",
+                "variable.other.constant.ts"
+            ],
+            "settings": { "foreground": "#8af0e8" }
+        },
+        {
+            "name": "JSON Syntax",
+            "scope": [
+                "support.type.property-name.json",
+                "string.quoted.double.json",
+                "constant.numeric.json",
+                "constant.language.json"
+            ],
+            "settings": { "foreground": "#8af0e8" }
+        },
+        {
+            "name": "JSON Strings",
+            "scope": ["string.quoted.double.json"],
+            "settings": { "foreground": "#a8c97d" }
+        },
+        {
+            "name": "JSON Values",
+            "scope": ["constant.numeric.json", "constant.language.json"],
+            "settings": { "foreground": "#d9a3ff" }
+        },
+        {
+            "name": "CSS Properties",
+            "scope": [
+                "support.type.property-name.css",
+                "support.type.property-name.scss"
+            ],
+            "settings": { "foreground": "#8af0e8" }
+        },
+        {
+            "name": "CSS Values",
+            "scope": [
+                "support.constant.property-value.css",
+                "support.constant.property-value.scss"
+            ],
+            "settings": { "foreground": "#a8c97d" }
+        },
+        {
+            "name": "CSS Selectors",
+            "scope": [
+                "entity.other.attribute-name.class.css",
+                "entity.other.attribute-name.id.css"
+            ],
+            "settings": { "foreground": "#c5a3ff" }
+        },
+        {
+            "name": "Strings",
+            "scope": [
+                "string",
+                "string.quoted.single",
+                "string.quoted.double",
+                "string.template",
+                "string.quoted.single.php",
+                "string.quoted.double.php",
+                "string.quoted.single.sql",
+                "string.quoted.double.sql",
+                "string.quoted.double.blade",
+                "string.quoted.single.blade",
+                "string.quoted.double.js",
+                "string.quoted.single.js",
+                "string.template.js",
+                "string.quoted.double.ts",
+                "string.quoted.single.ts",
+                "string.template.ts"
+            ],
+            "settings": { "foreground": "#a8c97d" }
+        },
+        {
+            "name": "SQL Strings",
+            "scope": [
+                "string.quoted.single.sql",
+                "string.quoted.double.sql",
+                "meta.arguments.php string.quoted.single.php",
+                "meta.arguments.php string.quoted.double.php"
+            ],
+            "settings": { "foreground": "#d9a3ff", "fontStyle": "italic" }
+        },
+        {
+            "name": "Keywords",
+            "scope": [
+                "keyword",
+                "keyword.control",
+                "keyword.operator",
+                "keyword.operator.new",
+                "keyword.operator.expression",
+                "keyword.other",
+                "keyword.control.flow.js",
+                "keyword.control.flow.ts",
+                "storage.type"
+            ],
+            "settings": { "foreground": "#c5a3ff" }
+        },
+        {
+            "name": "Storage",
+            "scope": ["storage", "storage.type", "storage.modifier"],
+            "settings": { "foreground": "#8af0e8" }
+        },
+        {
+            "name": "Punctuation",
+            "scope": [
+                "punctuation.definition",
+                "punctuation.separator",
+                "punctuation.terminator"
+            ],
+            "settings": { "foreground": "#ab87d6" }
+        },
+        {
+            "name": "PHP Variables",
+            "scope": [
+                "variable.other.php",
+                "variable.other.global.php",
+                "variable.language.php",
+                "variable.other.property.php"
+            ],
+            "settings": { "foreground": "#ab87d6" }
+        },
+        {
+            "name": "Object Property Access (e.g. $obj->prop)",
+            "scope": ["meta.property.php", "variable.other.object.php"],
+            "settings": { "foreground": "#d5d0f0" }
+        },
+        {
+            "name": "PHP Function Calls (e.g. $request->input)",
+            "scope": [
+                "meta.function-call.php",
+                "meta.method-call.php",
+                "support.function.php"
+            ],
+            "settings": { "foreground": "#b0f0ee", "fontStyle": "italic" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

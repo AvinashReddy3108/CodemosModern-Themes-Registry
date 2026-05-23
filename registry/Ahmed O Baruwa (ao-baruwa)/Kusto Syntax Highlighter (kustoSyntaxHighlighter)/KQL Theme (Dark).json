@@ -1,0 +1,52 @@
+{
+    "name": "KQL (Dark) Theme",
+    "type": "dark",
+    "colors": {
+        "editor.background": "#1E1E1E",
+        "editor.foreground": "#D4D4D4",
+        "editorLineNumber.foreground": "#858585",
+        "editorCursor.foreground": "#FFFFFF",
+        "editor.selectionBackground": "#264F78",
+        "editorSuggestWidget.selectedBackground": "#004E8C"
+    },
+    "tokenColors": [
+        {
+            "scope": ["keyword.table.control.kusto"],
+            "settings": { "foreground": "#4EC9B0" }
+        },
+        {
+            "scope": ["query.operators.kusto"],
+            "settings": { "foreground": "#FF4500" }
+        },
+        {
+            "scope": [
+                "keyword.functions.kusto",
+                "keyword.functions.datetime.kusto",
+                "operator.table.kusto",
+                "keyword.types.kusto"
+            ],
+            "settings": { "foreground": "#4EC9B0" }
+        },
+        {
+            "scope": "keyword.other.kusto",
+            "settings": { "foreground": "#569CD6" }
+        },
+        {
+            "scope": ["operator.math.kusto", "punctuation.kusto"],
+            "settings": { "foreground": "#DCDCDC" }
+        },
+        { "scope": "comment.kusto", "settings": { "foreground": "#608B4E" } },
+        {
+            "scope": "query.parameters.kusto",
+            "settings": { "foreground": "#2B91AF" }
+        },
+        {
+            "scope": [
+                "string.quoted.double.kusto",
+                "string.quoted.single.kusto"
+            ],
+            "settings": { "foreground": "#D69D85" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

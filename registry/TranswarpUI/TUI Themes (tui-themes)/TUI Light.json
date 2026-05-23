@@ -1,0 +1,129 @@
+{
+    "name": "TUI Light",
+    "colors": {
+        "editor.background": "#ffffff",
+        "editor.foreground": "#343434",
+        "editorError.foreground": "#fe6f28",
+        "editorBracketHighlight.foreground1": "#007BE4",
+        "editorBracketHighlight.foreground2": "#259663",
+        "editorBracketHighlight.foreground3": "#B022F7",
+        "editorBracketHighlight.foreground4": "#E75800"
+    },
+    "tokenColors": [
+        {
+            "name": "keywords",
+            "scope": [
+                "keyword",
+                "storage.type.js",
+                "storage.modifier.ts",
+                "meta.function.js",
+                "storage.type.class.ts"
+            ],
+            "settings": { "foreground": "#802FDC" }
+        },
+        {
+            "name": "variables",
+            "scope": [
+                "variable",
+                "support.type.property-name.json",
+                "support.type.property-name.json.comments",
+                "support.variable.property.ts",
+                "meta.object-literal.key.ts"
+            ],
+            "settings": { "foreground": "#0792B9" }
+        },
+        {
+            "name": "strings",
+            "scope": "string",
+            "settings": { "foreground": "#E75800" }
+        },
+        {
+            "name": "functions",
+            "scope": [
+                "entity.name.function",
+                "meta.function",
+                "meta.function-call",
+                "support.function",
+                "entity.name.type.class.ts",
+                "meta.class.ts",
+                "meta.method.declaration.ts"
+            ],
+            "settings": { "foreground": "#275BE2" }
+        },
+        {
+            "name": "numbers",
+            "scope": "constant.numeric.decimal.js",
+            "settings": { "foreground": "#BBA200" }
+        },
+        {
+            "name": "types",
+            "scope": [
+                "entity.name.type.ts",
+                "meta.type.parameters.ts",
+                "meta.return.type.ts"
+            ],
+            "settings": { "foreground": "#CA0A8A" }
+        },
+        {
+            "name": "Comments",
+            "scope": "comment",
+            "settings": { "fontStyle": "italic", "foreground": "#8B9598" }
+        },
+        {
+            "name": "HTML: Tags",
+            "scope": [
+                "meta.tag",
+                "punctuation.definition.tag.html",
+                "punctuation.definition.tag.begin.html",
+                "punctuation.definition.tag.end.html"
+            ],
+            "settings": { "foreground": "#AD5C5C" }
+        },
+        {
+            "name": "HTML: Tag Names",
+            "scope": "entity.name.tag",
+            "settings": { "foreground": "#AD5C5C" }
+        },
+        {
+            "name": "HTML: Attribute Names",
+            "scope": [
+                "meta.tag entity.other.attribute-name",
+                "entity.other.attribute-name.html"
+            ],
+            "settings": { "foreground": "#2476e0" }
+        },
+        {
+            "name": "HTML: Entities",
+            "scope": [
+                "constant.character.entity",
+                "punctuation.definition.entity"
+            ],
+            "settings": { "foreground": "#AB6526" }
+        },
+        {
+            "name": "CSS: Selectors",
+            "scope": [
+                "meta.selector",
+                "meta.selector entity",
+                "meta.selector entity punctuation",
+                "entity.name.tag.css"
+            ],
+            "settings": { "foreground": "#7b1db2" }
+        },
+        {
+            "name": "CSS: Property Names",
+            "scope": ["meta.property-name", "support.type.property-name"],
+            "settings": { "foreground": "#c66714" }
+        },
+        {
+            "name": "CSS: Property Values",
+            "scope": [
+                "meta.property-value",
+                "meta.property-value constant.other",
+                "support.constant.property-value"
+            ],
+            "settings": { "foreground": "#448C27" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

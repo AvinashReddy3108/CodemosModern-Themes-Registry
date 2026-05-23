@@ -1,0 +1,256 @@
+{
+    "name": "Cppish Light",
+    "colors": {
+        "editor.background": "#fefefe",
+        "editor.foreground": "#333333",
+        "list.activeSelectionIconForeground": "#fff",
+        "editor.selectionHighlightBackground": "#b3f2fb",
+        "editorLineNumber.activeForeground": "#ff0000",
+        "editorLineNumber.foreground": "#e7e7e7",
+        "editor.lineHighlightBorder": "#a9ddff"
+    },
+    "tokenColors": [
+        {
+            "name": "Comments",
+            "scope": [
+                "comment",
+                "punctuation.definition.comment",
+                "comment.block.preprocessor",
+                "comment.documentation",
+                "comment.block.documentation",
+                "comment.block.cpp"
+            ],
+            "settings": { "fontStyle": "italic", "foreground": "#dbd9d9" }
+        },
+        {
+            "name": "Doxygen",
+            "scope": ["storage.type.class.doxygen.cpp"],
+            "settings": { "fontStyle": "italic bold", "foreground": "#b0afaf" }
+        },
+        {
+            "name": "Directive guard name",
+            "scope": [
+                "meta.preprocessor.macro.cpp",
+                "entity.name.function.preprocessor.cpp",
+                "meta.preprocessor.conditional"
+            ],
+            "settings": { "foreground": "#660000", "fontStyle": "bold" }
+        },
+        {
+            "name": "Invalid - Illegal",
+            "scope": "invalid.illegal",
+            "settings": { "foreground": "#660000" }
+        },
+        {
+            "name": "Include directive",
+            "scope": "keyword.control.directive.include.cpp",
+            "settings": { "foreground": "#007e1b" }
+        },
+        {
+            "name": "Operators",
+            "scope": ["keyword.operator", "storage.modifier.reference.cpp"],
+            "settings": { "foreground": "#ff00dd", "fontStyle": "bold" }
+        },
+        {
+            "name": "Keywords",
+            "scope": ["keyword", "storage"],
+            "settings": { "foreground": "#005785", "fontStyle": "bold" }
+        },
+        {
+            "name": "Language Constants",
+            "scope": [
+                "constant.language",
+                "support.constant",
+                "variable.language"
+            ],
+            "settings": { "foreground": "#AB6526" }
+        },
+        {
+            "name": "Parameter",
+            "scope": ["variable.parameter.cpp", "parameter"],
+            "settings": { "foreground": "#d38057" }
+        },
+        {
+            "name": "Variables",
+            "scope": ["variable", "support.variable"],
+            "settings": { "foreground": "#7A3E9D" }
+        },
+        {
+            "name": "directives",
+            "scope": [
+                "keyword.control.directive",
+                "keyword.control.directive.conditional.ifndef.cpp",
+                "keyword.control.directive.conditional.ifdef.cpp",
+                "keyword.control.directive.endif.cpp",
+                "keyword.control.directive.define.cpp"
+            ],
+            "settings": { "foreground": "#8d0000" }
+        },
+        {
+            "name": "Enumeration Type",
+            "scope": ["entity.name.type.enum.cpp"],
+            "settings": { "foreground": "#1445ad" }
+        },
+        {
+            "name": "Scope resolution - namespaces",
+            "scope": [
+                "entity.name.namespace.cpp",
+                "entity.name.scope-resolution.cpp"
+            ],
+            "settings": { "foreground": "#9b9b9b" }
+        },
+        {
+            "name": "Namespace declaration",
+            "scope": ["storage.type.namespace.definition.cpp"],
+            "settings": { "foreground": "#1b1b1b" }
+        },
+        {
+            "name": "Functions",
+            "scope": ["entity.name.function.member.cpp"],
+            "settings": { "foreground": "#db7c00", "fontStyle": "bold" }
+        },
+        {
+            "name": "Pay attention",
+            "scope": [
+                "variable.other.global.cpp",
+                "keyword.control.return.cpp",
+                "constant.numeric",
+                "keyword.other.unit.hexadecimal.cpp"
+            ],
+            "settings": { "foreground": "#db0700" }
+        },
+        {
+            "name": "Member variables",
+            "scope": ["variable.other.property.cpp"],
+            "settings": { "foreground": "#494848", "fontStyle": "bold" }
+        },
+        {
+            "name": "Exceptions",
+            "scope": "entity.name.exception",
+            "settings": { "foreground": "#660000" }
+        },
+        {
+            "name": "Sections",
+            "scope": "entity.name.section",
+            "settings": { "fontStyle": "bold" }
+        },
+        {
+            "name": "Numbers, Characters",
+            "scope": ["constant.numeric", "constant.character", "constant"],
+            "settings": { "foreground": "#AB6526" }
+        },
+        {
+            "name": "Strings",
+            "scope": [
+                "string",
+                "string.quoted.double.cpp",
+                "string.quoted.double.include.cpp",
+                "string.quoted.other.lt-gt.include.cpp"
+            ],
+            "settings": { "fontStyle": "italic", "foreground": "#f13ff1" }
+        },
+        {
+            "name": "Strings Escape Chars",
+            "scope": ["constant.character.escape.cpp"],
+            "settings": { "fontStyle": "bold", "foreground": "#f130f1" }
+        },
+        {
+            "name": "Strings: Escape Sequences",
+            "scope": "constant.character.escape",
+            "settings": { "foreground": "#777777" }
+        },
+        {
+            "name": "Strings: Regular Expressions",
+            "settings": { "foreground": "#4B83CD" }
+        },
+        {
+            "name": "Strings: Symbols",
+            "scope": "constant.other.symbol",
+            "settings": { "foreground": "#AB6526" }
+        },
+        {
+            "name": "Punctuation",
+            "scope": "punctuation",
+            "settings": { "foreground": "#777777" }
+        },
+        {
+            "name": "Override",
+            "scope": "storage.modifier.specifier.functional.post-parameters.override.cpp",
+            "settings": { "foreground": "#213feb", "fontStyle": "italic" }
+        },
+        {
+            "name": "Default functions",
+            "scope": "keyword.other.default.function.cpp",
+            "settings": { "foreground": "#007519", "fontStyle": "italic" }
+        },
+        {
+            "name": "Deleted functions",
+            "scope": [
+                "keyword.other.delete.function.cpp",
+                "keyword.other.delete.constructor.cpp"
+            ],
+            "settings": { "foreground": "#db0700", "fontStyle": "italic" }
+        },
+        {
+            "name": "Function calls",
+            "scope": [
+                "entity.name.function.call.cpp",
+                "keyword.other.operator.overload.cpp",
+                "entity.name.function.member.cpp",
+                "entity.name.function.definition.cpp"
+            ],
+            "settings": { "fontStyle": "italic", "foreground": "#0023e9" }
+        },
+        {
+            "name": "Support Function - anonymous namespace",
+            "scope": ["support.function"],
+            "settings": { "fontStyle": "italic", "foreground": "#eb6a00" }
+        },
+        {
+            "name": "Important types",
+            "scope": [
+                "entity.name.type.class.cpp",
+                "entity.name.scope-resolution.function.definition.cpp",
+                "entity.name.type.enum.cpp",
+                "storage.type.template.cpp"
+            ],
+            "settings": { "fontStyle": "bold", "foreground": "#213feb" }
+        },
+        {
+            "name": "Constant var/params",
+            "scope": ["storage.modifier.specifier.const.cpp"],
+            "settings": { "fontStyle": "bold", "foreground": "#a821eb" }
+        },
+        {
+            "name": "Enumeration",
+            "scope": ["variable.other.enummember.cpp"],
+            "settings": { "fontStyle": "bold", "foreground": "#007e9a" }
+        },
+        {
+            "name": "Flow control",
+            "scope": ["keyword.control"],
+            "settings": { "foreground": "#007e1b", "fontStyle": "bold" }
+        },
+        {
+            "name": "Magic numbers",
+            "scope": [
+                "constant.numeric",
+                "keyword.other.unit.hexadecimal.cpp",
+                "constant.numeric.decimal.cpp"
+            ],
+            "settings": { "foreground": "#ff0000", "fontStyle": "bold" }
+        },
+        {
+            "scope": [
+                "constant.language.false.cpp",
+                "constant.language.true.cpp"
+            ],
+            "settings": { "foreground": "#26867d", "fontStyle": "bold" }
+        },
+        {
+            "scope": ["variable.other.local.cpp"],
+            "settings": { "foreground": "#0b8201", "fontStyle": "italic" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

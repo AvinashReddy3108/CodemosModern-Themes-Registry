@@ -1,0 +1,140 @@
+{
+    "name": "Rubyist Light",
+    "type": "light",
+    "semanticHighlighting": true,
+    "colors": {
+        "editor.background": "#fff",
+        "editor.foreground": "#000",
+        "editorBracketHighlight.foreground1": "#0be",
+        "editorBracketHighlight.foreground2": "#f90",
+        "editorBracketHighlight.foreground3": "#909",
+        "editorBracketHighlight.foreground4": "#0be",
+        "editorBracketHighlight.foreground5": "#f90",
+        "editorBracketHighlight.foreground6": "#909",
+        "editorBracketHighlight.unexpectedBracket.foreground": "#f00",
+        "editorBracketMatch.background": "#ddd",
+        "editorBracketMatch.border": "#ddd",
+        "editorLineNumber.activeForeground": "#000",
+        "editorLineNumber.foreground": "#ccc",
+        "editor.lineHighlightBackground": "#f4f4f4",
+        "editor.lineHighlightBorder": "#f4f4f4"
+    },
+    "semanticTokenColors": {
+        "namespace": { "foreground": "#03C" },
+        "method.declaration": { "foreground": "#000" },
+        "variable.default_library": {
+            "foreground": "#B10",
+            "fontStyle": "bold italic"
+        }
+    },
+    "tokenColors": [
+        {
+            "name": "Keywords",
+            "scope": [
+                "keyword.control",
+                "support.function.kernel.ruby",
+                "storage"
+            ],
+            "settings": { "foreground": "#B10", "fontStyle": "italic" }
+        },
+        {
+            "name": "Classes",
+            "scope": [
+                "meta.class",
+                "meta.module.ruby",
+                "entity.name.type",
+                "entity.other.inherited-class",
+                "support.class"
+            ],
+            "settings": { "foreground": "#03C" }
+        },
+        {
+            "name": "Functions",
+            "scope": ["meta.function-call.ruby", "variable.other.ruby"],
+            "settings": { "foreground": "#000" }
+        },
+        {
+            "name": "Strings",
+            "scope": [
+                "punctuation.definition.string.begin.ruby",
+                "punctuation.definition.string.end.ruby",
+                "string.quoted.double.ruby",
+                "string.quoted.single.ruby",
+                "string"
+            ],
+            "settings": { "foreground": "#090" }
+        },
+        {
+            "name": "Strings: Escape Sequences",
+            "scope": "constant.character.escape",
+            "settings": { "foreground": "#090" }
+        },
+        {
+            "name": "Strings: Regular Expressions",
+            "scope": "string.regexp",
+            "settings": { "foreground": "#060" }
+        },
+        {
+            "name": "Punctuation: Interpolation",
+            "scope": "punctuation.section.embedded.begin.ruby",
+            "settings": { "foreground": "#0be" }
+        },
+        {
+            "name": "Symbols: Hashkeys",
+            "scope": "constant.other.symbol.hashkey",
+            "settings": { "foreground": "#06F" }
+        },
+        {
+            "name": "Symbols: Symbols",
+            "scope": "constant.language.symbol",
+            "settings": { "foreground": "#08B" }
+        },
+        {
+            "name": "Variables: Class and Global",
+            "scope": [
+                "variable.other.readwrite.global",
+                "variable.other.readwrite.class"
+            ],
+            "settings": { "foreground": "#F0F", "fontStyle": "bold" }
+        },
+        {
+            "name": "Variables: Instance",
+            "scope": "variable.other.readwrite.instance",
+            "settings": { "foreground": "#80D" }
+        },
+        {
+            "name": "Variables: Other",
+            "scope": ["variable", "support.variable"],
+            "settings": { "foreground": "#06F" }
+        },
+        {
+            "name": "Constants",
+            "scope": [
+                "constant.language",
+                "support.constant",
+                "variable.language",
+                "variable.other.constant",
+                "constant.numeric",
+                "constant.character",
+                "constant"
+            ],
+            "settings": { "foreground": "#e80" }
+        },
+        {
+            "name": "Comments",
+            "scope": ["comment", "punctuation.definition.comment"],
+            "settings": { "foreground": "#CCC", "fontStyle": "italic" }
+        },
+        {
+            "name": "Keywords: Special Methods",
+            "scope": ["keyword.other.special-method.ruby"],
+            "settings": { "foreground": "#B10", "fontStyle": "italic" }
+        },
+        {
+            "name": "Invalid - Illegal",
+            "scope": ["entity.name.exception", "invalid.illegal"],
+            "settings": { "foreground": "#F00" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

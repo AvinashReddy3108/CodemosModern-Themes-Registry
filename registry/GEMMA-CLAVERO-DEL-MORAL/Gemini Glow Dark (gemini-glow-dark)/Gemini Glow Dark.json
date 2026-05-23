@@ -1,0 +1,94 @@
+{
+    "name": "Gemini Glow",
+    "type": "dark",
+    "colors": {
+        "editor.background": "#282A2C",
+        "editor.foreground": "#9AA1A9",
+        "editorCursor.foreground": "#BF86F2",
+        "activityBar.background": "#282A2C",
+        "sideBar.background": "#232527"
+    },
+    "tokenColors": [
+        {
+            "scope": ["string", "punctuation.definition.string"],
+            "settings": { "foreground": "#7DC291" }
+        },
+        {
+            "name": "Python Docstrings",
+            "scope": ["string.quoted.docstring.python"],
+            "settings": { "foreground": "#71767B", "fontStyle": "italic" }
+        },
+        {
+            "scope": ["constant.numeric", "constant.language"],
+            "settings": { "foreground": "#e78a43" }
+        },
+        {
+            "scope": [
+                "keyword.control",
+                "storage.type.function.python",
+                "storage.type.class.python",
+                "keyword.operator.logical.python"
+            ],
+            "settings": { "foreground": "#BF86F2" }
+        },
+        {
+            "scope": [
+                "entity.name.function",
+                "support.function",
+                "meta.class.python",
+                "entity.name.type.class.python"
+            ],
+            "settings": { "foreground": "#f7D161" }
+        },
+        {
+            "scope": ["comment", "punctuation.definition.comment"],
+            "settings": { "foreground": "#71767B" }
+        },
+        {
+            "scope": [
+                "punctuation",
+                "meta.brace",
+                "keyword.operator",
+                "meta.function-call.arguments .punctuation",
+                "meta.function-call punctuation",
+                "meta.function punctuation",
+                "meta.class punctuation",
+                "punctuation.definition.list.begin.python",
+                "punctuation.definition.list.end.python",
+                "punctuation.definition.dict.begin.python",
+                "punctuation.definition.dict.end.python",
+                "punctuation.separator.python",
+                "punctuation.terminator.statement.python",
+                "variable.language.special.self.python"
+            ],
+            "settings": { "foreground": "#9AA1A9" }
+        },
+        {
+            "name": "FIX DEFINITIVO para Puntuación Amarilla",
+            "scope": [
+                "punctuation.definition.parameters.begin.python",
+                "punctuation.definition.arguments.begin.python",
+                "punctuation.definition.list.begin.python",
+                "meta.function-call.python",
+                "source.python",
+                "meta.function.parameters.python",
+                "meta.function.python"
+            ],
+            "settings": { "foreground": "#9AA1A9" }
+        },
+        { "scope": ["support.type"], "settings": { "foreground": "#699df0" } },
+        {
+            "scope": ["support.function.builtin.python"],
+            "settings": { "foreground": "#9AA1A9" }
+        },
+        {
+            "scope": ["meta.fstring.python"],
+            "settings": { "foreground": "#ffffff" }
+        },
+        {
+            "scope": ["support.type.property-name.json.comments"],
+            "settings": { "foreground": "#e78a43" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

@@ -1,0 +1,175 @@
+{
+    "$schema": "vscode://schemas/color-theme",
+    "name": "Valinor Ungoliant",
+    "author": "Diego Brocanelli",
+    "maintainers": ["Diego Brocanelli <diegod2@msn.com>"],
+    "semanticClass": "theme.valinor.ungoliant",
+    "type": "dark",
+    "semanticHighlighting": true,
+    "colors": {
+        "panel.background": "#161818",
+        "titleBar.activeBackground": "#161818",
+        "editorGroupHeader.tabsBackground": "#161818",
+        "quickInput.background": "#161818",
+        "input.background": "#1c1e1f",
+        "editorWidget.background": "#1c1e1f",
+        "editor.background": "#1c1e1f",
+        "editor.foreground": "#c2c2b0",
+        "editorCursor.foreground": "#c2c2b0",
+        "editor.lineHighlightBackground": "#272929",
+        "editor.selectionBackground": "#363a3b",
+        "editor.selectionHighlightBackground": "#363a3b88",
+        "editor.wordHighlightBackground": "#363a3b66",
+        "editorWhitespace.foreground": "#363a3b",
+        "editorIndentGuide.background1": "#363a3b",
+        "editorRuler.foreground": "#363a3b",
+        "editorLineNumber.foreground": "#363a3b",
+        "editorLineNumber.activeForeground": "#c2c2b0",
+        "sideBar.background": "#161818",
+        "sideBar.foreground": "#c2c2b0",
+        "sideBarTitle.foreground": "#5cad4a",
+        "sideBarSectionHeader.background": "#272929",
+        "sideBarSectionHeader.foreground": "#5cad4a",
+        "statusBar.background": "#272929",
+        "statusBar.foreground": "#c2c2b0",
+        "activityBar.background": "#161818",
+        "activityBar.foreground": "#c2c2b0",
+        "activityBarBadge.background": "#5cad4a",
+        "activityBarBadge.foreground": "#1c1e1f",
+        "terminal.background": "#1c1e1f",
+        "terminal.foreground": "#c2c2b0",
+        "terminalCursor.foreground": "#c2c2b0",
+        "button.background": "#5cad4a",
+        "button.foreground": "#1c1e1f",
+        "editorLink.activeForeground": "#5cad4a",
+        "list.activeSelectionBackground": "#5cad4a",
+        "list.activeSelectionForeground": "#fff",
+        "list.inactiveSelectionBackground": "#5cad4a",
+        "list.inactiveSelectionForeground": "#000",
+        "list.hoverBackground": "#363a3b",
+        "list.focusHighlightForeground": "#1c1e1f",
+        "list.highlightForeground": "#fff",
+        "tab.activeBackground": "#1c1e1f",
+        "tab.activeForeground": "#c2c2b0",
+        "tab.inactiveBackground": "#161818",
+        "tab.inactiveForeground": "#c2c2b0"
+    },
+    "tokenColors": [
+        {
+            "name": "Keywords & Storage – italic (valinor-patch)",
+            "scope": [
+                "keyword.control",
+                "keyword.operator.expression",
+                "keyword.operator.new",
+                "keyword.control.new",
+                "storage.type",
+                "storage.modifier",
+                "keyword.other.use",
+                "keyword.other.namespace",
+                "storage.modifier.extends",
+                "entity.other.inherited-class",
+                "variable.language",
+                "variable.language.this",
+                "variable.language.self",
+                "variable.language.super",
+                "variable.language.parent",
+                "variable.language punctuation.definition.variable.php",
+                "punctuation.definition.variable.php",
+                "keyword.control.php",
+                "keyword.control.flow",
+                "keyword.control.async-modifier",
+                "keyword.control.import",
+                "keyword.control.export",
+                "keyword.control.from",
+                "keyword.control.return"
+            ],
+            "settings": { "fontStyle": "italic" }
+        },
+        {
+            "scope": ["comment", "punctuation.definition.comment"],
+            "settings": { "foreground": "#5c6162", "fontStyle": "italic" }
+        },
+        {
+            "scope": [
+                "keyword",
+                "keyword.control",
+                "keyword.operator.expression"
+            ],
+            "settings": { "foreground": "#cf8164" }
+        },
+        {
+            "scope": ["storage", "storage.type", "storage.modifier"],
+            "settings": { "foreground": "#a9a9a9" }
+        },
+        { "scope": ["variable"], "settings": { "foreground": "#c2c2b0" } },
+        {
+            "scope": ["variable.language"],
+            "settings": { "foreground": "#cf8164", "fontStyle": "italic" }
+        },
+        {
+            "scope": [
+                "string",
+                "string.quoted",
+                "punctuation.definition.string"
+            ],
+            "settings": { "foreground": "#5cad4a" }
+        },
+        {
+            "scope": ["constant", "constant.numeric", "constant.language"],
+            "settings": { "foreground": "#d7af00" }
+        },
+        {
+            "scope": ["entity.name.function", "support.function"],
+            "settings": { "foreground": "#85d3f2" }
+        },
+        {
+            "scope": [
+                "entity.name.type.class",
+                "entity.name.class",
+                "support.class"
+            ],
+            "settings": { "foreground": "#d7af00" }
+        },
+        {
+            "scope": ["entity.other.inherited-class"],
+            "settings": { "foreground": "#d7af00", "fontStyle": "italic" }
+        },
+        {
+            "scope": ["entity.name.tag"],
+            "settings": { "foreground": "#cf8164" }
+        },
+        {
+            "scope": ["entity.other.attribute-name"],
+            "settings": { "foreground": "#5cad4a", "fontStyle": "italic" }
+        },
+        {
+            "scope": ["support.type", "support.class"],
+            "settings": { "foreground": "#85d3f2" }
+        },
+        {
+            "name": "Function parameters",
+            "scope": ["variable.parameter", "entity.name.variable.parameter"],
+            "settings": { "fontStyle": "italic" }
+        },
+        {
+            "name": "Keyword new",
+            "scope": ["keyword.control.new", "keyword.operator.new"],
+            "settings": { "fontStyle": "bold italic" }
+        },
+        {
+            "name": "Markup italic",
+            "scope": ["markup.italic"],
+            "settings": { "fontStyle": "italic" }
+        },
+        {
+            "name": "Markup bold",
+            "scope": ["markup.bold"],
+            "settings": { "fontStyle": "bold" }
+        },
+        {
+            "name": "Markup heading",
+            "scope": ["markup.heading"],
+            "settings": { "foreground": "#85d3f2", "fontStyle": "bold" }
+        }
+    ]
+}

@@ -1,0 +1,106 @@
+{
+    "name": "Ceramics",
+    "semanticHighlighting": true,
+    "colors": {
+        "editor.selectionBackground": "#1353607f",
+        "editor.lineHighlightBackground": "#13536039",
+        "statusBarItem.remoteBackground": "#f1e6c0",
+        "statusBarItem.remoteForeground": "#1E1E1E",
+        "statusBar.noFolderBackground": "#7c356e",
+        "statusBar.debuggingBackground": "#d79232",
+        "focusBorder": "#24787e",
+        "progressBar.background": "#24787e",
+        "selection.background": "#24787e",
+        "activityBarBadge.background": "#24787e",
+        "inputOption.activeBackground": "#24787e",
+        "list.activeSelectionBackground": "#10474a",
+        "statusBar.background": "#10474a",
+        "menu.selectionBackground": "#10474a",
+        "button.background": "#10474a",
+        "list.highlightForeground": "#46adad",
+        "editorCodeLens.foreground": "#46adad",
+        "textLink.foreground": "#46adad",
+        "textLink.activeForeground": "#46adad",
+        "pickerGroup.foreground": "#46adad",
+        "notificationsInfoIcon.foreground": "#46adad"
+    },
+    "tokenColors": [
+        {
+            "name": "Reserved keywords",
+            "scope": [
+                "storage.type",
+                "storage.modifier",
+                "keyword.control",
+                "keyword.operator.new",
+                "keyword.operator.logical.python"
+            ],
+            "settings": { "foreground": "#ff533c" }
+        },
+        {
+            "name": "Functions and methods",
+            "scope": ["entity.name.function", "entity.name.method"],
+            "settings": { "foreground": "#ff8239" }
+        },
+        {
+            "name": "Types and classes",
+            "scope": ["entity.name.type"],
+            "settings": { "foreground": "#e8b66a" }
+        },
+        {
+            "name": "Variables",
+            "scope": ["variable", "support.type.property-name"],
+            "settings": { "foreground": "#f1e6c0" }
+        },
+        {
+            "name": "Constants (same as variables but bold)",
+            "scope": ["variable.other.constants"],
+            "settings": { "foreground": "#f1e6c0", "fontStyle": "bold" }
+        },
+        {
+            "name": "Comments",
+            "scope": ["comment"],
+            "settings": { "foreground": "#717171", "fontStyle": "italic" }
+        },
+        {
+            "name": "Numbers",
+            "scope": [
+                "constant.numeric",
+                "constant.language",
+                "storage.type.format"
+            ],
+            "settings": { "foreground": "#d68899" }
+        },
+        {
+            "name": "String, docstring",
+            "scope": ["string", "string.quoted.docstring.multi.python"],
+            "settings": { "foreground": "#8cb7bc" }
+        },
+        {
+            "name": "Char literal: \n etc (string but lighter)",
+            "scope": ["constant.character"],
+            "settings": { "foreground": "#a2c9ce", "fontStyle": "bold" }
+        },
+        {
+            "name": "Imports, libraries, and namespaces",
+            "scope": ["entity.name.namespace"],
+            "settings": { "foreground": "#2e909f", "fontStyle": "bold" }
+        },
+        {
+            "name": "TODO FIXME HACK",
+            "scope": ["keyword.codetag.notation"],
+            "settings": {
+                "foreground": "#7cc18c",
+                "fontStyle": "italic underline"
+            }
+        },
+        {
+            "name": "Invalid",
+            "scope": ["invalid", "invalid.illegal"],
+            "settings": {
+                "foreground": "#ff0000",
+                "fontStyle": "strikethrough"
+            }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}

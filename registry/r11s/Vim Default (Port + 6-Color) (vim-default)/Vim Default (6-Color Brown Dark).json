@@ -1,0 +1,51 @@
+{
+    "$schema": "vscode://schemas/color-theme",
+    "name": "Vim Default (6-Color) Dark",
+    "type": "dark",
+    "colors": {
+        "editor.background": "#1E1E1E",
+        "editor.foreground": "#FFFFFF",
+        "editorCursor.foreground": "#FFFFFF",
+        "editor.selectionBackground": "#264F78",
+        "editorLineNumber.foreground": "#AAAAAA",
+        "editorLineNumber.activeForeground": "#FFFFFF"
+    },
+    "tokenColors": [
+        {
+            "scope": ["comment"],
+            "settings": { "foreground": "#5FAFFF", "fontStyle": "italic" }
+        },
+        {
+            "scope": ["keyword", "storage.type", "storage.modifier"],
+            "settings": { "foreground": "#C08040", "fontStyle": "bold" }
+        },
+        {
+            "scope": ["string", "string.quoted", "string.template"],
+            "settings": { "foreground": "#98C379" }
+        },
+        {
+            "scope": [
+                "constant",
+                "constant.numeric",
+                "constant.character",
+                "constant.other"
+            ],
+            "settings": { "foreground": "#C678DD" }
+        },
+        {
+            "scope": ["entity.name.function", "support.function"],
+            "settings": { "fontStyle": "bold" }
+        },
+        {
+            "scope": ["variable", "identifier"],
+            "settings": { "foreground": "#FFFFFF" }
+        },
+        {
+            "scope": ["invalid", "invalid.deprecated"],
+            "settings": { "foreground": "#FFFFFF", "background": "#E06C75" }
+        },
+        { "scope": ["diff.inserted"], "settings": { "foreground": "#98C379" } },
+        { "scope": ["diff.deleted"], "settings": { "foreground": "#E06C75" } },
+        { "scope": ["diff.changed"], "settings": { "foreground": "#61AFEF" } }
+    ]
+}

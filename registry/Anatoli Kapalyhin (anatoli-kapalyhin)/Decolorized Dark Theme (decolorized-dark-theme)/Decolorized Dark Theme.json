@@ -1,0 +1,99 @@
+{
+    "name": "my-first-dark-theme-customized",
+    "colors": {
+        "editor.background": "#212121",
+        "editor.foreground": "#eeffff",
+        "editor.lineHighlightBackground": "#ffffff10"
+    },
+    "tokenColors": [
+        {
+            "name": "Base Color - Set everything to white by default (except specified below)",
+            "scope": [
+                "meta.function-call",
+                "entity.name.function",
+                "variable.other",
+                "support.function",
+                "entity.other.attribute-name",
+                "punctuation",
+                "keyword.control",
+                "support.type",
+                "support.class",
+                "storage.type",
+                "storage.modifier",
+                "entity.name",
+                "keyword",
+                "variable.language",
+                "variable"
+            ],
+            "settings": { "fontStyle": "", "foreground": "#eeffff" }
+        },
+        {
+            "name": "Decolorization: function/method usage, properties, brackets",
+            "scope": [
+                "meta.objectliteral.ts variable.other.constant.ts",
+                "variable.other.constant.object.property.ts",
+                "variable.other.constant.property.ts",
+                "meta.function-call variable.other.constant.ts",
+                "meta.function-call variable.other.constant",
+                "variable.other.readwrite",
+                "variable.other.property",
+                "variable.other.object",
+                "variable.other.member",
+                "meta.function-call variable.parameter",
+                "meta.function-call entity.name.function",
+                "meta.method-call entity.name.function",
+                "support.function",
+                "punctuation.paren.open",
+                "punctuation.paren.close",
+                "punctuation.brace.open",
+                "punctuation.brace.close",
+                "punctuation.bracket.open",
+                "punctuation.bracket.close",
+                "punctuation.dot",
+                "variable.other.readwrite.alias",
+                "entity.name.import"
+            ],
+            "settings": { "foreground": "#eeffff" }
+        },
+        {
+            "name": "Class Declaration (name)",
+            "scope": ["entity.name.type.class", "entity.name.type.module"],
+            "settings": { "foreground": "#F07178" }
+        },
+        {
+            "name": "Function Declaration (name)",
+            "scope": [
+                "entity.name.function.definition",
+                "entity.name.function",
+                "support.function.constructor"
+            ],
+            "settings": { "foreground": "#FFCB6B" }
+        },
+        {
+            "name": "Variable and Parameter Declarations (name)",
+            "scope": [
+                "meta.definition.variable.ts variable.other.constant.ts",
+                "variable.other.declaration",
+                "variable.other.constant",
+                "variable.parameter"
+            ],
+            "settings": { "foreground": "#89DDFF" }
+        },
+        {
+            "name": "Comments",
+            "scope": ["comment", "punctuation.definition.comment"],
+            "settings": { "foreground": "#C792EA" }
+        },
+        {
+            "name": "Strings and Numbers",
+            "scope": [
+                "string",
+                "constant.numeric",
+                "constant.language",
+                "support.constant"
+            ],
+            "settings": { "foreground": "#C3E88D" }
+        }
+    ],
+    "$schema": "vscode://schemas/color-theme"
+}
