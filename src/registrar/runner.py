@@ -1,5 +1,4 @@
 import asyncio
-from pathlib import Path
 
 from asyncer import runnify
 
@@ -14,81 +13,82 @@ from registrar.services.metadata import MetadataService
 
 
 class Runner:
-    def __init__(self, max_pages=None, concurrency=10):
+    def __init__(self, max_pages: int | None = None, concurrency: int = 10):
         self.max_pages = max_pages
         self.concurrency = concurrency
         log.debug(
-            f"Runner instance created with targeted constraints -> Concurrency: {concurrency}, Limit Page Cap: {max_pages or 'UNLIMITED'}"
+            f"Runner ready — concurrency: {concurrency}, "
+            f"page cap: {max_pages or 'unlimited'}"
         )
 
-    async def producer(self, queue, ext_service, progress, p_task, e_task):
+    async def _producer(
+        self,
+        queue: asyncio.Queue,
+        ext_service: ExtensionService,
+        progress,
+        p_task,
+        e_task,
+    ) -> None:
         page = 1
-        total_exts = 0
-        log.info(
-            "Starting processing work tracking: Orchestrating producer event execution queue..."
-        )
+        total = 0
+        log.info("Producer starting — discovering extensions...")
         try:
             while not self.max_pages or page <= self.max_pages:
                 exts = await ext_service.fetch_page(page)
                 if not exts:
-                    log.info(
-                        f"Producer reached an empty index listings page landscape on page {page}. Terminating discovery sweep loops."
-                    )
+                    log.info(f"No more extensions at page {page} — discovery complete.")
                     break
 
                 for ext_id in exts:
                     await queue.put(ext_id)
-                    total_exts += 1
+                    total += 1
                     if progress:
-                        progress.update(e_task, total=total_exts)
+                        progress.update(e_task, total=total)
 
                 if progress:
                     progress.update(p_task, advance=1)
                 page += 1
+
         except Exception as e:
-            log.critical(
-                f"Producer encountered catastrophic functional crash tracking marketplace records pagination context loop: {e}"
-            )
+            log.critical(f"Producer crashed: {e}")
         finally:
             log.info(
-                f"Producer lifecycle complete. Discovered total elements context counts: {total_exts}. Distributing terminal termination flags to worker threads..."
+                f"Producer done. Discovered {total} extension(s). "
+                "Sending shutdown signals to workers..."
             )
             for _ in range(self.concurrency):
                 await queue.put(None)
 
-    async def consumer(
+    async def _consumer(
         self,
-        queue,
-        meta_service,
-        downloader,
-        extractor,
-        index,
+        queue: asyncio.Queue,
+        meta_service: MetadataService,
+        downloader: VSIXDownloader,
+        extractor: Extractor,
+        index: IndexManager,
         progress,
         e_task,
         t_task,
-    ):
-        worker_id = asyncio.current_task().get_name()  # ty:ignore[unresolved-attribute]
-        log.debug(
-            f"Worker tracking thread [{worker_id}] connected and monitoring orchestration task queues."
-        )
+        failure_counter: list[int],
+    ) -> None:
+        worker = asyncio.current_task().get_name()  # ty:ignore[unresolved-attribute]
+        log.debug(f"[{worker}] started.")
+
         while True:
             ext_id = await queue.get()
             if ext_id is None:
-                log.debug(
-                    f"Worker tracking thread [{worker_id}] received terminal exit token package. Closing routine loop execution contexts cleanly."
-                )
+                log.debug(f"[{worker}] received shutdown signal.")
                 queue.task_done()
                 break
+
             try:
-                log.debug(
-                    f"Worker tracking thread [{worker_id}] picked up job item identification target: '{ext_id}'"
-                )
+                log.debug(f"[{worker}] processing '{ext_id}'")
                 data = await meta_service.fetch(ext_id)
                 ext = meta_service.parse(data, ext_id)
+
                 if not ext or not ext.vsix_url:
-                    log.warning(
-                        f"Skipping processing pipeline stack sequence for item target context '{ext_id}': Metadata failed formatting checks."
-                    )
+                    log.warning(f"Skipping '{ext_id}': invalid metadata.")
+                    failure_counter[0] += 1
                     continue
 
                 buf = await downloader.download(ext)
@@ -96,7 +96,7 @@ class Runner:
 
                 if themes:
                     log.info(
-                        f"Worker tracking thread [{worker_id}] successfully extracted validation files: Found ({len(themes)}) theme nodes within package '{ext_id}'"
+                        f"[{worker}] extracted {len(themes)} theme(s) from '{ext_id}'."
                     )
                     for t in themes:
                         await index.add(t)
@@ -104,47 +104,47 @@ class Runner:
                             progress.update(t_task, advance=1)
 
                     if progress:
-                        current_total = progress.tasks[t_task].total or 0
-                        progress.update(t_task, total=current_total + len(themes))
+                        current = progress.tasks[t_task].total or 0
+                        progress.update(t_task, total=current + len(themes))
                 else:
-                    log.debug(
-                        f"No thematic presentation elements located inside package installation structures for item identifier: {ext_id}"
-                    )
+                    log.debug(f"No themes found in '{ext_id}'.")
+
             except Exception as e:
-                log.error(
-                    f"Unexpected worker tracking execution failure exception raised tracking extension processing loops reference '{ext_id}': {e}"
-                )
+                log.error(f"[{worker}] failed on '{ext_id}': {e.with_traceback()}")  # ty:ignore[missing-argument]
+                failure_counter[0] += 1
             finally:
                 if progress:
                     progress.update(e_task, advance=1)
                 queue.task_done()
 
-    async def run_async(self, progress=None, tasks=None):
-        log.info("Initializing global workflow layout execution pipeline components...")
+    async def run_async(self, progress=None, tasks=None) -> None:
+        log.info("Starting pipeline...")
         p_task = tasks.get("pages") if tasks else None
         e_task = tasks.get("exts") if tasks else None
         t_task = tasks.get("themes") if tasks else None
 
-        index = IndexManager()
+        index_path = OUTPUT_ROOT / "index.json"
+        index = IndexManager(path=index_path)
         client = HTTPClient()
 
         ext_service = ExtensionService(client)
         meta_service = MetadataService(client, MARKETPLACE_API)
         downloader = VSIXDownloader(client)
-        extractor = Extractor(
-            OUTPUT_ROOT, client
-        )  # Pass through shared connection client
+        extractor = Extractor(OUTPUT_ROOT, client)
 
-        queue = asyncio.Queue(
-            maxsize=100
-        )  # Limit queue capacity to control extreme memory spikes
+        # Bounded queue prevents unbounded memory growth when producers
+        # outrun consumers.
+        queue: asyncio.Queue = asyncio.Queue(maxsize=2 * self.concurrency)
 
-        # Removed redundant asyncio.Semaphore. The number of active consumers
-        # naturally establishes the exact concurrency ceiling.
+        # Shared mutable counter for tracking failures across workers.
+        # Using a single-element list so workers can mutate it without closures.
+        failure_counter = [0]
 
+        # Spin up exactly `concurrency` consumers; their count IS the concurrency
+        # ceiling — no separate semaphore needed.
         consumers = [
             asyncio.create_task(
-                self.consumer(
+                self._consumer(
                     queue,
                     meta_service,
                     downloader,
@@ -153,25 +153,28 @@ class Runner:
                     progress,
                     e_task,
                     t_task,
+                    failure_counter,
                 ),
-                name=f"CONSUMER-{_}",
+                name=f"CONSUMER-{i}",
             )
-            for _ in range(self.concurrency)
+            for i in range(self.concurrency)
         ]
 
-        await self.producer(queue, ext_service, progress, p_task, e_task)
+        await self._producer(queue, ext_service, progress, p_task, e_task)
 
-        log.debug(
-            "Awaiting terminal execution completion steps from all worker tasks landscapes..."
-        )
+        log.debug("Waiting for all workers to finish...")
         await asyncio.gather(*consumers)
 
-        log.info(
-            "Worker loops joined. Finalizing indexing registry modifications context loops..."
-        )
+        total_failures = failure_counter[0]
+        if total_failures:
+            log.warning(
+                f"Pipeline complete with {total_failures} skipped/failed extension(s)."
+            )
+        else:
+            log.info("Pipeline complete — no failures.")
 
-        await index.write(Path(OUTPUT_ROOT) / "index.json")
+        await index.write(index_path)
         await client.close()
-        log.info("System operational sequence execution concluded successfully.")
+        log.info("Shutdown complete.")
 
     run = runnify(run_async)

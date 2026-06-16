@@ -2,7 +2,7 @@ from typing import Optional
 
 import typer
 
-from registrar.logging import log
+from registrar.logging import setup_logging
 from registrar.runner import Runner
 from registrar.utils.progress import make_progress
 
@@ -10,8 +10,14 @@ app = typer.Typer(help="Theme Registrar CLI")
 
 
 @app.command()
-def scrape(pages: Optional[int] = None, concurrency: int = 10):
-    log.info("Theme Registrar scraping runtime execution invoked via interface.")
+def scrape(
+    pages: Optional[int] = None,
+    concurrency: int = 10,
+    log_level: str = "INFO",
+):
+    log = setup_logging(level=log_level)
+    log.info("Theme Registrar starting.")
+
     runner = Runner(max_pages=pages, concurrency=concurrency)
 
     with make_progress() as progress:
@@ -27,7 +33,5 @@ def scrape(pages: Optional[int] = None, concurrency: int = 10):
         try:
             runner.run(progress=progress, tasks=tasks_map)  # ty:ignore[missing-argument]
         except Exception as e:
-            log.critical(
-                f"Execution terminated via an unhandled root level CLI panic: {e}"
-            )
+            log.critical(f"Fatal error: {e}")
             raise typer.Exit(code=1)

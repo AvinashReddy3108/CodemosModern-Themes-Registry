@@ -13,7 +13,7 @@ from tenacity import (
 from registrar.config import MARKETPLACE_API
 from registrar.logging import log
 
-# Limiter for Marketplace API
+# Rate limiter for the VS Marketplace API (150 requests per 5 minutes).
 marketplace_limiter = create_inmemory_limiter(
     duration=5 * Duration.MINUTE, rate_per_duration=150
 )
@@ -21,15 +21,12 @@ marketplace_limiter = create_inmemory_limiter(
 
 def is_retryable_exception(exc: BaseException) -> bool:
     if isinstance(exc, (httpx.TimeoutException, httpx.NetworkError)):
-        log.warning(
-            f"Transient Network/Timeout exception encountered: {type(exc).__name__}"
-        )
+        log.warning(f"Transient network/timeout error: {type(exc).__name__}")
         return True
     if isinstance(exc, httpx.HTTPStatusError):
-        status = exc.response.status_code
-        if status in {408, 429, 500, 502, 503, 504}:
+        if exc.response.status_code in {408, 429, 500, 502, 503, 504}:
             log.warning(
-                f"Server returned retryable status block ({status}). Registering request for retry."
+                f"Retryable HTTP status {exc.response.status_code} — scheduling retry."
             )
             return True
     if isinstance(
@@ -41,12 +38,12 @@ def is_retryable_exception(exc: BaseException) -> bool:
             httpx.RemoteProtocolError,
         ),
     ):
-        log.warning(f"Low level connection pipeline error: {type(exc).__name__}")
+        log.warning(f"Low-level connection error: {type(exc).__name__}")
         return True
     return False
 
 
-def retry_http():
+def _retry_policy():
     return retry(
         stop=stop_after_attempt(5),
         wait=wait_exponential_jitter(initial=2, jitter=2, max=30),
@@ -57,66 +54,53 @@ def retry_http():
 
 class HTTPClient:
     def __init__(self):
-        self.client = httpx.AsyncClient(
+        self._client = httpx.AsyncClient(
             timeout=httpx.Timeout(30.0, connect=10.0),
             headers={"User-Agent": "ThemeScraper/2.0"},
             follow_redirects=True,
         )
-        log.debug("Shared httpx AsyncClient pipeline initialized.")
+        # Pre-bind decorated methods once so we don't recreate decorators per call.
+        self.get = self._make_method("get")
+        self.post = self._make_method("post")
+        log.debug("HTTPClient initialised.")
 
     async def close(self):
-        await self.client.aclose()
-        log.debug("Shared httpx AsyncClient connection pool terminated cleanly.")
+        await self._client.aclose()
+        log.debug("HTTPClient connection pool closed.")
 
-    def _request(self, method: str):
-        func = getattr(self.client, method)
+    def _make_method(self, method: str):
+        raw = getattr(self._client, method)
 
-        @retry_http()
-        async def inner(url, **kwargs):
-            # Use the right limiter depending on URL
+        @_retry_policy()
+        async def _call(url, **kwargs):
             if url.startswith(MARKETPLACE_API):
-                log.debug(
-                    "Throttling request pipeline via Marketplace rate limiter constraints..."
-                )
+                log.debug("Applying Marketplace rate-limiter...")
                 await marketplace_limiter.try_acquire_async("marketplace")
 
-            log.debug(f"Outbound HTTP Request Execution: {method.upper()} -> {url}")
-            resp = await func(url, **kwargs)
+            log.debug(f"HTTP {method.upper()} → {url}")
+            resp = await raw(url, **kwargs)
 
             if resp.status_code == 429:
                 retry_after = resp.headers.get("Retry-After")
                 if retry_after:
                     try:
                         delay = int(retry_after)
-                        log.warning(
-                            f"[rate-limit] 429 Too Many Requests encountered -> Server demands pause for {delay}s"
-                        )
+                        log.warning(f"429 Too Many Requests — backing off {delay}s.")
                         try:
                             await asyncio.sleep(delay)
                         except asyncio.CancelledError:
-                            log.info(
-                                "Rate limiter dynamic window wait back-off canceled during shutdown sequence."
-                            )
+                            log.info("Rate-limit back-off cancelled during shutdown.")
                             raise
                     except ValueError:
                         log.warning(
-                            f"[rate-limit] 429 received with unparsable non-integer Retry-After window content: '{retry_after}'"
+                            f"429 with non-integer Retry-After value: '{retry_after}'"
                         )
-
-                # Raise so tenacity will retry after the sleep
+                # Raise so tenacity retries after the sleep.
                 raise httpx.HTTPStatusError(
-                    "rate limited",
-                    request=resp.request,
-                    response=resp,
+                    "rate limited", request=resp.request, response=resp
                 )
 
             resp.raise_for_status()
             return resp
 
-        return inner
-
-    async def get(self, url, **kwargs):
-        return await self._request("get")(url, **kwargs)
-
-    async def post(self, url, **kwargs):
-        return await self._request("post")(url, **kwargs)
+        return _call

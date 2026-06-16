@@ -19,33 +19,22 @@ class InterceptHandler(logging.Handler):
         logger.opt(depth=6, exception=record.exc_info).log(level, record.getMessage())
 
 
-def setup_logging(level: str = "INFO"):
-    # Remove default loguru handlers
+def setup_logging(level: str = "INFO") -> logger:  # ty:ignore[invalid-type-form]
     logger.remove()
 
-    # Add Rich console handler
     logger.add(
         RichHandler(rich_tracebacks=True, markup=True),
         level=level,
         format="{message}",
     )
-
-    # Add file sink
     logger.add("registrar.log", level=level)
 
-    # Map string level to numeric logging level
     numeric_level = getattr(logging, level.upper(), logging.INFO)
-
-    # Intercept standard logging with chosen level
-    logging.basicConfig(handlers=[InterceptHandler()], level=numeric_level)
-
-    # TODO: Optionally tune noisy libraries
-    # logging.getLogger("httpx").setLevel(numeric_level)
-    # logging.getLogger("asyncio").setLevel(logging.WARNING)
-    # logging.getLogger("tenacity").setLevel(logging.DEBUG)
-    # logging.getLogger("pyrate_limiter").setLevel(logging.INFO)
+    logging.basicConfig(handlers=[InterceptHandler()], level=numeric_level, force=True)
 
     return logger
 
 
-log = setup_logging()
+# Module-level logger; configure via setup_logging() at entry point.
+# Defaults to INFO so imports don't silently suppress warnings.
+log = logger
