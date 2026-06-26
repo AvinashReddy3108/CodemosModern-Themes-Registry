@@ -1,6 +1,6 @@
 from pathlib import Path
 
-OUTPUT_ROOT = Path("../registry/registry")
+OUTPUT_ROOT = Path("../registry")
 MARKETPLACE_API = (
     "https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery"
 )

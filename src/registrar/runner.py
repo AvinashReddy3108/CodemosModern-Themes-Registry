@@ -130,7 +130,7 @@ class Runner:
         ext_service = ExtensionService(client)
         meta_service = MetadataService(client, MARKETPLACE_API)
         downloader = VSIXDownloader(client)
-        extractor = Extractor(OUTPUT_ROOT, client)
+        extractor = Extractor(OUTPUT_ROOT / "registry", client)
 
         # Bounded queue prevents unbounded memory growth when producers
         # outrun consumers.
