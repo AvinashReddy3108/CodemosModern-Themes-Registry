@@ -1,5 +1,4 @@
-import asyncio
-
+import anyio
 import httpx
 from pyrate_limiter import Duration
 from pyrate_limiter.limiter_factory import create_inmemory_limiter
@@ -86,11 +85,7 @@ class HTTPClient:
                     try:
                         delay = int(retry_after)
                         log.warning(f"429 Too Many Requests — backing off {delay}s.")
-                        try:
-                            await asyncio.sleep(delay)
-                        except asyncio.CancelledError:
-                            log.info("Rate-limit back-off cancelled during shutdown.")
-                            raise
+                        await anyio.sleep(delay)
                     except ValueError:
                         log.warning(
                             f"429 with non-integer Retry-After value: '{retry_after}'"

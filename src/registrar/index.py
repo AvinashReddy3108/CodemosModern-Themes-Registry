@@ -1,15 +1,19 @@
-import asyncio
 import hashlib
 from pathlib import Path
 
+import anyio
 import msgspec
+from asyncer import asyncify
 
 from registrar.logging import log
+
+# Wrap sync file write with asyncify
+_write_bytes_async = asyncify(lambda path, data: path.write_bytes(data))
 
 
 class IndexManager:
     def __init__(self, path: Path | None = None):
-        self._lock = asyncio.Lock()
+        self._lock = anyio.Lock()
         self.data: dict = {"version": "v1.0.0", "themes": {"dark": [], "light": []}}
 
         if path and path.exists():
@@ -53,6 +57,7 @@ class IndexManager:
             self._bump_version()
             encoded = msgspec.json.encode(self.data)
             log.info(f"Writing updated index to {path}...")
-            await asyncio.to_thread(path.write_bytes, encoded)
+            # Use asyncer asyncify wrapper instead of anyio.to_thread.run_sync
+            await _write_bytes_async(path, encoded)
         else:
             log.info("Index content unchanged — skipping write.")

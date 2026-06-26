@@ -1,6 +1,5 @@
 from io import BytesIO
 
-
 from registrar.logging import log
 
 
