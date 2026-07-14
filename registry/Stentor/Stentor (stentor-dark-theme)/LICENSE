@@ -1,0 +1,1 @@
+This theme is free to use and modify, but please do not redistribute it without permission. If you have any questions or suggestions, please feel free to contact me.
