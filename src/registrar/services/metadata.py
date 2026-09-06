@@ -12,7 +12,7 @@ class MetadataService:
         return {
             "filters": [
                 {
-                    "criteria": [{"filterType": 7, "value": extension_id}],
+                    "criteria": [{"filterType": 4, "value": extension_id}],
                     "pageNumber": 1,
                     "pageSize": 1,
                 }
