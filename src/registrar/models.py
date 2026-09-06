@@ -1,17 +1,15 @@
-from dataclasses import dataclass
+import msgspec
 
 
-@dataclass
-class Extension:
+class Extension(msgspec.Struct):
     publisher: str
     name: str
     version: str
-    vsix_url: str
+    vsix_url: str | None
     license_url: str | None
 
 
-@dataclass
-class ThemeEntry:
+class ThemeEntry(msgspec.Struct):
     publisher: str
     extension: str
     theme: str

@@ -10,40 +10,44 @@ from registrar.services.downloader import VSIXDownloader
 from registrar.services.extensions import ExtensionService
 from registrar.services.metadata import MetadataService
 
+# Worker pool sizes. The Marketplace metadata stage is rate-limited
+# (150 req / 5 min), so it needs the most concurrent in-flight requests
+# to stay saturated. Download and extraction are independent pools so a
+# slow download never blocks extraction of other VSIXes (and vice versa).
+META_WORKERS = 30
+DOWNLOAD_WORKERS = 12
+EXTRACT_WORKERS = 20
+
 
 class Runner:
     def __init__(self, max_pages: int | None = None):
         self.max_pages = max_pages
 
-    async def _fetch_pages(self, ext_service, send, progress, p_task, e_task):
-        self.page, self.total = 1, 0
-        async with send:
+    async def _fetch_pages(self, ext_service, id_send, progress, p_task, e_task):
+        """Fetch theme index pages and emit each extension ID downstream."""
+        page = 1
+        total = 0
+        async with id_send:
             try:
-                while not self.max_pages or self.page <= self.max_pages:
-                    exts = await ext_service.fetch_page(self.page)
+                while not self.max_pages or page <= self.max_pages:
+                    exts = await ext_service.fetch_page(page)
                     if not exts:
                         break
-                    self.total += len(exts)
+                    total += len(exts)
                     if progress:
                         progress.update(p_task, advance=1)
-                        progress.update(e_task, total=self.total)
-                    await send.send(exts)
-                    self.page += 1
+                        progress.update(e_task, total=total)
+                    for ext_id in exts:
+                        await id_send.send(ext_id)
+                    page += 1
             except Exception as e:
                 log.critical(f"Page fetcher crashed: {e}")
-
-    async def _emit_ids(self, recv, send):
-        async with recv, send:
-            async for ext_ids in recv:
-                for ext_id in ext_ids:
-                    await send.send(ext_id)
 
     async def _meta_worker(self, recv, send, meta_service, failures, progress, e_task):
         async with recv, send:
             async for ext_id in recv:
                 try:
-                    data = await meta_service.fetch(ext_id)
-                    ext = meta_service.parse(data, ext_id)
+                    ext = await meta_service.get_extension(ext_id)
                     if ext and ext.vsix_url:
                         await send.send(ext)
                     else:
@@ -56,17 +60,28 @@ class Runner:
                     if progress:
                         progress.update(e_task, advance=1)
 
-    async def _dl_extract_worker(self, recv, send, downloader, extractor, failures):
+    async def _downloader(self, recv, send, downloader, failures):
         async with recv, send:
             async for ext in recv:
                 try:
                     buf = await downloader.download(ext)
+                    await send.send((ext, buf))
+                except Exception as e:
+                    log.error(
+                        f"Download failed for '{ext.publisher}.{ext.name}': {e}"
+                    )
+                    failures[0] += 1
+
+    async def _extractor(self, recv, send, extractor, failures):
+        async with recv, send:
+            async for ext, buf in recv:
+                try:
                     themes = await extractor.extract_themes(buf, ext)
                     for t in themes:
                         await send.send(t)
                 except Exception as e:
                     log.error(
-                        f"Download/extract failed for '{ext.publisher}.{ext.name}': {e}"
+                        f"Extract failed for '{ext.publisher}.{ext.name}': {e}"
                     )
                     failures[0] += 1
 
@@ -78,71 +93,88 @@ class Runner:
                     if progress:
                         progress.update(t_task, advance=1)
                 except Exception as e:
-                    log.error(
-                        f"Indexing failed for '{theme.extension}/{theme.theme}': {e}"
-                    )
+                    log.error(f"Indexing failed for '{theme.extension}/{theme.theme}': {e}")
 
     async def run_async(self, progress=None, tasks=None):
         t = tasks or {}
-        p_task = t.get("pages")
-        e_task = t.get("exts")
-        t_task = t.get("themes")
+        p_task, e_task, t_task = t.get("pages"), t.get("exts"), t.get("themes")
 
         index_path = OUTPUT_ROOT / "index.json"
         index = IndexManager(path=index_path)
         client = HTTPClient()
+        failures = [0]
 
         ext_service = ExtensionService(client)
         meta_service = MetadataService(client, MARKETPLACE_API)
         downloader = VSIXDownloader(client)
-        extractor = Extractor(OUTPUT_ROOT, client)
+        extractor = Extractor(OUTPUT_ROOT / "registry", client)
 
-        failures = [0]
+        # Memory-object streams between stages. Generous buffers decouple
+        # producer/consumer speed so one stage's backpressure doesn't stall the
+        # next. Each stream's ORIGINAL send/recv end must be closed once all
+        # workers have been given clones, or downstream stages never see EOF
+        # and the task group hangs.
+        id_send, id_recv = anyio.create_memory_object_stream(max_buffer_size=1000)
+        meta_send, meta_recv = anyio.create_memory_object_stream(max_buffer_size=200)
+        vsix_send, vsix_recv = anyio.create_memory_object_stream(max_buffer_size=20)
+        theme_send, theme_recv = anyio.create_memory_object_stream(max_buffer_size=1000)
 
-        page_send, page_recv = anyio.create_memory_object_stream(max_buffer_size=10)
-        id_send, id_recv = anyio.create_memory_object_stream(max_buffer_size=200)
-        meta_send, meta_recv = anyio.create_memory_object_stream(max_buffer_size=50)
-        theme_send, theme_recv = anyio.create_memory_object_stream(max_buffer_size=500)
-
-        async with anyio.create_task_group() as tg:
-            tg.start_soon(
-                self._fetch_pages, ext_service, page_send, progress, p_task, e_task
-            )
-            tg.start_soon(self._emit_ids, page_recv, id_send)
-
-            for _ in range(10):
+        try:
+            async with anyio.create_task_group() as tg:
+                # page fetch → extension IDs (sole producer owns id_send)
                 tg.start_soon(
-                    self._meta_worker,
-                    id_recv.clone(),
-                    meta_send.clone(),
-                    meta_service,
-                    failures,
-                    progress,
-                    e_task,
+                    self._fetch_pages, ext_service, id_send, progress, p_task, e_task
                 )
-            id_recv.close()
-            meta_send.close()
 
-            for _ in range(10):
-                tg.start_soon(
-                    self._dl_extract_worker,
-                    meta_recv.clone(),
-                    theme_send.clone(),
-                    downloader,
-                    extractor,
-                    failures,
-                )
-            meta_recv.close()
-            theme_send.close()
+                # metadata workers
+                for _ in range(META_WORKERS):
+                    tg.start_soon(
+                        self._meta_worker,
+                        id_recv.clone(),
+                        meta_send.clone(),
+                        meta_service,
+                        failures,
+                        progress,
+                        e_task,
+                    )
+                id_recv.close()
+                meta_send.close()
 
-            tg.start_soon(self._index_writer, theme_recv, index, progress, t_task)
+                # download workers (VSIX bytes)
+                for _ in range(DOWNLOAD_WORKERS):
+                    tg.start_soon(
+                        self._downloader,
+                        meta_recv.clone(),
+                        vsix_send.clone(),
+                        downloader,
+                        failures,
+                    )
+                meta_recv.close()
+                vsix_send.close()
 
-        if failures[0]:
-            log.warning(f"Pipeline complete — {failures[0]} extension(s) failed.")
-        else:
-            log.info("Pipeline complete.")
+                # extract workers (themes)
+                for _ in range(EXTRACT_WORKERS):
+                    tg.start_soon(
+                        self._extractor,
+                        vsix_recv.clone(),
+                        theme_send.clone(),
+                        extractor,
+                        failures,
+                    )
+                vsix_recv.close()
+                theme_send.close()
 
-        await index.write(index_path)
-        await client.close()
+                # final writer (sole consumer owns theme_recv)
+                tg.start_soon(self._index_writer, theme_recv, index, progress, t_task)
+
+            if failures[0]:
+                log.warning(f"Pipeline complete — {failures[0]} extension(s) failed.")
+            else:
+                log.info("Pipeline complete.")
+        finally:
+            # Persist whatever made it through and free the connection pool even
+            # when the group is cancelled or a stage crashes.
+            await index.write(index_path)
+            await client.close()
 
     run = runnify(run_async)

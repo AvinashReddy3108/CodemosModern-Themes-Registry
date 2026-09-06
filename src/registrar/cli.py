@@ -1,5 +1,3 @@
-from typing import Optional
-
 import typer
 
 from registrar.logging import setup_logging
@@ -11,7 +9,7 @@ app = typer.Typer(help="Theme Registrar CLI")
 
 @app.command()
 def scrape(
-    pages: Optional[int] = None,
+    pages: int | None = None,
     log_level: str = "INFO",
 ):
     log = setup_logging(level=log_level)
@@ -33,6 +31,6 @@ def scrape(
 
         try:
             runner.run(progress=progress, tasks=tasks_map)
-        except Exception as e:
-            log.exception(f"Fatal error: {e}")
+        except Exception:
+            log.exception("Fatal error")
             raise typer.Exit(code=1)

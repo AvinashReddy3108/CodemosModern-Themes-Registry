@@ -32,6 +32,11 @@ class MetadataService:
         resp.raise_for_status()
         return resp.json()
 
+    async def get_extension(self, extension_id: str) -> Extension | None:
+        """Fetch metadata and parse into an Extension object."""
+        data = await self.fetch(extension_id)
+        return self.parse(data, extension_id)
+
     @staticmethod
     def _label(display: str, internal: str) -> str:
         """Return 'Display Name (internal)' when they differ, else just the display name."""
@@ -78,7 +83,7 @@ class MetadataService:
                 publisher=safe_filename(publisher_label),
                 name=safe_filename(extension_label),
                 version=version["version"],
-                vsix_url=vsix_url,  # ty:ignore[invalid-argument-type]
+                vsix_url=vsix_url,
                 license_url=license_url,
             )
             log.debug(
