@@ -4,6 +4,7 @@ from pathlib import Path
 import anyio
 import msgspec
 from asyncer import asyncify
+from msgspec import DecodeError
 
 from registrar.logging import log
 from registrar.models import ThemeEntry
@@ -17,7 +18,9 @@ class ThemeIndex(msgspec.Struct):
     round-trips the whole document with no manual dict conversion."""
 
     version: str = "v1.0.0"
-    themes: dict[str, list[ThemeEntry]] = msgspec.field(default_factory=lambda: {"dark": [], "light": []})
+    themes: dict[str, list[ThemeEntry]] = msgspec.field(
+        default_factory=lambda: {"dark": [], "light": []}
+    )
 
 
 def _theme_key(t: ThemeEntry) -> str:
@@ -38,7 +41,7 @@ class IndexManager:
                 log.debug(f"Loading existing index from {path}.")
                 self.data = decoder.decode(path.read_bytes())
                 log.info(f"Loaded existing index (version {self.data.version}).")
-            except Exception as e:
+            except (DecodeError, OSError) as e:
                 log.error(f"Failed to load existing index — starting fresh: {e}")
 
     async def add(self, entry: ThemeEntry) -> None:

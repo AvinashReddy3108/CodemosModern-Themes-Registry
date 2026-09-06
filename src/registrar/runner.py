@@ -1,4 +1,9 @@
+import json
+import zipfile
+
 import anyio
+import httpx
+import msgspec
 from asyncer import runnify
 
 from registrar.config import MARKETPLACE_API, OUTPUT_ROOT
@@ -40,7 +45,7 @@ class Runner:
                     for ext_id in exts:
                         await id_send.send(ext_id)
                     page += 1
-            except Exception as e:
+            except (httpx.HTTPError, KeyError, json.JSONDecodeError) as e:
                 log.critical(f"Page fetcher crashed: {e}")
 
     async def _meta_worker(self, recv, send, meta_service, failures, progress, e_task):
@@ -53,7 +58,7 @@ class Runner:
                     else:
                         log.warning(f"Skipping '{ext_id}': bad metadata.")
                         failures[0] += 1
-                except Exception as e:
+                except (httpx.HTTPError, KeyError, json.JSONDecodeError) as e:
                     log.error(f"Metadata failed for '{ext_id}': {e}")
                     failures[0] += 1
                 finally:
@@ -66,10 +71,8 @@ class Runner:
                 try:
                     buf = await downloader.download(ext)
                     await send.send((ext, buf))
-                except Exception as e:
-                    log.error(
-                        f"Download failed for '{ext.publisher}.{ext.name}': {e}"
-                    )
+                except (httpx.HTTPError, OSError) as e:
+                    log.error(f"Download failed for '{ext.publisher}.{ext.name}': {e}")
                     failures[0] += 1
 
     async def _extractor(self, recv, send, extractor, failures):
@@ -79,10 +82,15 @@ class Runner:
                     themes = await extractor.extract_themes(buf, ext)
                     for t in themes:
                         await send.send(t)
-                except Exception as e:
-                    log.error(
-                        f"Extract failed for '{ext.publisher}.{ext.name}': {e}"
-                    )
+                except (
+                    OSError,
+                    KeyError,
+                    ValueError,
+                    TypeError,
+                    zipfile.BadZipFile,
+                    msgspec.DecodeError,
+                ) as e:
+                    log.error(f"Extract failed for '{ext.publisher}.{ext.name}': {e}")
                     failures[0] += 1
 
     async def _index_writer(self, recv, index, progress, t_task):
@@ -92,8 +100,10 @@ class Runner:
                     await index.add(theme)
                     if progress:
                         progress.update(t_task, advance=1)
-                except Exception as e:
-                    log.error(f"Indexing failed for '{theme.extension}/{theme.theme}': {e}")
+                except KeyError as e:
+                    log.error(
+                        f"Indexing failed for '{theme.extension}/{theme.theme}': {e}"
+                    )
 
     async def run_async(self, progress=None, tasks=None):
         t = tasks or {}

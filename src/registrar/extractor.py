@@ -1,6 +1,7 @@
 import zipfile
 from pathlib import Path
 
+import httpx
 import jsonc
 import msgspec
 from asyncer import asyncify
@@ -39,7 +40,7 @@ class Extractor:
                 if detected:
                     log.info(f"ScanCode detected SPDX: '{detected}'")
                     spdx_id = detected
-            except Exception as e:
+            except (OSError, LookupError, ValueError, TypeError) as e:
                 log.warning(f"ScanCode failed for {license_path}: {e}")
         return spdx_id
 
@@ -66,7 +67,7 @@ class Extractor:
             license_path.write_bytes(resp.content)
             log.info(f"Downloaded LICENSE for {ext.publisher}/{ext.name}.")
             return True
-        except Exception as e:
+        except (httpx.HTTPError, OSError, ValueError) as e:
             log.warning(f"Failed to fetch license from {ext.license_url}: {e}")
             return False
 
@@ -114,7 +115,13 @@ class Extractor:
                             else "light",
                         )
                     )
-                except Exception as e:
+                except (
+                    OSError,
+                    KeyError,
+                    ValueError,
+                    TypeError,
+                    msgspec.DecodeError,
+                ) as e:
                     log.error(f"Failed to process theme {path}: {e}")
         return results
 
@@ -123,7 +130,7 @@ class Extractor:
             with zipfile.ZipFile(buf) as z:
                 pkg = msgspec.json.decode(z.read("extension/package.json"))
                 spdx_id = await self._ensure_license(z, pkg, ext)
-        except Exception as e:
+        except (OSError, KeyError, ValueError, TypeError, msgspec.DecodeError) as e:
             log.error(f"Failed to open VSIX for {ext.publisher}/{ext.name}: {e}")
             return []
 

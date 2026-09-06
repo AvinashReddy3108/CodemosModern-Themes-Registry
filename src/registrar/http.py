@@ -29,12 +29,14 @@ def is_retryable_exception(exc: BaseException) -> bool:
     if isinstance(exc, (httpx.TimeoutException, httpx.NetworkError, *_LOW_LEVEL)):
         log.warning(f"Transient network/timeout error: {type(exc).__name__}")
         return True
-    if isinstance(exc, httpx.HTTPStatusError):
-        if exc.response.status_code in _RETRYABLE_STATUSES:
-            log.warning(
-                f"Retryable HTTP status {exc.response.status_code} — scheduling retry."
-            )
-            return True
+    if (
+        isinstance(exc, httpx.HTTPStatusError)
+        and exc.response.status_code in _RETRYABLE_STATUSES
+    ):
+        log.warning(
+            f"Retryable HTTP status {exc.response.status_code} — scheduling retry."
+        )
+        return True
     return False
 
 
