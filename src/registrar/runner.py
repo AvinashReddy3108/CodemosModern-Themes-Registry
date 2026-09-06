@@ -124,7 +124,10 @@ class Runner:
         # next. Each stream's ORIGINAL send/recv end must be closed once all
         # workers have been given clones, or downstream stages never see EOF
         # and the task group hangs.
-        id_send, id_recv = anyio.create_memory_object_stream(max_buffer_size=1000)
+        #
+        # id_send is huge so the page fetcher runs unbound — it scrapes every
+        # page without waiting for metadata/download/extract to catch up.
+        id_send, id_recv = anyio.create_memory_object_stream(max_buffer_size=10000)
         meta_send, meta_recv = anyio.create_memory_object_stream(max_buffer_size=200)
         vsix_send, vsix_recv = anyio.create_memory_object_stream(max_buffer_size=20)
         theme_send, theme_recv = anyio.create_memory_object_stream(max_buffer_size=1000)
