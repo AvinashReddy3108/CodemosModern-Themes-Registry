@@ -1,3 +1,4 @@
+import asyncio
 import zipfile
 from pathlib import Path
 
@@ -21,6 +22,10 @@ class Extractor:
         self.client = http_client
         # Wrap sync extraction with asyncify
         self._async_extract = asyncify(self._sync_extract)
+        # Serialize ScanCode calls — the pyahocorasick C extension is not
+        # safe for concurrent invocation from multiple threads; concurrent
+        # access corrupts the internal automaton heap → `free(): invalid pointer`.
+        self._scancode_sem = asyncio.Semaphore(1)
 
     def _ext_dir(self, ext) -> Path:
         return self.root / ext.publisher / ext.name
@@ -34,8 +39,10 @@ class Extractor:
         )
         if license_path and license_path.exists():
             try:
-                # Use asyncified ScanCode call
-                results: dict = await _get_licenses_async(str(license_path))
+                # Use asyncified ScanCode call — serialized through the
+                # semaphore so only one thread touches pyahocorasick at a time.
+                async with self._scancode_sem:
+                    results: dict = await _get_licenses_async(str(license_path))
                 detected = results.get("detected_license_expression_spdx")
                 if detected:
                     log.info(f"ScanCode detected SPDX: '{detected}'")
