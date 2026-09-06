@@ -12,12 +12,12 @@ class MetadataService:
         return {
             "filters": [
                 {
-                    "criteria": [{"filterType": 4, "value": extension_id}],
+                    "criteria": [{"filterType": 7, "value": extension_id}],
                     "pageNumber": 1,
                     "pageSize": 1,
                 }
             ],
-            "flags": 870,
+            "flags": 7,
         }
 
     async def fetch(self, extension_id: str) -> dict:
