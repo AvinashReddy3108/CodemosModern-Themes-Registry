@@ -1,0 +1,24 @@
+# License
+
+Copyright (c) 2026 Ruvarashe Shalom Nemaramba
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to use, 
+copy, modify, and distribute the Software, subject to the following conditions:
+
+1. **ATTRIBUTION:** Any copy, redistribution, or modified version of the Software 
+   must include the original copyright notice above and prominent, clear credit 
+   naming **Ruvarashe Shalom Nemara** as the original creator, including a link 
+   back to the original repository (https://github.com/Ruvaaa/dark-midnight-pink).
+
+2. **NON-COMMERCIAL:** The Software, code, and design assets CANNOT be sold, 
+   resold, rented, leased, licensed, or otherwise used for direct or indirect 
+   commercial gain, profit, or monetary compensation.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
